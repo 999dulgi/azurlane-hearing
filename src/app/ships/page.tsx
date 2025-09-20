@@ -22,6 +22,25 @@ const rows = [
 ];
 
 export default function Page() {
+
+    function ShipTableRow({ row }: { row: {photo: string, name: string, type: string, faction: string, base: string, max_lb: string, lv120: string} }) {
+        return (
+            <TableRow
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+                <TableCell component="th" scope="row">
+                    <Image src="/favicon.ico" alt={row.name} width={50} height={50}/>
+                </TableCell>
+                <TableCell>{row.name}</TableCell>
+                <TableCell>{row.type}</TableCell>
+                <TableCell>{row.faction}</TableCell>
+                <TableCell>{row.base}</TableCell>
+                <TableCell>{row.max_lb}</TableCell>
+                <TableCell>{row.lv120}</TableCell>
+            </TableRow>
+        );
+    }
+
     return (
         <Box>
             <Container>
@@ -50,20 +69,3 @@ export default function Page() {
     );
 }
 
-function ShipTableRow({ row }: { row: {photo: string, name: string, type: string, faction: string, base: string, max_lb: string, lv120: string} }) {
-    return (
-        <TableRow
-            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-        >
-            <TableCell component="th" scope="row">
-                <Image src="/favicon.ico" alt={row.name} width={50} height={50}/>
-            </TableCell>
-            <TableCell>{row.name}</TableCell>
-            <TableCell>{row.type}</TableCell>
-            <TableCell>{row.faction}</TableCell>
-            <TableCell>{row.base}</TableCell>
-            <TableCell>{row.max_lb}</TableCell>
-            <TableCell>{row.lv120}</TableCell>
-        </TableRow>
-    );
-}
