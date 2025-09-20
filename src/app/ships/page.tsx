@@ -86,8 +86,6 @@ export default function Page() {
     );
 }
 
-<<<<<<< HEAD
-=======
 function ShipTableRow({ row }: { row: {photo: string, name: string, type: string, faction: string, stats: string, base: string, max_lb: string, lv120: string} }) {
     return (
         <TableRow
@@ -130,4 +128,3 @@ function ShipTableRow({ row }: { row: {photo: string, name: string, type: string
         </TableRow>
     );
 }
->>>>>>> 69dcee08d0793606e90b25139abcce4a22f63d61
