@@ -77,7 +77,37 @@ function ShipTableRow({ ship, hullTypes, nationalities, shipSkins }: { ship: Shi
                     ''
                 )}
             </TableCell>
-            <TableCell>{ship.tech ? ship.tech.add_get_value : 0}</TableCell>
+            <TableCell>{ship.tech ? (
+                <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
+                        {
+                            ship.tech.add_get_shiptype.map((text, index) => (
+                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={25} height={25}/>
+                            ))
+                        }
+                        <p style={{ marginLeft: "5px" }}>+{ship.tech.add_get_value}</p>
+                        </Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
+                            <Image src="techpoint.png" alt="techpoint" width={25} height={25}/>
+                        </Box>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
+
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
+                        {
+                            ship.tech.add_level_shiptype.map((text, index) => (
+                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={25} height={25}/>
+                            ))
+                        }
+                        <p style={{ marginLeft: "5px" }}>+{ship.tech.add_level_value}</p>
+                    </Box>
+                </Box>
+            ) : (
+                ''
+            )}
+            </TableCell>
         </TableRow>
     );
 }
