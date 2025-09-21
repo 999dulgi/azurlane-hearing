@@ -46,8 +46,5 @@ prettierrc.json
 # eslint
 eslintrc.json
 
-# excel
-shipsheet.xlsx
-ships.json
-shipsheet - 복사본.xlsx
-convert.py
+# misc
+/translation/
