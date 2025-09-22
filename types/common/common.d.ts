@@ -32,8 +32,6 @@ interface Ship {
         add_level_attr: number;
         add_level_shiptype: number[];
         add_level_value: number;
-        class: number;
-        id: number;
         pt_get: number;
         pt_level: number;
         pt_upgrage: number;
