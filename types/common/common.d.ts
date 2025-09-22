@@ -34,7 +34,7 @@ interface Ship {
         add_level_value: number;
         pt_get: number;
         pt_level: number;
-        pt_upgrage: number;
+        pt_upgrade: number;
     };
 }
 

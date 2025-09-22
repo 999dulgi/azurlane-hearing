@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container } from "@mui/material";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
+import { Checkbox } from "@mui/material";
 import Image from "next/image";
 import fs from 'fs';
 import path from 'path';
@@ -37,6 +38,8 @@ export default function Page() {
                                 <TableCell>등급</TableCell>
                                 <TableCell>획득방법</TableCell>
                                 <TableCell>기술점수</TableCell>
+                                <TableCell/>
+                                <TableCell>완성여부</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -64,7 +67,7 @@ function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: 
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
         >
             <TableCell component="th" scope="row">
-                <Image src={skinIcon} alt={ship.name_kr || ship.name} width={100} height={100} />
+                <Image src={skinIcon} alt={ship.name_kr || ship.name} width={112} height={112} />
             </TableCell>
             <TableCell>{ship.name_kr || ship.name}</TableCell>
             <TableCell>{hullTypeName}</TableCell>
@@ -83,13 +86,15 @@ function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: 
             </TableCell>
             <TableCell>{ship.tech ? (
                 <Box sx={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column' }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', marginBottom: '32px' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginBottom: '32px' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
                         {
                             ship.tech.add_get_shiptype.map((text, index) => (
-                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={32} height={32} />
+                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
                             ))
                         }
-                        <Box sx={{ marginLeft: "4px" }}>
+                        </Box>
+                        <Box sx={{ marginLeft: "4px", display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
                             <Image src={statTypes[statList[ship.tech.add_get_attr - 1]]?.iconbox} alt={statTypes[statList[ship.tech.add_get_attr - 1]]?.name} width={20} height={20} />
                             <p style={{ marginLeft: "4px" }}>+{ship.tech.add_get_value}</p>
                         </Box>
@@ -97,10 +102,10 @@ function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: 
                     <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
                         {
                             ship.tech.add_level_shiptype.map((text, index) => (
-                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={32} height={32} />
+                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
                             ))
                         }
-                        <Box sx={{ marginLeft: "4px" }}>
+                        <Box sx={{ marginLeft: "4px", display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
                             <Image src={statTypes[statList[ship.tech.add_level_attr - 1]]?.iconbox} alt={statTypes[statList[ship.tech.add_level_attr - 1]]?.name} width={20} height={20} />
                             <p style={{ marginLeft: "4px" }}>+{ship.tech.add_level_value}</p>
                         </Box>
@@ -122,12 +127,19 @@ function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: 
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
                         <Image src="/techpoint.png" alt="techpoint" width={32} height={32} />
-                        <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_upgrage}</p>
+                        <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_upgrade}</p>
                     </Box>
                 </Box>
             ) : (
                 ''
             )}
+            </TableCell>
+            <TableCell>
+                <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
+                    <Checkbox/>
+                    <Checkbox/>
+                    <Checkbox/>
+                </Box>
             </TableCell>
         </TableRow>
     );
