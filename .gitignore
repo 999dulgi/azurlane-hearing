@@ -48,3 +48,4 @@ eslintrc.json
 
 # misc
 /translation/
+/public/ship_kr_backup.json

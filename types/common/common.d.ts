@@ -32,6 +32,11 @@ interface Ship {
         add_level_attr: number;
         add_level_shiptype: number[];
         add_level_value: number;
+        class: number;
+        id: number;
+        pt_get: number;
+        pt_level: number;
+        pt_upgrage: number;
     };
 }
 
@@ -45,6 +50,17 @@ interface HullTypeData {
     tech: string | null;
     title: string;
     label: Record<string, string>;
+}
+
+interface StatTypeData {
+    code: string;
+    name: string;
+    short: string;
+    icon: string;
+    iconbox: string;
+    icon128: string;
+    icon64: string;
+    icon32: string;
 }
 
 interface NationalityData {
@@ -88,6 +104,7 @@ interface SkinData {
 type ShipSkins = Record<string, ShipSkin>;
 type HullTypes = Record<string, HullTypeData>;
 type Nationalities = Record<string, NationalityData>;
+type StatTypes = Record<string, StatTypeData>;
 
 interface SkillData {
     id: number;
