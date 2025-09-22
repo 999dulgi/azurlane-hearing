@@ -1,57 +1,121 @@
-import React from "react";
-import { Box, Container } from "@mui/material";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@mui/material";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { Box, Paper, CircularProgress } from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import { Checkbox } from "@mui/material";
 import Image from "next/image";
-import fs from 'fs';
-import path from 'path';
+import { TableVirtuoso, TableComponents } from "react-virtuoso";
 
 export default function Page() {
-    const dataPath = path.join(process.cwd(), 'public');
+    const [ships, setShips] = useState<Ship[]>([]);
+    const [shipSkins, setShipSkins] = useState<ShipSkins>({});
+    const [hullTypes, setHullTypes] = useState<HullTypes>({});
+    const [statTypes, setStatTypes] = useState<StatTypes>({});
+    const [nationalities, setNationalities] = useState<Nationalities>({});
+    const [loading, setLoading] = useState(true);
 
-    const shipsJson = fs.readFileSync(path.join(dataPath, 'ship_kr.json'), 'utf-8');
-    const ships: Ship[] = JSON.parse(shipsJson);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes] = await Promise.all([
+                    fetch('/ship_kr.json'),
+                    fetch('/ship_skin.json'),
+                    fetch('/hulltype.json'),
+                    fetch('/attribute.json'),
+                    fetch('/nationality.json'),
+                ]);
 
-    const shipSkinsJson = fs.readFileSync(path.join(dataPath, 'ship_skin.json'), 'utf-8');
-    const shipSkins: ShipSkins = JSON.parse(shipSkinsJson);
+                const shipsData = await shipsRes.json();
+                const skinsData = await skinsRes.json();
+                const hullsData = await hullsRes.json();
+                const statsData = await statsRes.json();
+                const nationsData = await nationsRes.json();
 
-    const hullTypesJson = fs.readFileSync(path.join(dataPath, 'hulltype.json'), 'utf-8');
-    const hullTypes: HullTypes = JSON.parse(hullTypesJson);
+                setShips(shipsData);
+                setShipSkins(skinsData);
+                setHullTypes(hullsData);
+                setStatTypes(statsData);
+                setNationalities(nationsData);
+            } catch (error) {
+                console.error("Failed to fetch data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    const statTypesJson = fs.readFileSync(path.join(dataPath, 'attribute.json'), 'utf-8');
-    const statTypes: StatTypes = JSON.parse(statTypesJson);
+        fetchData();
+    }, []);
 
-    const nationalitiesJson = fs.readFileSync(path.join(dataPath, 'nationality.json'), 'utf-8');
-    const nationalities: Nationalities = JSON.parse(nationalitiesJson);
+    if (loading) {
+        return (
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                <CircularProgress />
+            </Box>
+        );
+    }
 
     return (
         <Box>
-            <Container>
-                <TableContainer component={Paper}>
-                    <Table sx={{ minWidth: 900 }} aria-label="ship table">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell></TableCell>
-                                <TableCell>이름</TableCell>
-                                <TableCell>함종</TableCell>
-                                <TableCell>진영</TableCell>
-                                <TableCell>등급</TableCell>
-                                <TableCell>획득방법</TableCell>
-                                <TableCell>기술점수</TableCell>
-                                <TableCell/>
-                                <TableCell>완성여부</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {ships.map((ship) => (
-                                <ShipTableRow key={ship.id} ship={ship} hullTypes={hullTypes} statTypes={statTypes} nationalities={nationalities} shipSkins={shipSkins} />
-                            ))}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-            </Container>
+            <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                <TableVirtuoso
+                    data={ships}
+                    components={VirtuosoTableComponents}
+                    fixedHeaderContent={ShipHeaderContent}
+                    itemContent={(index, ship) => (
+                        <ShipTableRow
+                            ship={ship}
+                            hullTypes={hullTypes}
+                            statTypes={statTypes}
+                            nationalities={nationalities}
+                            shipSkins={shipSkins}
+                        />
+                    )}
+                />
+            </Paper>
         </Box>
     );
+}
+
+const Scroller = React.forwardRef<HTMLDivElement>((props, ref) => (
+  <TableContainer component={Paper} {...props} ref={ref} />
+));
+Scroller.displayName = 'Scroller';
+
+const VirtuosoTableHead = React.forwardRef<HTMLTableSectionElement>((props, ref) => (
+  <TableHead {...props} ref={ref} />
+));
+VirtuosoTableHead.displayName = 'VirtuosoTableHead';
+
+const VirtuosoTableBody = React.forwardRef<HTMLTableSectionElement>((props, ref) => (
+  <TableBody {...props} ref={ref} />
+));
+VirtuosoTableBody.displayName = 'VirtuosoTableBody';
+
+const VirtuosoTableComponents: TableComponents<Ship> = {
+    Scroller,
+    Table: (props) => (
+      <Table {...props} sx={{ borderCollapse: 'separate', tableLayout: 'fixed', minWidth: '100%', minHeight: '100%' }} />
+    ),
+    TableHead: VirtuosoTableHead,
+    TableRow,
+    TableBody: VirtuosoTableBody,
+  };
+
+function ShipHeaderContent() {
+    return (
+        <TableRow>
+            <TableCell></TableCell>
+            <TableCell>이름</TableCell>
+            <TableCell>함종</TableCell>
+            <TableCell>진영</TableCell>
+            <TableCell>등급</TableCell>
+            <TableCell>획득방법</TableCell>
+            <TableCell>기술점수</TableCell>
+            <TableCell />
+            <TableCell>완성여부</TableCell>
+        </TableRow>
+    )
 }
 
 function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: { ship: Ship, hullTypes: HullTypes, statTypes: StatTypes, nationalities: Nationalities, shipSkins: ShipSkins }) {
@@ -88,11 +152,11 @@ function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: 
                 <Box sx={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', flexDirection: 'row', marginBottom: '32px' }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
-                        {
-                            ship.tech.add_get_shiptype.map((text, index) => (
-                                <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
-                            ))
-                        }
+                            {
+                                ship.tech.add_get_shiptype.map((text, index) => (
+                                    <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
+                                ))
+                            }
                         </Box>
                         <Box sx={{ marginLeft: "4px", display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
                             <Image src={statTypes[statList[ship.tech.add_get_attr - 1]]?.iconbox} alt={statTypes[statList[ship.tech.add_get_attr - 1]]?.name} width={20} height={20} />
@@ -136,9 +200,9 @@ function ShipTableRow({ ship, hullTypes, statTypes, nationalities, shipSkins }: 
             </TableCell>
             <TableCell>
                 <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }}>
-                    <Checkbox/>
-                    <Checkbox/>
-                    <Checkbox/>
+                    <Checkbox />
+                    <Checkbox />
+                    <Checkbox />
                 </Box>
             </TableCell>
         </TableRow>
