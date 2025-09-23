@@ -162,11 +162,11 @@ export default function Page() {
         const fetchData = async () => {
             try {
                 const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes] = await Promise.all([
-                    fetch('../ship_kr.json'),
-                    fetch('../ship_skin.json'),
-                    fetch('../hulltype.json'),
-                    fetch('../attribute.json'),
-                    fetch('../nationality.json'),
+                    fetch('/azurelane-hearing/ship_kr.json'),
+                    fetch('/azurelane-hearing/ship_skin.json'),
+                    fetch('/azurelane-hearing/hulltype.json'),
+                    fetch('/azurelane-hearing/attribute.json'),
+                    fetch('/azurelane-hearing/nationality.json'),
                 ]);
 
                 const shipsData = await shipsRes.json();
