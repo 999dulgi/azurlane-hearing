@@ -1,17 +1,17 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
     Box,
     Button,
+    Chip,
     Dialog,
     DialogActions,
     DialogContent,
     DialogTitle,
     FormControl,
     InputLabel,
-    ToggleButton,
-    ToggleButtonGroup,
 } from "@mui/material";
 
 export const rarities = ['N', 'R', 'SR', 'SSR', 'UR', 'PR', 'DR'];
@@ -23,8 +23,8 @@ interface FilterDialogProps {
     hullTypes: HullTypes;
     nationalities: Nationalities;
     statTypes: StatTypes;
-    selectedHullTypes: string[];
-    setSelectedHullTypes: (value: string[]) => void;
+    selectedHullTypes: number[];
+    setSelectedHullTypes: (value: number[]) => void;
     selectedNationalities: string[];
     setSelectedNationalities: (value: string[]) => void;
     selectedRarities: string[];
@@ -41,6 +41,7 @@ export default function FilterDialog({
     onClose,
     hullTypes,
     nationalities,
+    statTypes,
     selectedHullTypes,
     setSelectedHullTypes,
     selectedNationalities,
@@ -56,172 +57,182 @@ export default function FilterDialog({
     const regularNationCodes = ['US', 'EN', 'JP', 'DE', 'CN', 'ITA', 'SN', 'FF', 'MNF', 'HNL', 'MOT', 'META', 'BULIN'];
     const collaborationNationCodes = ['FR', 'CM', 'LINK', 'BILI', 'NP', 'UM', 'AI', 'HOLO', 'DOA', 'IMAS', 'SSSS', 'RYZA', 'SENRAN', 'TOLOVE', 'BLACKROCKSHOOTER', 'YUMIA'];
     const statNames = ["내구", "화력", "뇌장", "대공", "항공", "장전", "명중", "기동", "대잠"];
-
-    const allHullTypeNames = Object.values(hullTypes).map((h) => h.name);
-    const allNationCodes = [...regularNationCodes, ...collaborationNationCodes];
-    const allStatNames = Object.values(statList);
-
-    const hullTypeValue = selectedHullTypes.length === allHullTypeNames.length ? [...selectedHullTypes, "all"] : selectedHullTypes;
-    const allNationsSelected = allNationCodes.every(code => selectedNationalities.includes(code));
-    const nationalityValue = allNationsSelected ? [...selectedNationalities, "all"] : selectedNationalities;
-    const rarityValue = selectedRarities.length === rarities.length ? [...selectedRarities, "all"] : selectedRarities;
-    const techStatValue = selectedTechStats.length === allStatNames.length ? [...selectedTechStats, "all"] : selectedTechStats;
     const techStatusNames = ['획득', '풀돌', '120레벨'];
     const techStatusCodes = ['get', 'level', 'upgrade'];
 
-    const handleHullTypeChange = (event: React.MouseEvent<HTMLElement>, newValues: string[]) => {
-        const allWasClicked = newValues.includes("all") && !hullTypeValue.includes("all");
-        const allWasDeselected = !newValues.includes("all") && hullTypeValue.includes("all");
+    const allHullTypeIds = Object.values(hullTypes).map((h) => h.id);
+    const allNationCodes = [...regularNationCodes, ...collaborationNationCodes];
+    const allStatNames = Object.values(statList);
 
-        if (allWasClicked) {
-            setSelectedHullTypes(allHullTypeNames);
-        } else if (allWasDeselected) {
-            setSelectedHullTypes([]);
+    const handleChipClick = <T,>(value: T, selectedValues: T[], setSelectedValues: (values: T[]) => void) => {
+        const newSelection = selectedValues.includes(value)
+            ? selectedValues.filter((v) => v !== value)
+            : [...selectedValues, value];
+        setSelectedValues(newSelection);
+    };
+
+    const handleAllClick = <T,>(allItems: T[], selectedValues: T[], setSelectedValues: (values: T[]) => void) => {
+        if (selectedValues.length === allItems.length) {
+            setSelectedValues([]);
         } else {
-            setSelectedHullTypes(newValues.filter((v) => v !== "all"));
+            setSelectedValues(allItems);
         }
     };
 
-    const handleNationalityChange = (event: React.MouseEvent<HTMLElement>, newValues: string[]) => {
-        const allWasClicked = newValues.includes("all") && !nationalityValue.includes("all");
-        const allWasDeselected = !newValues.includes("all") && nationalityValue.includes("all");
-        const collabWasClicked = newValues.includes("collab") && !nationalityValue.includes("collab");
-        const collabWasDeselected = !newValues.includes("collab") && nationalityValue.includes("collab");
-
-        if (allWasClicked) {
-            setSelectedNationalities([...allNationCodes, "collab"]);
-        } else if (allWasDeselected) {
-            setSelectedNationalities([]);
-        } else if (collabWasClicked) {
+    const handleCollabClick = () => {
+        const currentlySelected = collaborationNationCodes.filter(c => selectedNationalities.includes(c));
+        if (currentlySelected.length === collaborationNationCodes.length) {
+            // Deselect all collab nations
+            setSelectedNationalities(selectedNationalities.filter(n => !collaborationNationCodes.includes(n)));
+        } else {
+            // Select all collab nations
             const newSelection = [...new Set([...selectedNationalities, ...collaborationNationCodes])];
-            setSelectedNationalities(newSelection.filter(v => v !== 'all' && v !== 'collab'));
-        } else if (collabWasDeselected) {
-            const newSelection = selectedNationalities.filter(n => !collaborationNationCodes.includes(n));
             setSelectedNationalities(newSelection);
-        } else {
-            setSelectedNationalities(newValues.filter((v) => v !== "all" && v !== "collab"));
         }
-    };
-
-    const handleRarityChange = (event: React.MouseEvent<HTMLElement>, newValues: string[]) => {
-        const allWasClicked = newValues.includes("all") && !rarityValue.includes("all");
-        const allWasDeselected = !newValues.includes("all") && rarityValue.includes("all");
-
-        if (allWasClicked) {
-            setSelectedRarities(rarities);
-        } else if (allWasDeselected) {
-            setSelectedRarities([]);
-        } else {
-            setSelectedRarities(newValues.filter((v) => v !== "all"));
-        }
-    };
-
-    const handleTechStatChange = (event: React.MouseEvent<HTMLElement>, newValues: string[]) => {
-        const allWasClicked = newValues.includes("all") && !techStatValue.includes("all");
-        const allWasDeselected = !newValues.includes("all") && techStatValue.includes("all");
-
-        if (allWasClicked) {
-            setSelectedTechStats(allStatNames);
-        } else if (allWasDeselected) {
-            setSelectedTechStats([]);
-        } else {
-            setSelectedTechStats(newValues.filter((v) => v !== "all"));
-        }
-    };
-
-    const handleTechStatusChange = (event: React.MouseEvent<HTMLElement>, newValues: string[]) => {
-        setSelectedTechStatus(newValues);
     };
 
     return (
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
-            <DialogTitle>Filter Ships</DialogTitle>
+            <DialogTitle>함선 필터</DialogTitle>
             <DialogContent>
-                <Box component="form" sx={{ display: "flex", flexDirection: "column", gap: 2, pt: 1 }}>
+                <Box component="form" sx={{ display: "flex", flexDirection: "column", gap: 3, pt: 1 }}>
                     <FormControl component="fieldset" fullWidth>
                         <InputLabel shrink>함종</InputLabel>
-                        <ToggleButtonGroup
-                            value={hullTypeValue}
-                            onChange={handleHullTypeChange}
-                            sx={{ flexWrap: "wrap", pt: 3 }}
-                        >
-                            <ToggleButton value="all" sx={{ textTransform: "none" }}>
-                                전체
-                            </ToggleButton>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, pt: 3 }}>
+                            <Chip
+                                label="전체"
+                                clickable
+                                onClick={() => handleAllClick(allHullTypeIds, selectedHullTypes, setSelectedHullTypes)}
+                                variant={selectedHullTypes.length === allHullTypeIds.length ? 'filled' : 'outlined'}
+                                color="primary"
+                                sx={{ fontWeight: selectedHullTypes.length === allHullTypeIds.length ? 'bold' : 'normal' }}
+                            />
                             {Object.values(hullTypes).map((hull) => (
-                                <ToggleButton key={hull.name} value={hull.name} sx={{ textTransform: "none" }}>
-                                    {hull.name_kr}
-                                </ToggleButton>
+                                <Chip
+                                    key={hull.id}
+                                    label={hull.name_kr}
+                                    clickable
+                                    onClick={() => handleChipClick(hull.id, selectedHullTypes, setSelectedHullTypes)}
+                                    variant={selectedHullTypes.includes(hull.id) ? 'filled' : 'outlined'}
+                                    sx={{ fontWeight: selectedHullTypes.includes(hull.id) ? 'bold' : 'normal' }}
+                                />
                             ))}
-                        </ToggleButtonGroup>
+                        </Box>
                     </FormControl>
+
                     <FormControl component="fieldset" fullWidth>
                         <InputLabel shrink>진영</InputLabel>
-                        <ToggleButtonGroup
-                            value={nationalityValue}
-                            onChange={handleNationalityChange}
-                            sx={{ flexWrap: "wrap", pt: 3 }}
-                        >
-                            <ToggleButton value="all" sx={{ textTransform: "none" }}>
-                                전체
-                            </ToggleButton>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, pt: 3 }}>
+                            <Chip
+                                label="전체"
+                                clickable
+                                onClick={() => handleAllClick(allNationCodes, selectedNationalities, setSelectedNationalities)}
+                                variant={selectedNationalities.length === allNationCodes.length ? 'filled' : 'outlined'}
+                                color="primary"
+                                sx={{ fontWeight: selectedNationalities.length === allNationCodes.length ? 'bold' : 'normal' }}
+                                
+                            />
                             {Object.values(nationalities).filter(n => regularNationCodes.includes(n.code)).map((nation) => (
-                                <ToggleButton key={nation.code} value={nation.code} sx={{ textTransform: "none" }}>
-                                    {nation.name_kr || nation.name}
-                                </ToggleButton>
+                                <Chip
+                                    key={nation.code}
+                                    label={nation.name_kr || nation.name}
+                                    clickable
+                                    onClick={() => handleChipClick(nation.code, selectedNationalities, setSelectedNationalities)}
+                                    variant={selectedNationalities.includes(nation.code) ? 'filled' : 'outlined'}
+                                    sx={{ fontWeight: selectedNationalities.includes(nation.code) ? 'bold' : 'normal' }}
+                                />
                             ))}
-                            <ToggleButton value="collab" sx={{ textTransform: "none" }}>
-                                콜라보
-                            </ToggleButton>
-                        </ToggleButtonGroup>
+                            <Chip
+                                label="콜라보"
+                                clickable
+                                onClick={handleCollabClick}
+                                variant={collaborationNationCodes.every(c => selectedNationalities.includes(c)) ? 'filled' : 'outlined'}
+                                color="secondary"
+                                sx={{ fontWeight: collaborationNationCodes.every(c => selectedNationalities.includes(c)) ? 'bold' : 'normal' }}
+                            />
+                        </Box>
                     </FormControl>
+
                     <FormControl component="fieldset" fullWidth>
                         <InputLabel shrink>등급</InputLabel>
-                        <ToggleButtonGroup
-                            value={rarityValue}
-                            onChange={handleRarityChange}
-                            sx={{ flexWrap: "wrap", pt: 3 }}
-                        >
-                            <ToggleButton value="all" sx={{ textTransform: "none" }}>
-                                전체
-                            </ToggleButton>
-                            {rarities.map((rarity) => (
-                                <ToggleButton key={rarity} value={rarity} sx={{ textTransform: "none" }}>
-                                    {rarity}
-                                </ToggleButton>
-                            ))}
-                        </ToggleButtonGroup>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, pt: 3 }}>
+                            <Chip
+                                label="전체"
+                                clickable
+                                onClick={() => handleAllClick(rarities, selectedRarities, setSelectedRarities)}
+                                variant={selectedRarities.length === rarities.length ? 'filled' : 'outlined'}
+                                color="primary"
+                                sx={{ fontWeight: selectedRarities.length === rarities.length ? 'bold' : 'normal' }}
+                            />
+                            {rarities.map((rarity) => {
+                                const isSelected = selectedRarities.includes(rarity);
+                                const style = {
+                                    background: {
+                                        'N': '#DDDDDD',
+                                        'R': '#34B8F2',
+                                        'SR': '#C963FC',
+                                        'SSR': '#F4B039',
+                                        'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                        'PR': '#F4B039',
+                                        'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                    }[rarity],
+                                    color: rarity === 'N' ? 'black' : 'white',
+                                    fontWeight: isSelected ? 'bold' : 'normal',
+                                };
+
+                                return (
+                                    <Chip
+                                        key={rarity}
+                                        label={rarity}
+                                        clickable
+                                        onClick={() => handleChipClick(rarity, selectedRarities, setSelectedRarities)}
+                                        sx={isSelected ? style : { fontWeight: 'normal' }}
+                                        variant={isSelected ? 'filled' : 'outlined'}
+                                    />
+                                );
+                            })}
+                        </Box>
                     </FormControl>
+
                     <FormControl component="fieldset" fullWidth>
                         <InputLabel shrink>기술점수 능력치</InputLabel>
-                        <ToggleButtonGroup
-                            value={techStatValue}
-                            onChange={handleTechStatChange}
-                            sx={{ flexWrap: "wrap", pt: 3 }}
-                        >
-                            <ToggleButton value="all" sx={{ textTransform: "none" }}>
-                                전체
-                            </ToggleButton>
-                            {statList.map((stat) => (
-                                <ToggleButton key={stat} value={stat} sx={{ textTransform: "none" }}>
-                                    {statNames[statList.indexOf(stat)]}
-                                </ToggleButton>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, pt: 3 }}>
+                            <Chip
+                                label="전체"
+                                clickable
+                                onClick={() => handleAllClick(allStatNames, selectedTechStats, setSelectedTechStats)}
+                                variant={selectedTechStats.length === allStatNames.length ? 'filled' : 'outlined'}
+                                color="primary"
+                                sx={{ fontWeight: selectedTechStats.length === allStatNames.length ? 'bold' : 'normal' }}
+                            />
+                            {statList.map((stat, index) => (
+                                <Chip
+                                    key={stat}
+                                    icon={<Image src={statTypes[stat]?.iconbox} alt={statTypes[stat]?.name} width={20} height={20} />}
+                                    label={statNames[index]}
+                                    clickable
+                                    onClick={() => handleChipClick(stat, selectedTechStats, setSelectedTechStats)}
+                                    variant={selectedTechStats.includes(stat) ? 'filled' : 'outlined'}
+                                    sx={{ fontWeight: selectedTechStats.includes(stat) ? 'bold' : 'normal' }}
+                                />
                             ))}
-                        </ToggleButtonGroup>
+                        </Box>
                     </FormControl>
+
                     <FormControl component="fieldset" fullWidth>
                         <InputLabel shrink>기술점수 달성 상태</InputLabel>
-                        <ToggleButtonGroup
-                            value={selectedTechStatus}
-                            onChange={handleTechStatusChange}
-                            sx={{ flexWrap: "wrap", pt: 3 }}
-                        >
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, pt: 3 }}>
                             {techStatusCodes.map((status, index) => (
-                                <ToggleButton key={status} value={status} sx={{ textTransform: "none" }}>
-                                    {techStatusNames[index]}
-                                </ToggleButton>
+                                <Chip
+                                    key={status}
+                                    label={techStatusNames[index]}
+                                    clickable
+                                    onClick={() => handleChipClick(status, selectedTechStatus, setSelectedTechStatus)}
+                                    variant={selectedTechStatus.includes(status) ? 'filled' : 'outlined'}
+                                    sx={{ fontWeight: selectedTechStatus.includes(status) ? 'bold' : 'normal' }}
+                                />
                             ))}
-                        </ToggleButtonGroup>
+                        </Box>
                     </FormControl>
                 </Box>
             </DialogContent>
