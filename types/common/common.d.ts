@@ -2,8 +2,9 @@ type StatType = "Ammunition" | "AntiAir" | "Armor" | "ASW" | "Aviation" | "Consu
     "Firepower" | "Health" | "Luck" | "Oxygen" | "Reload" | "Torpedo";
 type HullType = "DD" | "CL" | "CA" | "BC" | "BB" | "CVL" | "CV" | "BBV" | "SS" |
     "AR" | "BM" | "SSV" | "CB" | "DDGV" | "DDGM" | "IXS" | "IXV" | "IXM";
-type FactionType = "CM" | "US" | "EN" | "JP" | "DE" | "CN" | "ITA" | "SN" | "FF" | "MNF" | "FR" | "MOT" | 
-    "META" | "BULIN" | "LINK" | "NP" | "BILI" | "UM" | "AI" | "HOLO" | "DOA" | "IMAS" | "SSSS" | "RYZA" | "SENRAN";
+type FactionType = "CM" | "US" | "EN" | "JP" | "DE" | "CN" | "ITA" | "SN" | "FF" | "MNF" | "FR" | "MOT" | "META" |
+    "BULIN" | "LINK" | "NP" | "BILI" | "UM" | "AI" | "HOLO" | "DOA" | "IMAS" | "SSSS" | "RYZA" | "SENRAN" | "TOLOVE" | 
+    "BLACKROCKSHOOTER" | "YUMIA";
 
 interface Ship {
     id: number;
@@ -99,11 +100,6 @@ interface SkinData {
     shipyard: string;
 }
 
-type ShipSkins = Record<string, ShipSkin>;
-type HullTypes = Record<string, HullTypeData>;
-type Nationalities = Record<string, NationalityData>;
-type StatTypes = Record<string, StatTypeData>;
-
 interface SkillData {
     id: number;
     parent: number;
@@ -111,3 +107,16 @@ interface SkillData {
     downgrade: number | null;
     requirement: string;
 }
+
+interface ShipTechStatData {
+    id: number;
+    get: boolean;
+    level: boolean;
+    upgrade: boolean;
+}
+
+type ShipSkins = Record<string, ShipSkin>;
+type HullTypes = Record<string, HullTypeData>;
+type Nationalities = Record<string, NationalityData>;
+type StatTypes = Record<string, StatTypeData>;
+

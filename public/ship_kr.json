@@ -2275,7 +2275,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -2842,7 +2842,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -5344,7 +5344,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         1,
         20,
@@ -10377,7 +10377,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -11172,7 +11172,7 @@
       "한정 이벤트: 거듭되는 평행세계"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         1,
         20,
@@ -11718,7 +11718,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -13331,7 +13331,7 @@
       "함대 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -15547,7 +15547,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -21441,7 +21441,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -24877,7 +24877,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -25885,7 +25885,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -29861,7 +29861,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -30383,7 +30383,7 @@
       "소형함, 특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -30657,12 +30657,12 @@
       "소형함, 특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6
       ],
@@ -30905,7 +30905,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -31182,7 +31182,7 @@
       "소형함, 특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -31988,7 +31988,7 @@
       "소형함, 특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -32740,7 +32740,7 @@
         7
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -35125,7 +35125,7 @@
       "코어 데이터 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -35374,7 +35374,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -35623,7 +35623,7 @@
       "한정 이벤트: 거듭되는 평행세계"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -35872,7 +35872,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -36119,12 +36119,12 @@
       "한정 이벤트: 빛을 쫓는 별의 바다"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -37114,7 +37114,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -37374,7 +37374,7 @@
       "한정 이벤트: 샌드플레이"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -38140,7 +38140,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -38663,7 +38663,7 @@
       "한정 이벤트: 빛을 쫓는 별의 바다"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -38923,7 +38923,7 @@
       "한정 이벤트: 강철의 날개와 바람"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -40107,7 +40107,7 @@
       "연구 도크"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         4,
         5,
@@ -40459,7 +40459,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -41122,7 +41122,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -41748,7 +41748,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -42046,7 +42046,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -42344,7 +42344,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -44333,7 +44333,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -44600,7 +44600,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -44925,7 +44925,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -45452,7 +45452,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -45743,7 +45743,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -46003,7 +46003,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -46525,7 +46525,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -46787,7 +46787,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -47056,7 +47056,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -47316,7 +47316,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -47576,7 +47576,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -48103,7 +48103,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -48370,7 +48370,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -48637,7 +48637,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -48903,7 +48903,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -49441,7 +49441,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -49706,7 +49706,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -50284,7 +50284,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -50572,7 +50572,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -51103,7 +51103,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -51365,7 +51365,7 @@
       "훈장 지원(랜덤)"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         2
       ],
@@ -52675,7 +52675,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -52931,7 +52931,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -53187,7 +53187,7 @@
       "소형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -53448,7 +53448,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -53706,7 +53706,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -54248,7 +54248,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -54799,7 +54799,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -55084,7 +55084,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -55345,7 +55345,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -56120,7 +56120,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -56902,7 +56902,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -58739,7 +58739,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -59058,7 +59058,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -61793,7 +61793,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -62038,7 +62038,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -62281,7 +62281,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -62524,7 +62524,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -62999,7 +62999,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -63311,7 +63311,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -65118,7 +65118,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -65629,7 +65629,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -66405,12 +66405,12 @@
       "소형함, 특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6
       ],
@@ -66651,7 +66651,7 @@
       "한정 이벤트: 잿빛 폐허"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -66962,7 +66962,7 @@
       "함대 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -67209,7 +67209,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         6,
         7
@@ -67461,12 +67461,12 @@
       "함대 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6
       ],
@@ -67972,7 +67972,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         6,
         7
@@ -68765,7 +68765,7 @@
         7
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -74153,7 +74153,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -74418,7 +74418,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -74968,7 +74968,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -75235,7 +75235,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -75493,7 +75493,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -75751,7 +75751,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -76947,7 +76947,7 @@
       "훈장 지원(랜덤)"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         1,
         20,
@@ -83291,7 +83291,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         1,
         20,
@@ -84614,7 +84614,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -84874,7 +84874,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -85165,7 +85165,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -85454,7 +85454,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -85721,7 +85721,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -85981,7 +85981,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -86241,7 +86241,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -86501,7 +86501,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -91350,7 +91350,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -93340,7 +93340,7 @@
       "메인 스테이지 해역 10-4"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -94897,7 +94897,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -95153,7 +95153,7 @@
       "한정 이벤트: 깨워라 창홍의 바람"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -97822,7 +97822,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -100164,7 +100164,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -100406,7 +100406,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -100648,7 +100648,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -100890,7 +100890,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -104577,7 +104577,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -105800,7 +105800,7 @@
       "메인 스테이지 해역 12-2"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -106040,7 +106040,7 @@
       "메인 스테이지 해역 12-3"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -106287,7 +106287,7 @@
       "메인 스테이지 해역 7-4"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -106534,12 +106534,12 @@
       "한정 이벤트: 저편의 묻혀진 꽃"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -106806,7 +106806,7 @@
       "함대 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -107055,7 +107055,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -107306,12 +107306,12 @@
       "훈장 지원(랜덤)"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -107804,7 +107804,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -108857,7 +108857,7 @@
         7
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -110814,7 +110814,7 @@
         7
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -112025,7 +112025,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -113318,7 +113318,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -116738,7 +116738,7 @@
       "연구 도크"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         4,
         5,
@@ -129433,7 +129433,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -129680,7 +129680,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -129938,7 +129938,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -130196,7 +130196,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -130944,7 +130944,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -132246,7 +132246,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -134468,7 +134468,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -134730,7 +134730,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -134994,7 +134994,7 @@
       "훈장 지원(랜덤)"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -135265,7 +135265,7 @@
       "함대 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -135529,7 +135529,7 @@
       "함대 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -135789,7 +135789,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -136049,7 +136049,7 @@
       "특형함 건조"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -136315,7 +136315,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -136585,7 +136585,7 @@
         17
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         8,
         17
@@ -136841,7 +136841,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -137101,7 +137101,7 @@
       "춘절 한정 건조"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -137363,7 +137363,7 @@
       "공훈 상점 교환"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -137623,7 +137623,7 @@
       "한정 이벤트: 웰컴 투 동심 학원"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
@@ -137883,7 +137883,7 @@
       "한정 이벤트: 네온 시티의 탐색자"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         8,
         17
@@ -139255,7 +139255,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -139902,7 +139902,7 @@
       "연구 도크"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         6,
         7
@@ -145176,7 +145176,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -145440,7 +145440,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -146222,7 +146222,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -146482,7 +146482,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -146742,7 +146742,7 @@
         3
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3
       ],
@@ -148464,7 +148464,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -148731,7 +148731,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -149532,7 +149532,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -150066,7 +150066,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -150333,7 +150333,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -150863,7 +150863,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -151922,7 +151922,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -152452,7 +152452,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -154509,7 +154509,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -158609,7 +158609,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -159143,7 +159143,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -159408,7 +159408,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -160203,7 +160203,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -160455,7 +160455,7 @@
       "한정 이벤트: 동절의 북해"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -160774,7 +160774,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -161030,7 +161030,7 @@
       "소형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -161554,7 +161554,7 @@
       "소형함 건조"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -162083,7 +162083,7 @@
         2
       ],
       "add_get_value": 2,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -162343,7 +162343,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -165139,7 +165139,7 @@
         7
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -166345,7 +166345,7 @@
       "연구 도크"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -166610,7 +166610,7 @@
       "훈장 지원(랜덤)"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         1,
         20,
@@ -166910,7 +166910,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -167177,7 +167177,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -167446,7 +167446,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -167971,7 +167971,7 @@
       "소형함 건조"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         1,
         20,
@@ -168783,7 +168783,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -169046,7 +169046,7 @@
         2
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -169307,7 +169307,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -170091,7 +170091,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -170354,7 +170354,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -170603,7 +170603,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -171617,12 +171617,12 @@
       "한정 이벤트: 심연 아래의 비밀"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -172724,7 +172724,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -173053,7 +173053,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -173708,7 +173708,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -174001,7 +174001,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -174261,7 +174261,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -175044,7 +175044,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -175309,7 +175309,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -175581,7 +175581,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -175845,7 +175845,7 @@
       "훈장 지원(랜덤)"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         1,
         20,
@@ -176362,7 +176362,7 @@
       "소형함 건조"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         1,
         20,
@@ -176627,7 +176627,7 @@
       "한정 이벤트: 환몽 간주곡"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         1,
         20,
@@ -178194,7 +178194,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -181446,7 +181446,7 @@
         24
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         22,
         23,
@@ -181703,14 +181703,14 @@
       "한정 이벤트: 템페스타와 청춘의 샘"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         22,
         23,
         24
       ],
       "add_get_value": 2,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         22,
         23,
@@ -183010,7 +183010,7 @@
         24
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         22,
         23,
@@ -183537,7 +183537,7 @@
         24
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         22,
         23,
@@ -184068,7 +184068,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -184336,7 +184336,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -184872,7 +184872,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 12,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -185676,7 +185676,7 @@
         21
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         1,
         20,
@@ -185944,7 +185944,7 @@
       "META 연구실·정보 동기화"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         1,
         20,
@@ -186492,7 +186492,7 @@
       "META 연구실·정보 동기화"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -187029,7 +187029,7 @@
       "META 연구실·월드투어"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         2
       ],
@@ -187566,7 +187566,7 @@
       "META 연구실·정보 동기화"
     ],
     "tech": {
-      "add_get_attr": 8,
+      "add_get_attr": 7,
       "add_get_shiptype": [
         2
       ],
@@ -188114,7 +188114,7 @@
         2
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         2
       ],
@@ -188386,7 +188386,7 @@
         18
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         3,
         13,
@@ -190017,7 +190017,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -190291,7 +190291,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -190564,7 +190564,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -190837,7 +190837,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -191111,7 +191111,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -191377,7 +191377,7 @@
         10
       ],
       "add_get_value": 1,
-      "add_level_attr": 9,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4
       ],
@@ -192477,7 +192477,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -193297,7 +193297,7 @@
         10
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         4,
         5,
@@ -194111,7 +194111,7 @@
       "META 연구실·월드투어"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -194385,7 +194385,7 @@
       "META 연구실·월드투어"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -194652,7 +194652,7 @@
       "META 연구실·월드투어"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -194920,7 +194920,7 @@
       "META 연구실·월드투어"
     ],
     "tech": {
-      "add_get_attr": 12,
+      "add_get_attr": 9,
       "add_get_shiptype": [
         6
       ],
@@ -195198,7 +195198,7 @@
         7
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -195471,7 +195471,7 @@
         7
       ],
       "add_get_value": 1,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -196565,7 +196565,7 @@
         7
       ],
       "add_get_value": 2,
-      "add_level_attr": 8,
+      "add_level_attr": 7,
       "add_level_shiptype": [
         6,
         7
@@ -197109,7 +197109,7 @@
       "한정 이벤트: 오엽각 교차점"
     ],
     "tech": {
-      "add_get_attr": 9,
+      "add_get_attr": 8,
       "add_get_shiptype": [
         8,
         17
