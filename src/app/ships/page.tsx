@@ -162,11 +162,11 @@ export default function Page() {
         const fetchData = async () => {
             try {
                 const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes] = await Promise.all([
-                    fetch('/azurelane-hearing/ship_kr.json'),
-                    fetch('/azurelane-hearing/ship_skin.json'),
-                    fetch('/azurelane-hearing/hulltype.json'),
-                    fetch('/azurelane-hearing/attribute.json'),
-                    fetch('/azurelane-hearing/nationality.json'),
+                    fetch('ship_kr.json'),
+                    fetch('ship_skin.json'),
+                    fetch('hulltype.json'),
+                    fetch('attribute.json'),
+                    fetch('nationality.json'),
                 ]);
 
                 const shipsData = await shipsRes.json();
@@ -383,7 +383,7 @@ export default function Page() {
                                                 </Box>
                                             </Box>
                                             <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
-                                                <Image src="/icon/techpoint.png" alt="techpoint" width={32} height={32} />
+                                                <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
                                                 <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_get}</p>
                                             </Box>
                                         </Box>
@@ -392,7 +392,7 @@ export default function Page() {
                                         <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
                                             <Box sx={{ flex: 1 }} /> {/* Empty placeholder for stat bonus */}
                                             <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
-                                                <Image src="/icon/techpoint.png" alt="techpoint" width={32} height={32} />
+                                                <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
                                                 <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_level}</p>
                                             </Box>
                                         </Box>
@@ -411,7 +411,7 @@ export default function Page() {
                                                 </Box>
                                             </Box>
                                             <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
-                                                <Image src="/icon/techpoint.png" alt="techpoint" width={32} height={32} />
+                                                <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
                                                 <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_upgrade}</p>
                                             </Box>
                                         </Box>
