@@ -130,7 +130,6 @@ export default function FilterDialog({
                                 variant={selectedNationalities.length === allNationCodes.length ? 'filled' : 'outlined'}
                                 color="primary"
                                 sx={{ fontWeight: selectedNationalities.length === allNationCodes.length ? 'bold' : 'normal' }}
-                                
                             />
                             {Object.values(nationalities).filter(n => regularNationCodes.includes(n.code)).map((nation) => (
                                 <Chip

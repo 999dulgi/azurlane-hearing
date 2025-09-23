@@ -8,9 +8,10 @@ import {
     Toolbar,
     Typography,
     SvgIcon,
-    IconButton
+    IconButton,
+    InputBase
 } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
+import { useTheme, alpha } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Image from "next/image";
@@ -22,6 +23,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import SearchIcon from '@mui/icons-material/Search';
 import ShipInfoDialog from "./ShipInfoDialog";
 
 type AppState = {
@@ -114,6 +116,7 @@ export default function Page() {
     const [importText, setImportText] = useState('');
     const [filteredShips, setFilteredShips] = useState<Ship[]>([]);
     const [selectedShip, setSelectedShip] = useState<Ship | null>(null);
+    const [searchTerm, setSearchTerm] = useState('');
     
     const [state, dispatch] = useReducer(appReducer, initialState);
 
@@ -210,6 +213,12 @@ export default function Page() {
     useEffect(() => {
         let shipsToFilter = [...ships];
 
+        if (searchTerm) {
+            shipsToFilter = shipsToFilter.filter(ship =>
+                (ship.name_kr || ship.name).toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+
         if (state.selectedHullTypes.length > 0) {
             shipsToFilter = shipsToFilter.filter(ship => state.selectedHullTypes.includes(ship.type));
         }
@@ -246,7 +255,7 @@ export default function Page() {
         }
 
         setFilteredShips(shipsToFilter);
-    }, [ships, state, nationalities, hullTypes, techStatList]);
+    }, [ships, state, nationalities, hullTypes, techStatList, searchTerm]);
 
     const exportTechStats = async () => {
         const data = JSON.stringify(techStatList);
@@ -314,6 +323,34 @@ export default function Page() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         함순이 청문회
                     </Typography>
+                    <Box sx={{
+                        position: 'relative',
+                        borderRadius: theme.shape.borderRadius,
+                        backgroundColor: alpha(theme.palette.common.white, 0.15),
+                        '&:hover': {
+                            backgroundColor: alpha(theme.palette.common.white, 0.25),
+                        },
+                        marginLeft: 0,
+                        width: 'auto',
+                    }}>
+                        <Box sx={{ padding: theme.spacing(0, 2), height: '100%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <SearchIcon />
+                        </Box>
+                        <InputBase
+                            placeholder="함선 검색…"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            sx={{
+                                color: 'inherit',
+                                '& .MuiInputBase-input': {
+                                    padding: theme.spacing(1, 1, 1, 0),
+                                    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+                                    transition: theme.transitions.create('width'),
+                                    width: '20ch',
+                                },
+                            }}
+                        />
+                    </Box>
                     <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
                         {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                     </IconButton>
