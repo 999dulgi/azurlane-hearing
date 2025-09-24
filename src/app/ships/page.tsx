@@ -117,6 +117,9 @@ export default function Page() {
     const [filteredShips, setFilteredShips] = useState<Ship[]>([]);
     const [selectedShip, setSelectedShip] = useState<Ship | null>(null);
     const [searchTerm, setSearchTerm] = useState('');
+    const [nationalityImages, setNationalityImages] = useState<{ [key: string]: string }>({});
+    const [skillData, setSkillData] = useState<Skills>({});
+    const [skillIcons, setSkillIcons] = useState<SkillIcons>({});
     
     const [state, dispatch] = useReducer(appReducer, initialState);
 
@@ -150,13 +153,13 @@ export default function Page() {
         return (
             <TableRow sx={{ backgroundColor: 'background.paper', }}>
                 <TableCell sx={{ width: '100px' }}></TableCell>
-                <TableCell sx={{ width: '160px' }}>이름</TableCell>
-                <TableCell>함종</TableCell>
-                <TableCell>진영</TableCell>
+                <TableCell sx={{ width: '124px' }}>이름</TableCell>
+                <TableCell sx={{ width: '160px' }}>함종</TableCell>
+                <TableCell sx={{ width: '140px' }}>진영</TableCell>
                 <TableCell>등급</TableCell>
-                <TableCell sx={{ width: '300px' }}>획득방법</TableCell>
+                <TableCell sx={{ width: '300px' }}>입수 경로</TableCell>
                 <TableCell sx={{ width: '240px' }}>기술점수</TableCell>
-                <TableCell sx={{ width: '52px' }}></TableCell>
+                <TableCell sx={{ width: '48px' }}></TableCell>
             </TableRow>
         )
     }, []);
@@ -164,12 +167,15 @@ export default function Page() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes] = await Promise.all([
+                const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes, nationsDataRes, skillsRes, skillIconsRes] = await Promise.all([
                     fetch('ship_kr.json'),
                     fetch('ship_skin.json'),
                     fetch('hulltype.json'),
                     fetch('attribute.json'),
                     fetch('nationality.json'),
+                    fetch('nationality_icon.json'),
+                    fetch('skill_data.json'),
+                    fetch('skill_icon.json'),
                 ]);
 
                 const shipsData = await shipsRes.json();
@@ -177,13 +183,19 @@ export default function Page() {
                 const hullsData = await hullsRes.json();
                 const statsData = await statsRes.json();
                 const nationsData = await nationsRes.json();
+                const nationsImgData = await nationsDataRes.json();
+                const skillsData = await skillsRes.json();
+                const skillIconsData = await skillIconsRes.json();
 
                 setShips(shipsData);
                 setShipSkins(skinsData);
                 setHullTypes(hullsData);
                 setStatTypes(statsData);
                 setNationalities(nationsData);
-                
+                setNationalityImages(nationsImgData);
+                setSkillData(skillsData);
+                setSkillIcons(skillIconsData);
+
             } catch (error) {
                 console.error("Failed to fetch data:", error);
             } finally {
@@ -220,7 +232,14 @@ export default function Page() {
         }
 
         if (state.selectedHullTypes.length > 0) {
-            shipsToFilter = shipsToFilter.filter(ship => state.selectedHullTypes.includes(ship.type));
+            shipsToFilter = shipsToFilter.filter(ship => {
+                const originalTypeMatch = state.selectedHullTypes.includes(ship.type);
+                if (ship.retrofit?.type === undefined) {
+                    return originalTypeMatch;
+                }
+                const retrofitTypeMatch = state.selectedHullTypes.includes(ship.retrofit.type);
+                return originalTypeMatch || retrofitTypeMatch;
+            });
         }
 
         if (state.selectedNationalities.length > 0) {
@@ -228,7 +247,19 @@ export default function Page() {
         }
 
         if (state.selectedRarities.length > 0) {
-            shipsToFilter = shipsToFilter.filter(ship => state.selectedRarities.includes(rarities[ship.rarity - 2 + (ship.cid === 2 ? 2 : 0)]));
+            shipsToFilter = shipsToFilter.filter(ship => {
+                const originalRarityName = rarities[ship.rarity - 2 + (ship.cid === 2 ? 2 : 0)];
+                const originalRarityMatch = state.selectedRarities.includes(originalRarityName);
+
+                if (ship.retrofit === undefined) {
+                    return originalRarityMatch;
+                }
+
+                const retrofitRarityName = rarities[ship.rarity - 1 + (ship.cid === 2 ? 2 : 0)];
+                const retrofitRarityMatch = state.selectedRarities.includes(retrofitRarityName);
+
+                return originalRarityMatch || retrofitRarityMatch;
+            });
         }
 
         if (state.selectedTechStats.length > 0) {
@@ -374,24 +405,61 @@ export default function Page() {
                                     <Image src={skinIcon} alt={ship.name_kr || ship.name} width={64} height={64} />
                                 </TableCell>
                                 <TableCell>{ship.name_kr || ship.name}</TableCell>
-                                <TableCell>{hullTypeName}</TableCell>
+                                <TableCell>
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                            {hullTypes[ship.type] && <Image src={hullTypes[ship.type].icon} alt={hullTypeName} width={32} height={32} />}
+                                            <span>{hullTypeName}</span>
+                                        </Box>
+                                        {ship.retrofit?.type !== undefined && ship.retrofit.type !== ship.type && hullTypes[ship.retrofit.type] && (
+                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                                <span>→</span>
+                                                <Image src={hullTypes[ship.retrofit.type].icon} alt={hullTypes[ship.retrofit.type].name_kr} width={32} height={32} />
+                                                <span>{hullTypes[ship.retrofit.type].name_kr === "미사일구축함" ? "미구" : hullTypes[ship.retrofit.type].name_kr}</span>
+                                            </Box>
+                                        )}
+                                    </Box>
+                                </TableCell>
                                 <TableCell>{nationalityName}</TableCell>
                                 <TableCell sx={{ fontWeight: 800 }}>
-                                    <Chip
-                                        label={rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]}
-                                        sx={{
-                                            color: rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)] === 'N' ? 'black' : 'white',
-                                            background: {
-                                                'N': '#DDDDDD',
-                                                'R': '#34B8F2',
-                                                'SR': '#C963FC',
-                                                'SSR': '#F4B039',
-                                                'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
-                                                'PR': '#F4B039',
-                                                'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
-                                            }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]],
-                                        }}
-                                    />
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                                        <Chip
+                                            label={rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]}
+                                            sx={{
+                                                background: {
+                                                    'N': '#DDDDDD',
+                                                    'R': '#34B8F2',
+                                                    'SR': '#C963FC',
+                                                    'SSR': '#F4B039',
+                                                    'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                    'PR': '#F4B039',
+                                                    'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]],
+                                                color: rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)] === 'N' ? 'black' : 'white',
+                                                fontWeight: 'bold',
+                                                width: 'fit-content'
+                                            }}
+                                        />
+                                        {ship.retrofit !== undefined &&
+                                            <Chip
+                                                label={rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]}
+                                                sx={{
+                                                    background: {
+                                                        'N': '#DDDDDD',
+                                                        'R': '#34B8F2',
+                                                        'SR': '#C963FC',
+                                                        'SSR': '#F4B039',
+                                                        'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                        'PR': '#F4B039',
+                                                        'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                    }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]],
+                                                    color: rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)] === 'N' ? 'black' : 'white',
+                                                    fontWeight: 'bold',
+                                                    width: 'fit-content'
+                                                }}
+                                            />
+                                        }
+                                    </Box>
                                 </TableCell>
                                 <TableCell>
                                     {ship.obtain_kr ? (
@@ -490,6 +558,14 @@ export default function Page() {
                 open={state.shipInfoDialogOpen}
                 onClose={() => dispatch({ type: 'TOGGLE_SHIP_INFO_DIALOG', payload: false })}
                 ship={selectedShip}
+                hullTypes={hullTypes}
+                nationalities={nationalities}
+                nationalityImages={nationalityImages}
+                skinData={shipSkins}
+                statData={statTypes}
+                techStatList={techStatList}
+                skillData={skillData}
+                skillIcons={skillIcons}
             />
             <Dialog open={state.importDialogOpen} onClose={() => dispatch({ type: 'TOGGLE_IMPORT_DIALOG', payload: false })}>
                 <DialogTitle>데이터 가져오기</DialogTitle>

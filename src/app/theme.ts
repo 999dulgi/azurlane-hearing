@@ -1,13 +1,7 @@
 "use client";
 
 import { createTheme } from '@mui/material/styles';
-import { Roboto } from 'next/font/google';
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
 
 // 라이트 테마
 export const lightTheme = createTheme({
@@ -23,7 +17,7 @@ export const lightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: "Noto Sans KR, sans-serif",
     fontWeightBold: 700,
     fontWeightMedium: 500,
     fontWeightLight: 300,
@@ -41,7 +35,7 @@ export const darkTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: "Noto Sans KR, sans-serif",
     fontWeightBold: 700,
     fontWeightMedium: 500,
     fontWeightLight: 300,

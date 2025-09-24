@@ -194,7 +194,7 @@
   "20": {
     "id": 20,
     "name": "Guided-missile Destroyer",
-    "name_kr": "미사일구축함(선봉)",
+    "name_kr": "미사일구축함",
     "short": "DDGV",
     "position": "vanguard",
     "icon": "https://raw.githubusercontent.com/Fernando2603/AzurLane/main/images/type/20.png",

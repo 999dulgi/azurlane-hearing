@@ -71,6 +71,31 @@ export default function FilterDialog({
         setSelectedValues(newSelection);
     };
 
+    const handleHullTypeClick = (hullId: number) => {
+        const ddgIds = [20, 21];
+        let newSelection = [...selectedHullTypes];
+
+        const isDdg = ddgIds.includes(hullId);
+        const isCurrentlySelected = selectedHullTypes.includes(hullId);
+
+        if (isDdg) {
+            if (isCurrentlySelected) {
+                // Deselect both DDGs
+                newSelection = newSelection.filter(id => !ddgIds.includes(id));
+            } else {
+                // Select both DDGs
+                newSelection.push(...ddgIds.filter(id => !newSelection.includes(id)));
+            }
+        } else {
+            if (isCurrentlySelected) {
+                newSelection = newSelection.filter(id => id !== hullId);
+            } else {
+                newSelection.push(hullId);
+            }
+        }
+        setSelectedHullTypes(newSelection);
+    };
+
     const handleAllClick = <T,>(allItems: T[], selectedValues: T[], setSelectedValues: (values: T[]) => void) => {
         if (selectedValues.length === allItems.length) {
             setSelectedValues([]);
@@ -112,7 +137,7 @@ export default function FilterDialog({
                                     key={hull.id}
                                     label={hull.name_kr}
                                     clickable
-                                    onClick={() => handleChipClick(hull.id, selectedHullTypes, setSelectedHullTypes)}
+                                    onClick={() => handleHullTypeClick(hull.id)}
                                     variant={selectedHullTypes.includes(hull.id) ? 'filled' : 'outlined'}
                                     sx={{ fontWeight: selectedHullTypes.includes(hull.id) ? 'bold' : 'normal' }}
                                 />

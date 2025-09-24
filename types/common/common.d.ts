@@ -1,10 +1,17 @@
-type StatType = "Ammunition" | "AntiAir" | "Armor" | "ASW" | "Aviation" | "Consumption" | "Evasion" | 
+type StatType = "Ammunition" | "AntiAir" | "Armor" | "ASW" | "Aviation" | "Consumption" | "Evasion" |
     "Firepower" | "Health" | "Luck" | "Oxygen" | "Reload" | "Torpedo";
 type HullType = "DD" | "CL" | "CA" | "BC" | "BB" | "CVL" | "CV" | "BBV" | "SS" |
     "AR" | "BM" | "SSV" | "CB" | "DDGV" | "DDGM" | "IXS" | "IXV" | "IXM";
 type FactionType = "CM" | "US" | "EN" | "JP" | "DE" | "CN" | "ITA" | "SN" | "FF" | "MNF" | "FR" | "MOT" | "META" |
-    "BULIN" | "LINK" | "NP" | "BILI" | "UM" | "AI" | "HOLO" | "DOA" | "IMAS" | "SSSS" | "RYZA" | "SENRAN" | "TOLOVE" | 
+    "BULIN" | "LINK" | "NP" | "BILI" | "UM" | "AI" | "HOLO" | "DOA" | "IMAS" | "SSSS" | "RYZA" | "SENRAN" | "TOLOVE" |
     "BLACKROCKSHOOTER" | "YUMIA";
+
+type ShipSkins = Record<string, ShipSkin>;
+type HullTypes = Record<string, HullTypeData>;
+type Nationalities = Record<string, NationalityData>;
+type StatTypes = Record<string, StatTypeData>;
+type SkillIcons = Record<string, string>;
+type Skills = Record<string, Skill>;
 
 interface Ship {
     id: number;
@@ -14,6 +21,7 @@ interface Ship {
     name: string;
     name_kr?: string;
     codename: string;
+    codename_kr?: string;
     class: string;
     nationality: number;
     obtain: string[];
@@ -24,8 +32,24 @@ interface Ship {
     hexagon: string[];
     share_group: number[];
     breakout: (string | string[])[][];
+    base: Record<string, Record<string, number>>;
+    growth: Record<string, Record<string, number>>;
+    oxy_max?: number;
+    hunting_range?: number[][][];
+    oil_min?: number;
+    oil_max?: number;
+    retrofit?: {
+        id: number;
+        level: number;
+        type?: number;
+        bonus: Record<string, number>;
+        skill: number;
+        skin: number;
+        armor: number;
+        hexagon: string[];
+    };
     enhance: Record<string, number>;
-    skill: Record<string, SkillData>;
+    skill: Record<string, ShipSkillData>;
     tech: {
         add_get_attr: number;
         add_get_shiptype: number[];
@@ -100,7 +124,20 @@ interface SkinData {
     shipyard: string;
 }
 
-interface SkillData {
+interface Skill {
+    desc: string;
+    desc_add: unknown[];
+    desc_get: string;
+    desc_get_add: unknown[];
+    id: number;
+    max_level: number;
+    name: string;
+    system_transform: unknown[];
+    type: number;
+    world_death_mark: number[];
+}
+
+interface ShipSkillData {
     id: number;
     parent: number;
     upgrade: number | null;
@@ -114,9 +151,3 @@ interface ShipTechStatData {
     level: boolean;
     upgrade: boolean;
 }
-
-type ShipSkins = Record<string, ShipSkin>;
-type HullTypes = Record<string, HullTypeData>;
-type Nationalities = Record<string, NationalityData>;
-type StatTypes = Record<string, StatTypeData>;
-
