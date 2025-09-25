@@ -469,7 +469,7 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
                             {/* Main Image with Background */}
                             <Box sx={{ position: 'relative', width: '100%', height: '500px', backgroundColor: '#f0f0f0', borderRadius: 2, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                {loadingUrls.size > 0 && <CircularProgress />}
+                                {loadingUrls.size > 0 && <CircularProgress sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />}
                                 <Box sx={{
                                     opacity: loadingUrls.size > 0 ? 0 : 1,
                                     visibility: loadingUrls.size > 0 ? 'hidden' : 'visible',
