@@ -113,6 +113,7 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
         8: "뇌격기",
         9: "폭격기",
         10: "설비",
+        11: "대순포",
         14: "설비",
         12: "수상기",
         13: "잠수함 어뢰",
