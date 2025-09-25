@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
     Dialog,
     DialogContent,
@@ -98,6 +98,14 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
     const [selectedSkin, setSelectedSkin] = useState<SkinData | null>(null);
     const [loadingUrls, setLoadingUrls] = useState<Set<string>>(new Set());
     const [showPaintingN, setShowPaintingN] = useState(false);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+        if (scrollContainerRef.current) {
+            e.preventDefault();
+            scrollContainerRef.current.scrollLeft += e.deltaY;
+        }
+    };
 
     const statList = ["health", "firepower", "torpedo", "antiair", "aviation", "reload", "accuracy",
         "evasion", "speed", "luck", "asw"]
@@ -527,7 +535,10 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 )}
                             </Box>
 
-                            <Box sx={{ 
+                            <Box 
+                                ref={scrollContainerRef}
+                                onWheel={handleWheel}
+                                sx={{ 
                                 display: 'flex', 
                                 overflowX: 'scroll', 
                                 gap: 1, 

@@ -9,7 +9,8 @@ import {
     Typography,
     SvgIcon,
     IconButton,
-    InputBase
+    InputBase,
+    Fab
 } from "@mui/material";
 import { useTheme, alpha } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -593,21 +594,18 @@ export default function Page() {
                     <Button onClick={importTechStats}>가져오기</Button>
                 </DialogActions>
             </Dialog>
+            <Fab 
+            color="primary" 
+            aria-label="filter" 
+            onClick={() => dispatch({ type: 'TOGGLE_FILTER_DIALOG', payload: true })}
+            sx={{ position: 'fixed', bottom: 20, right: 100 }}>
+                <FilterListIcon />
+            </Fab>
             <SpeedDial
                 ariaLabel="tools"
                 sx={{ position: 'fixed', bottom: 20, right: 20 }}
                 icon={<SpeedDialIcon sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} />}
             >
-                <SpeedDialAction
-                    key="Filter"
-                    icon={<FilterListIcon />}
-                    slotProps={{
-                        tooltip: {
-                            title: "필터"
-                        }
-                    }}
-                    onClick={() => dispatch({ type: 'TOGGLE_FILTER_DIALOG', payload: true })}
-                />
                 <SpeedDialAction
                     key="Export"
                     icon={<FileUploadIcon />}
