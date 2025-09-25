@@ -29,6 +29,7 @@ interface Ship {
     type: number;
     rarity: number;
     armor: number;
+    equipment: Record<string, ShipEquipmentData>;
     hexagon: string[];
     share_group: number[];
     breakout: (string | string[])[][];
@@ -105,6 +106,7 @@ interface SkinData {
     id: number;
     gid: number;
     name: string;
+    name_kr: string;
     type: string;
     desc: string;
     tag: string[];
@@ -150,4 +152,13 @@ interface ShipTechStatData {
     get: boolean;
     level: boolean;
     upgrade: boolean;
+}
+
+interface ShipEquipmentData {
+    default: number;
+    slot: number;
+    type: number[];
+    mount: number;
+    preload: number;
+    efficiency: number;
 }

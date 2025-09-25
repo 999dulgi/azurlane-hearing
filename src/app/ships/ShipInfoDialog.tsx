@@ -15,6 +15,9 @@ import {
     TableBody,
     TableRow,
     TableCell,
+    CircularProgress,
+    Switch,
+    FormControlLabel,
 } from '@mui/material';
 import Image from 'next/image';
 import { rarities } from './FilterDialog';
@@ -28,13 +31,15 @@ interface ShipInfoDialogProps {
     nationalityImages: { [key: string]: string };
     skinData: ShipSkins;
     statData: StatTypes;
-    techStatList: ShipTechStatData[];
     skillData: Skills;
     skillIcons: SkillIcons;
+    transformSkillMapping: { [key: string]: number };
+    uniqueSpWeapons: { [key: string]: { name: string; skill: number } };
 }
 
 
-const HuntingRangeGrid = ({ gridLevels, setLevel, level }: { gridLevels: number[][][] | undefined; setLevel: React.Dispatch<React.SetStateAction<number>>; level: number; }) => {
+const HuntingRangeGrid = ({ gridLevels, setLevel, level }:
+    { gridLevels: number[][][] | undefined; setLevel: React.Dispatch<React.SetStateAction<number>>; level: number; }) => {
     const colors = ['#FFFFFF', '#87CEEB'];
     const playerPosition = { row: 3, col: 3 };
 
@@ -84,15 +89,36 @@ const HuntingRangeGrid = ({ gridLevels, setLevel, level }: { gridLevels: number[
     );
 };
 
-function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationalityImages, skinData, statData, techStatList, skillData, skillIcons }: ShipInfoDialogProps) {
+function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationalityImages, skinData, statData,
+    skillData, skillIcons, transformSkillMapping, uniqueSpWeapons }: ShipInfoDialogProps) {
     const [tab, setTab] = useState(0);
     const [affinity, setAffinity] = useState(1);
     const [gridLevels, setGridLevels] = useState<number[][][]>();
     const [level, setLevel] = useState(0);
+    const [selectedSkin, setSelectedSkin] = useState<SkinData | null>(null);
+    const [loadingUrls, setLoadingUrls] = useState<Set<string>>(new Set());
+    const [showPaintingN, setShowPaintingN] = useState(false);
 
     const statList = ["health", "firepower", "torpedo", "antiair", "aviation", "reload", "accuracy",
         "evasion", "speed", "luck", "asw"]
     const lvlList = [1, 100, 120, 125];
+    const equipName: Record<number, string> = {
+        1: "구축포",
+        2: "경순포",
+        3: "중순포",
+        4: "전함포",
+        5: "수면 어뢰",
+        6: "대공포",
+        7: "전투기",
+        8: "뇌격기",
+        9: "폭격기",
+        10: "설비",
+        14: "설비",
+        12: "수상기",
+        13: "잠수함 어뢰",
+        21: "대공포(시한신관)"
+    }
+    const equipHasMount = [1, 2, 3, 4, 6, 7, 8, 9, 21];
 
     useEffect(() => {
         setLevel(0);
@@ -121,7 +147,32 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
         }
 
         setGridLevels(newGridLevels);
-    }, [ship]);
+
+        if (ship && skinData[ship.gid]) {
+            const defaultSkin = Object.values(skinData[ship.gid].skins).find(s => s.id === ship.gid * 10) || Object.values(skinData[ship.gid].skins)[0];
+            setSelectedSkin(defaultSkin);
+        }
+
+    }, [ship, skinData]);
+
+    useEffect(() => {
+        if (selectedSkin) {
+            setShowPaintingN(false); // Reset switch on new skin selection
+            const urls = new Set<string>();
+            urls.add(selectedSkin.background || 'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/images/background/210.png');
+            urls.add(selectedSkin.painting); // Initially, only load the default painting
+            urls.add(selectedSkin.chibi);
+            setLoadingUrls(urls);
+        }
+    }, [selectedSkin]);
+
+    const handleImageLoad = (url: string) => {
+        setLoadingUrls(prev => {
+            const newUrls = new Set(prev);
+            newUrls.delete(url);
+            return newUrls;
+        });
+    };
 
 
 
@@ -133,8 +184,6 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
     if (!ship) {
         return null;
     }
-
-    const isSubmarine = hullTypes[ship.type]?.position === 'submarine';
 
     return (
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
@@ -227,7 +276,10 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                     <Typography sx={{ width: '80px' }}>{ship.retrofit ? 'O' : 'X'}</Typography>
                                 </Box>
                                 <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
-                                    <Typography sx={{ fontWeight: 'bold' }}>호감도</Typography>
+                                    <Typography sx={{ fontWeight: 'bold', minWidth: '80px' }}>전장 유무</Typography>
+                                    <Typography sx={{ width: '80px' }}>{Object.keys(uniqueSpWeapons || {}).includes(ship.gid.toString()) ? 'O' : 'X'}</Typography>
+                                </Box>
+                                <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
                                     <Box sx={{ display: 'flex', gap: 1 }}>
                                         {[
                                             { label: '낯섦', value: 1 },
@@ -320,25 +372,201 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 ) : null}
                             </TableBody>
                         </Table>
-                        {isSubmarine && gridLevels && (
+                        {hullTypes[ship.type]?.position === "submarine" && gridLevels && (
                             <HuntingRangeGrid gridLevels={gridLevels} setLevel={setLevel} level={level} />
                         )}
                         <Box sx={{ marginTop: 2 }}>
                             <Typography variant="h6" gutterBottom>스킬</Typography>
-                            {Object.values(ship.skill).map(skill => (
-                                <Box key={skill.id} sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
-                                    <Image src={skillIcons[skill.id]} alt={skillData[skill.id]?.name} width={64} height={64} />
-                                    <Box>
-                                        <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{skillData[skill.id]?.name}</Typography>
-                                        <Typography variant="body2">{skillData[skill.id]?.desc}</Typography>
+                            {Object.values(ship.skill).map(skill => {
+                                let skillId = skill.id;
+                                if (skillId === 19001 || skillId === 19002) {
+                                    return null;
+                                }
+                                if (transformSkillMapping[skill.id]) {
+                                    skillId = transformSkillMapping[skill.id];
+                                }
+                                return (
+                                    <Box key={skillId} sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                                        <Image src={skillIcons[skillId]} alt={skillData[skillId]?.name} width={64} height={64} />
+                                        <Box>
+                                            <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{skillData[skillId]?.name} {skill.requirement === "Retrofit" ? "(개조 스킬)" : ""}</Typography>
+                                            <Typography variant="body2">{skillData[skillId]?.desc}</Typography>
+                                        </Box>
                                     </Box>
+                                )
+                            })}
+                            <Box sx={{ marginTop: 2 }}>
+                                <Typography variant="h6" gutterBottom>장비</Typography>
+                                <Table>
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableCell>슬롯</TableCell>
+                                            <TableCell>장비종류</TableCell>
+                                            <TableCell>효율</TableCell>
+                                            <TableCell>포좌/항공기수</TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody>
+                                        {Object.values(ship.equipment).map((equip, index) => {
+                                            const proficiencyBonusKey = `equipment_proficiency_${index + 1}`;
+                                            const proficiencyBonus = ship.retrofit?.bonus[proficiencyBonusKey];
+
+                                            return (
+                                                <TableRow key={index}>
+                                                    <TableCell>{index + 1}</TableCell>
+                                                    <TableCell>{
+                                                        index === 3 || index === 4
+                                                            ? '설비'
+                                                            : equip.type.map(t => equipName[t] || '').join(', ')
+                                                    }</TableCell>
+                                                    <TableCell>
+                                                        {Math.floor(equip.efficiency * 100)}%
+                                                        {proficiencyBonus && <span style={{ color: 'skyblue' }}> (+{Math.floor(proficiencyBonus * 100)}%)</span>}
+                                                    </TableCell>
+                                                    <TableCell>{equip.type.some(t => equipHasMount.includes(t)) ? equip.mount : '-'}</TableCell>
+                                                </TableRow>
+                                            )
+                                        })}
+                                    </TableBody>
+                                </Table>
+                            </Box>
+                            {Object.keys(uniqueSpWeapons || {}).includes(ship.gid.toString()) ? (
+                            <Box sx={{ marginTop: 2 }}>
+                                <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+                                    <Typography variant="h6" gutterBottom>전용 장비</Typography>
+                                    <Typography>{uniqueSpWeapons[ship.gid].name}</Typography>
                                 </Box>
-                            ))}
+                                <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+                                    {skillData[uniqueSpWeapons[ship.gid].skill] ? (
+                                        <Box key={ship.gid} sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                                            <Image src={skillIcons[uniqueSpWeapons[ship.gid].skill]} alt={skillData[uniqueSpWeapons[ship.gid].skill]?.name} width={64} height={64} />
+                                            <Box>
+                                                <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{skillData[uniqueSpWeapons[ship.gid].skill]?.name}</Typography>
+                                                <Typography variant="body2">{skillData[uniqueSpWeapons[ship.gid].skill]?.desc}</Typography>
+                                            </Box>
+                                        </Box>
+                                    ) : <Typography>전용 장비 스킬 정보 없음</Typography>}
+                                </Box>
+                            </Box>) : null}
+                            <Box sx={{ marginTop: 2 }}>
+                                <Typography variant="h6" gutterBottom>한줄평</Typography>
+                                언젠가 추가
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
                 <Box role="tabpanel" hidden={tab !== 1} id={`tabpanel-${tab}`}>
-                    <Image src={skinData[ship.gid]["skins"][ship.gid * 10].painting} alt={ship.name} width={200} height={0} />
+                    {selectedSkin && (
+                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+                            {/* Main Image with Background */}
+                            <Box sx={{ position: 'relative', width: '100%', height: '500px', backgroundColor: '#f0f0f0', borderRadius: 2, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                {loadingUrls.size > 0 && <CircularProgress />}
+                                <Box sx={{
+                                    opacity: loadingUrls.size > 0 ? 0 : 1,
+                                    visibility: loadingUrls.size > 0 ? 'hidden' : 'visible',
+                                    transition: 'opacity 0.3s ease-in-out',
+                                    width: '100%',
+                                    height: '100%',
+                                    position: 'relative'
+                                }}>
+                                    <Image
+                                        key={`${selectedSkin.id}-bg`}
+                                        src={selectedSkin.background || 'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/images/background/210.png'}
+                                        alt="background"
+                                        layout="fill"
+                                        objectFit="cover"
+                                        quality={100}
+                                        style={{ zIndex: 0 }}
+                                        onLoad={() => handleImageLoad(selectedSkin.background || 'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/images/background/210.png')}
+                                        onError={() => handleImageLoad(selectedSkin.background || 'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/images/background/210.png')}
+                                    />
+                                    <Image
+                                        key={showPaintingN ? `${selectedSkin.id}-painting_n` : `${selectedSkin.id}-painting`}
+                                        src={showPaintingN ? selectedSkin.painting_n! : selectedSkin.painting}
+                                        alt={selectedSkin.name_kr || selectedSkin.name}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        style={{ zIndex: 1 }}
+                                        onLoad={() => handleImageLoad(showPaintingN ? selectedSkin.painting_n! : selectedSkin.painting)}
+                                        onError={() => handleImageLoad(showPaintingN ? selectedSkin.painting_n! : selectedSkin.painting)}
+                                    />
+                                    <Image
+                                        key={`${selectedSkin.id}-chibi`}
+                                        src={selectedSkin.chibi}
+                                        alt={`${selectedSkin.name_kr || selectedSkin.name} chibi`}
+                                        width={150}
+                                        height={150}
+                                        style={{
+                                            position: 'absolute',
+                                            bottom: 10,
+                                            right: 10,
+                                            zIndex: 2,
+                                        }}
+                                        onLoad={() => handleImageLoad(selectedSkin.chibi)}
+                                        onError={() => handleImageLoad(selectedSkin.chibi)}
+                                    />
+                                </Box>
+                            </Box>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                <Typography variant="h6">{selectedSkin.name_kr || selectedSkin.name}</Typography>
+                                {selectedSkin.painting_n && (
+                                    <FormControlLabel
+                                        control={<Switch checked={showPaintingN} onChange={(e) => {
+                                            const isChecked = e.target.checked;
+                                            setShowPaintingN(isChecked);
+                                            if (isChecked && selectedSkin?.painting_n) {
+                                                setLoadingUrls(prev => new Set(prev).add(selectedSkin.painting_n!));
+                                            } else if (!isChecked && selectedSkin?.painting) {
+                                                setLoadingUrls(prev => new Set(prev).add(selectedSkin.painting));
+                                            }
+                                        }} />}
+                                        label="배경 제거"
+                                        labelPlacement="start"
+                                    />
+                                )}
+                            </Box>
+
+                            <Box sx={{ 
+                                display: 'flex', 
+                                overflowX: 'scroll', 
+                                gap: 1, 
+                                padding: 1, 
+                                width: '100%',
+                                '::-webkit-scrollbar': {
+                                    height: '8px',
+                                },
+                                '::-webkit-scrollbar-thumb': {
+                                    backgroundColor: 'rgba(0,0,0,.2)',
+                                    borderRadius: '4px',
+                                }
+                            }}>
+                                {Object.values(skinData[ship.gid].skins).map(skin => (
+                                    <Box
+                                        key={skin.id}
+                                        onClick={() => setSelectedSkin(skin)}
+                                        sx={{
+                                            cursor: 'pointer',
+                                            border: skin.id === selectedSkin.id ? '2px solid' : '2px solid transparent',
+                                            borderColor: skin.id === selectedSkin.id ? 'primary.main' : 'transparent',
+                                            borderRadius: 1,
+                                            minWidth: '100px',
+                                            height: '100px',
+                                            position: 'relative',
+                                            overflow: 'hidden',
+                                            backgroundColor: '#e0e0e0'
+                                        }}
+                                    >
+                                        <Image 
+                                            src={skin.icon} 
+                                            alt={skin.name_kr || skin.name} 
+                                            layout="fill" 
+                                            objectFit="cover" 
+                                        />
+                                    </Box>
+                                ))}
+                            </Box>
+                        </Box>
+                    )}
                 </Box>
             </DialogContent>
             <DialogActions>

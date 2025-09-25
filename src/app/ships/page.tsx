@@ -120,6 +120,8 @@ export default function Page() {
     const [nationalityImages, setNationalityImages] = useState<{ [key: string]: string }>({});
     const [skillData, setSkillData] = useState<Skills>({});
     const [skillIcons, setSkillIcons] = useState<SkillIcons>({});
+    const [transformSkillMapping, setTransformSkillMapping] = useState<{ [key: string]: number }>({});
+    const [uniqueSpWeapons, setUniqueSpWeapons] = useState<{ [key: string]: { name: string; skill: number } }>({});
     
     const [state, dispatch] = useReducer(appReducer, initialState);
 
@@ -167,7 +169,7 @@ export default function Page() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes, nationsDataRes, skillsRes, skillIconsRes] = await Promise.all([
+                const [shipsRes, skinsRes, hullsRes, statsRes, nationsRes, nationsDataRes, skillsRes, skillIconsRes, transformSkillMappingRes, uniqueSpWeaponsRes] = await Promise.all([
                     fetch('ship_kr.json'),
                     fetch('ship_skin.json'),
                     fetch('hulltype.json'),
@@ -176,6 +178,8 @@ export default function Page() {
                     fetch('nationality_icon.json'),
                     fetch('skill_data.json'),
                     fetch('skill_icon.json'),
+                    fetch('transform_skill_mapping.json'),
+                    fetch('unique_sp_weapons.json'),
                 ]);
 
                 const shipsData = await shipsRes.json();
@@ -186,6 +190,8 @@ export default function Page() {
                 const nationsImgData = await nationsDataRes.json();
                 const skillsData = await skillsRes.json();
                 const skillIconsData = await skillIconsRes.json();
+                const transformSkillMappingData = await transformSkillMappingRes.json();
+                const uniqueSpWeaponsData = await uniqueSpWeaponsRes.json();
 
                 setShips(shipsData);
                 setShipSkins(skinsData);
@@ -195,6 +201,8 @@ export default function Page() {
                 setNationalityImages(nationsImgData);
                 setSkillData(skillsData);
                 setSkillIcons(skillIconsData);
+                setTransformSkillMapping(transformSkillMappingData);
+                setUniqueSpWeapons(uniqueSpWeaponsData);
 
             } catch (error) {
                 console.error("Failed to fetch data:", error);
@@ -563,9 +571,10 @@ export default function Page() {
                 nationalityImages={nationalityImages}
                 skinData={shipSkins}
                 statData={statTypes}
-                techStatList={techStatList}
                 skillData={skillData}
                 skillIcons={skillIcons}
+                transformSkillMapping={transformSkillMapping}
+                uniqueSpWeapons={uniqueSpWeapons}
             />
             <Dialog open={state.importDialogOpen} onClose={() => dispatch({ type: 'TOGGLE_IMPORT_DIALOG', payload: false })}>
                 <DialogTitle>데이터 가져오기</DialogTitle>
