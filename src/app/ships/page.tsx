@@ -25,7 +25,9 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SearchIcon from '@mui/icons-material/Search';
+import TableChartIcon from '@mui/icons-material/TableChart';
 import ShipInfoDialog from "./ShipInfoDialog";
+import StatDialog from "./StatDialog";
 
 type AppState = {
     // Filter State
@@ -39,6 +41,7 @@ type AppState = {
     filterDialogOpen: boolean;
     importDialogOpen: boolean;
     shipInfoDialogOpen: boolean;
+    statDialogOpen: boolean;
     snackbar: { open: boolean; message: string; severity: 'success' | 'error' };
 };
 
@@ -55,7 +58,8 @@ type AppAction =
     | { type: 'TOGGLE_IMPORT_DIALOG'; payload: boolean }
     | { type: 'TOGGLE_SHIP_INFO_DIALOG'; payload: boolean }
     | { type: 'SHOW_SNACKBAR'; payload: { message: string; severity: 'success' | 'error' } }
-    | { type: 'HIDE_SNACKBAR' };
+    | { type: 'HIDE_SNACKBAR' }
+    | { type: 'TOGGLE_STAT_DIALOG'; payload: boolean };
 
 const initialState: AppState = {
     // Filter State
@@ -70,6 +74,7 @@ const initialState: AppState = {
     importDialogOpen: false,
     shipInfoDialogOpen: false,
     snackbar: { open: false, message: '', severity: 'success' },
+    statDialogOpen: false,
 };
 
 
@@ -100,6 +105,8 @@ function appReducer(state: AppState, action: AppAction): AppState {
             return { ...state, snackbar: { open: true, ...action.payload } };
         case 'HIDE_SNACKBAR':
             return { ...state, snackbar: { ...state.snackbar, open: false } };
+        case 'TOGGLE_STAT_DIALOG':
+            return { ...state, statDialogOpen: action.payload };
         default:
             return state;
     }
@@ -123,6 +130,7 @@ export default function Page() {
     const [skillIcons, setSkillIcons] = useState<SkillIcons>({});
     const [transformSkillMapping, setTransformSkillMapping] = useState<{ [key: string]: number }>({});
     const [uniqueSpWeapons, setUniqueSpWeapons] = useState<{ [key: string]: { name: string; skill: number } }>({});
+    const [selectedShips, setSelectedShips] = useState<Ship[]>([]);
     
     const [state, dispatch] = useReducer(appReducer, initialState);
 
@@ -296,6 +304,11 @@ export default function Page() {
 
         setFilteredShips(shipsToFilter);
     }, [ships, state, nationalities, hullTypes, techStatList, searchTerm]);
+
+    useEffect(() => {
+        const selected = ships.filter(ship => techStatList.some(tech => tech.id === ship.id && (tech.get || tech.level)));
+        setSelectedShips(selected);
+    }, [techStatList, ships]);
 
     const exportTechStats = async () => {
         const data = JSON.stringify(techStatList);
@@ -577,6 +590,15 @@ export default function Page() {
                 transformSkillMapping={transformSkillMapping}
                 uniqueSpWeapons={uniqueSpWeapons}
             />
+            <StatDialog
+                open={state.statDialogOpen}
+                onClose={() => dispatch({ type: 'TOGGLE_STAT_DIALOG', payload: false })}
+                shipData={selectedShips}
+                allShips={ships}
+                shipType={hullTypes}
+                statList={statList}
+                statData={statTypes}
+            />
             <Dialog open={state.importDialogOpen} onClose={() => dispatch({ type: 'TOGGLE_IMPORT_DIALOG', payload: false })}>
                 <DialogTitle>데이터 가져오기</DialogTitle>
                 <DialogContent>
@@ -598,8 +620,15 @@ export default function Page() {
             color="primary" 
             aria-label="filter" 
             onClick={() => dispatch({ type: 'TOGGLE_FILTER_DIALOG', payload: true })}
-            sx={{ position: 'fixed', bottom: 20, right: 100 }}>
+            sx={{ position: 'fixed', bottom: 20, right: 180 }}>
                 <FilterListIcon />
+            </Fab>
+            <Fab
+            color="primary"
+            aria-label="stat"
+            onClick={() => dispatch({ type: 'TOGGLE_STAT_DIALOG', payload: true })}
+            sx={{ position: 'fixed', bottom: 20, right: 100 }}>
+                <TableChartIcon />
             </Fab>
             <SpeedDial
                 ariaLabel="tools"
