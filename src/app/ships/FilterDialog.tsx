@@ -13,9 +13,7 @@ import {
     FormControl,
     InputLabel,
 } from "@mui/material";
-
-export const rarities = ['N', 'R', 'SR', 'SSR', 'UR', 'PR', 'DR'];
-export const statList = ["health", "firepower", "torpedo", "antiair", "aviation", "reload", "accuracy", "evasion", "asw"];
+import {rarities, statList} from "../typelist";
 
 interface FilterDialogProps {
     open: boolean;

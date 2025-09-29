@@ -17,7 +17,6 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Image from "next/image";
 import { TableVirtuoso, TableComponents } from "react-virtuoso";
-import FilterDialog, { rarities, statList } from './FilterDialog';
 import { ColorModeContext } from "../(components)/ThemeRegistry";
 import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -26,8 +25,10 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SearchIcon from '@mui/icons-material/Search';
 import TableChartIcon from '@mui/icons-material/TableChart';
+import FilterDialog from './FilterDialog';
 import ShipInfoDialog from "./ShipInfoDialog";
 import StatDialog from "./StatDialog";
+import { statList, rarities, techAttr } from '../typelist';
 
 type AppState = {
     // Filter State
@@ -282,8 +283,8 @@ export default function Page() {
         if (state.selectedTechStats.length > 0) {
             shipsToFilter = shipsToFilter.filter(ship => {
                 if (!ship.tech) return false;
-                const techStatName = statList[ship.tech.add_get_attr - 1];
-                const techStatName2 = statList[ship.tech.add_level_attr - 1];
+                const techStatName = techAttr[ship.tech.add_get_attr];
+                const techStatName2 = techAttr[ship.tech.add_level_attr];
                 return state.selectedTechStats.includes(techStatName) || state.selectedTechStats.includes(techStatName2);
             });
         }
@@ -505,7 +506,7 @@ export default function Page() {
                                                     ))}
                                                 </Box>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '4px' }}>
-                                                    <Image src={statTypes[statList[ship.tech.add_get_attr - 1]]?.iconbox} alt={statTypes[statList[ship.tech.add_get_attr - 1]]?.name} width={20} height={20} />
+                                                    <Image src={statTypes[techAttr[ship.tech.add_get_attr]]?.iconbox} alt={statTypes[techAttr[ship.tech.add_get_attr]]?.name} width={20} height={20} />
                                                     <p style={{ marginLeft: "4px" }}>+{ship.tech.add_get_value}</p>
                                                 </Box>
                                             </Box>
@@ -533,7 +534,7 @@ export default function Page() {
                                                     ))}
                                                 </Box>
                                                 <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '4px' }}>
-                                                    <Image src={statTypes[statList[ship.tech.add_level_attr - 1]]?.iconbox} alt={statTypes[statList[ship.tech.add_level_attr - 1]]?.name} width={20} height={20} />
+                                                    <Image src={statTypes[techAttr[ship.tech.add_level_attr]]?.iconbox} alt={statTypes[techAttr[ship.tech.add_level_attr]]?.name} width={20} height={20} />
                                                     <p style={{ marginLeft: "4px" }}>+{ship.tech.add_level_value}</p>
                                                 </Box>
                                             </Box>
@@ -596,6 +597,7 @@ export default function Page() {
                 shipData={selectedShips}
                 allShips={ships}
                 shipType={hullTypes}
+                nationalities={nationalities}
                 statList={statList}
                 statData={statTypes}
             />

@@ -20,7 +20,7 @@ import {
     FormControlLabel,
 } from '@mui/material';
 import Image from 'next/image';
-import { rarities } from './FilterDialog';
+import { rarities, statList } from '../typelist';
 
 interface ShipInfoDialogProps {
     open: boolean;
@@ -107,8 +107,6 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
         }
     };
 
-    const statList = ["health", "firepower", "torpedo", "antiair", "aviation", "reload", "accuracy",
-        "evasion", "speed", "luck", "asw"]
     const lvlList = [1, 100, 120, 125];
     const equipName: Record<number, string> = {
         1: "구축포",
