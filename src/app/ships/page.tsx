@@ -600,6 +600,7 @@ export default function Page() {
                 nationalities={nationalities}
                 statList={statList}
                 statData={statTypes}
+                skinData={shipSkins}
             />
             <Dialog open={state.importDialogOpen} onClose={() => dispatch({ type: 'TOGGLE_IMPORT_DIALOG', payload: false })}>
                 <DialogTitle>데이터 가져오기</DialogTitle>
