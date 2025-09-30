@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogActions, Button, Tabs, Tab, LinearProgress
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import { Typography, Box } from '@mui/material';
 import Image from 'next/image';
-import { techAttr } from '../typelist';
+import { techAttr } from '../ships/state/types';
 
 interface StatDialogProps {
     open: boolean;
@@ -33,7 +33,7 @@ const milestones = {
         { gid: 19906, pt: 950 },
         { gid: 79901, pt: 760 },
         { gid: 89902, pt: 760 },
-        { gid: 99901, pt: 760}
+        { gid: 99901, pt: 760 }
     ],
     "EN": [
         { gid: 29903, pt: 700 },
@@ -80,8 +80,8 @@ const milestones = {
         { gid: 79903, pt: 300 }
     ],
     "FF": [
-        { gid: 89003, pt: 250 },
-        { gid: 89004, pt: 230 },
+        { gid: 89903, pt: 250 },
+        { gid: 89904, pt: 230 },
     ],
     "MNF": [
         { gid: 99902, pt: 180 }
@@ -177,7 +177,7 @@ export default function StatDialog({ open, onClose, shipData, allShips, shipType
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
             <DialogContent sx={{ p: 0 }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={tabValue} onChange={handleTabChange} centered>
+                    <Tabs value={tabValue} onChange={handleTabChange}>
                         <Tab label="스탯" id="stat-tab-0" />
                         <Tab label="진영점수" id="stat-tab-1" />
                     </Tabs>
@@ -236,23 +236,21 @@ export default function StatDialog({ open, onClose, shipData, allShips, shipType
                                                 const sortedMilestones = milestones[factionInfo.code as keyof typeof milestones].sort((a, b) => a.pt - b.pt);
                                                 return sortedMilestones.map((milestone, index) => {
                                                     const isAchieved = currentValue >= milestone.pt;
-                                                    const start = index > 0 ? sortedMilestones[index - 1].pt : 0;
-                                                    const end = milestone.pt;
                                                     let progress = 0;
-                                                    if (currentValue > start) {
-                                                        progress = Math.min(((currentValue - start) / (end - start)) * 100, 100);
+                                                    if (currentValue > 0) {
+                                                        progress = Math.min(((currentValue) / (milestone.pt)) * 100, 100);
                                                     }
 
                                                     return (
-                                                        <Box key={milestone.gid} sx={{ mb: 1.5 }}>
-                                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: isAchieved ? 'text.disabled' : 'text.primary' }}>
+                                                        <Box key={index} sx={{ mb: 1.5 }}>
+                                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'text.primary' }}>
                                                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                                                    <Image src={skinData[milestone.gid].skins[milestone.gid*10].icon} alt={milestone.gid.toString()} width={48} height={48} />
-                                                                    <Typography>{Object.values(shipData).find(n => n.gid === milestone.gid)?.name_kr || "none"}</Typography> 
+                                                                    <Image src={skinData[milestone.gid].skins[milestone.gid * 10].icon} alt={milestone.gid.toString()} width={48} height={48} />
+                                                                    <Typography>{Object.values(allShips).find(n => n.gid === milestone.gid)?.name_kr || "none"}</Typography>
                                                                 </Box>
-                                                                <Typography variant="body2" sx={{ ml: 'auto' }}>{`${start} / ${end}`}</Typography>
+                                                                <Typography variant="body2" sx={{ ml: 'auto' }}>{`${currentValue < milestone.pt ? currentValue : milestone.pt} / ${milestone.pt}`}</Typography>
                                                             </Box>
-                                                            <LinearProgress variant="determinate" value={progress} sx={{ height: 6, borderRadius: 3, mt: 0.5 }} />
+                                                            <LinearProgress variant="determinate" value={progress} sx={{ height: 6, borderRadius: 3, mt: 0.5, backgroundColor: isAchieved ? '#44dd44' : 'color.primary' }} />
                                                         </Box>
                                                     );
                                                 });

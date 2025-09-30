@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 "use client";
 
-import React, { useContext, useEffect, useState, useMemo, useCallback, useReducer } from "react";
+import React, { useContext, useEffect, useMemo, useCallback, useReducer } from "react";
 import {
     Box, Paper, CircularProgress, Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
     Checkbox, Button, DialogActions, Dialog, DialogContent, TextField, DialogTitle, Snackbar, Alert, Chip, AppBar,
@@ -10,7 +10,9 @@ import {
     SvgIcon,
     IconButton,
     InputBase,
-    Fab
+    Fab,
+    useMediaQuery,
+    TableFooter
 } from "@mui/material";
 import { useTheme, alpha } from '@mui/material/styles';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
@@ -28,115 +30,19 @@ import TableChartIcon from '@mui/icons-material/TableChart';
 import FilterDialog from './FilterDialog';
 import ShipInfoDialog from "./ShipInfoDialog";
 import StatDialog from "./StatDialog";
-import { statList, rarities, techAttr } from '../typelist';
+import { statList, rarities, techAttr } from '../ships/state/types';
+import { appReducer, initialState } from './state/reducer';
 
-type AppState = {
-    // Filter State
-    selectedHullTypes: number[];
-    selectedNationalities: string[];
-    selectedRarities: string[];
-    selectedTechStats: string[];
-    selectedTechStatus: string[];
-    // UI State
-    loading: boolean;
-    filterDialogOpen: boolean;
-    importDialogOpen: boolean;
-    shipInfoDialogOpen: boolean;
-    statDialogOpen: boolean;
-    snackbar: { open: boolean; message: string; severity: 'success' | 'error' };
-};
-
-type AppAction = 
-    // Filter Actions
-    | { type: 'SET_HULL_TYPES'; payload: number[] }
-    | { type: 'SET_NATIONALITIES'; payload: string[] }
-    | { type: 'SET_RARITIES'; payload: string[] }
-    | { type: 'SET_TECH_STATS'; payload: string[] }
-    | { type: 'SET_TECH_STATUS'; payload: string[] }
-    // UI Actions
-    | { type: 'SET_LOADING'; payload: boolean }
-    | { type: 'TOGGLE_FILTER_DIALOG'; payload: boolean }
-    | { type: 'TOGGLE_IMPORT_DIALOG'; payload: boolean }
-    | { type: 'TOGGLE_SHIP_INFO_DIALOG'; payload: boolean }
-    | { type: 'SHOW_SNACKBAR'; payload: { message: string; severity: 'success' | 'error' } }
-    | { type: 'HIDE_SNACKBAR' }
-    | { type: 'TOGGLE_STAT_DIALOG'; payload: boolean };
-
-const initialState: AppState = {
-    // Filter State
-    selectedHullTypes: [],
-    selectedNationalities: [],
-    selectedRarities: [],
-    selectedTechStats: [],
-    selectedTechStatus: [],
-    // UI State
-    loading: true,
-    filterDialogOpen: false,
-    importDialogOpen: false,
-    shipInfoDialogOpen: false,
-    snackbar: { open: false, message: '', severity: 'success' },
-    statDialogOpen: false,
-};
-
-
-function appReducer(state: AppState, action: AppAction): AppState {
-    switch (action.type) {
-        // Filter Reducers
-        case 'SET_HULL_TYPES':
-            return { ...state, selectedHullTypes: action.payload };
-        case 'SET_NATIONALITIES':
-            return { ...state, selectedNationalities: action.payload };
-        case 'SET_RARITIES':
-            return { ...state, selectedRarities: action.payload };
-        case 'SET_TECH_STATS':
-            return { ...state, selectedTechStats: action.payload };
-        case 'SET_TECH_STATUS':
-            return { ...state, selectedTechStatus: action.payload };
-
-        // UI Reducers
-        case 'SET_LOADING':
-            return { ...state, loading: action.payload };
-        case 'TOGGLE_FILTER_DIALOG':
-            return { ...state, filterDialogOpen: action.payload };
-        case 'TOGGLE_IMPORT_DIALOG':
-            return { ...state, importDialogOpen: action.payload };
-        case 'TOGGLE_SHIP_INFO_DIALOG':
-            return { ...state, shipInfoDialogOpen: action.payload };
-        case 'SHOW_SNACKBAR':
-            return { ...state, snackbar: { open: true, ...action.payload } };
-        case 'HIDE_SNACKBAR':
-            return { ...state, snackbar: { ...state.snackbar, open: false } };
-        case 'TOGGLE_STAT_DIALOG':
-            return { ...state, statDialogOpen: action.payload };
-        default:
-            return state;
-    }
-}
 
 export default function Page() {
     const theme = useTheme();
     const { toggleColorMode } = useContext(ColorModeContext);
-    const [ships, setShips] = useState<Ship[]>([]);
-    const [shipSkins, setShipSkins] = useState<ShipSkins>({});
-    const [hullTypes, setHullTypes] = useState<HullTypes>({});
-    const [statTypes, setStatTypes] = useState<StatTypes>({});
-    const [nationalities, setNationalities] = useState<Nationalities>({});
-    const [techStatList, setTechStatList] = useState<ShipTechStatData[]>([]);
-    const [importText, setImportText] = useState('');
-    const [filteredShips, setFilteredShips] = useState<Ship[]>([]);
-    const [selectedShip, setSelectedShip] = useState<Ship | null>(null);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [nationalityImages, setNationalityImages] = useState<{ [key: string]: string }>({});
-    const [skillData, setSkillData] = useState<Skills>({});
-    const [skillIcons, setSkillIcons] = useState<SkillIcons>({});
-    const [transformSkillMapping, setTransformSkillMapping] = useState<{ [key: string]: number }>({});
-    const [uniqueSpWeapons, setUniqueSpWeapons] = useState<{ [key: string]: { name: string; skill: number } }>({});
-    const [selectedShips, setSelectedShips] = useState<Ship[]>([]);
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     
     const [state, dispatch] = useReducer(appReducer, initialState);
 
     const handleRowClick = useCallback((ship: Ship) => {
-        setSelectedShip(ship);
+        dispatch({ type: 'SET_SELECTED_SHIP', payload: ship });
         dispatch({ type: 'TOGGLE_SHIP_INFO_DIALOG', payload: true });
     }, []);
 
@@ -159,22 +65,35 @@ export default function Page() {
         TableBody: React.forwardRef<HTMLTableSectionElement>((props, ref) => (
             <TableBody {...props} ref={ref} />
         )),
-    }), [handleRowClick]);
+        Footer: () => (
+            <TableFooter>
+                <TableRow>
+                    <TableCell colSpan={isMobile ? 4 : 8} align="center" sx={{ py: 3 }}>
+                        <Typography variant="body2" color="text.secondary">
+                            {'Copyright © Azurlane Hearing '}
+                            {new Date().getFullYear()}
+                            {'.'}
+                        </Typography>
+                    </TableCell>
+                </TableRow>
+            </TableFooter>
+        ),
+    }), [handleRowClick, isMobile]);
 
     const ShipHeaderContent = useCallback(() => {
         return (
             <TableRow sx={{ backgroundColor: 'background.paper', }}>
                 <TableCell sx={{ width: '100px' }}></TableCell>
                 <TableCell sx={{ width: '124px' }}>이름</TableCell>
-                <TableCell sx={{ width: '160px' }}>함종</TableCell>
-                <TableCell sx={{ width: '140px' }}>진영</TableCell>
-                <TableCell>등급</TableCell>
-                <TableCell sx={{ width: '300px' }}>입수 경로</TableCell>
-                <TableCell sx={{ width: '240px' }}>기술점수</TableCell>
+                {!isMobile && <TableCell sx={{ width: '160px' }}>함종</TableCell>}
+                {!isMobile && <TableCell sx={{ width: '140px' }}>진영</TableCell>}
+                {!isMobile && <TableCell>등급</TableCell>}
+                {!isMobile && <TableCell sx={{ width: '300px' }}>입수 경로</TableCell>}
+                <TableCell sx={{ width: isMobile ? '100px' : '240px' }}>기술점수</TableCell>
                 <TableCell sx={{ width: '48px' }}></TableCell>
             </TableRow>
         )
-    }, []);
+    }, [isMobile]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -203,16 +122,18 @@ export default function Page() {
                 const transformSkillMappingData = await transformSkillMappingRes.json();
                 const uniqueSpWeaponsData = await uniqueSpWeaponsRes.json();
 
-                setShips(shipsData);
-                setShipSkins(skinsData);
-                setHullTypes(hullsData);
-                setStatTypes(statsData);
-                setNationalities(nationsData);
-                setNationalityImages(nationsImgData);
-                setSkillData(skillsData);
-                setSkillIcons(skillIconsData);
-                setTransformSkillMapping(transformSkillMappingData);
-                setUniqueSpWeapons(uniqueSpWeaponsData);
+                dispatch({ type: 'SET_SHIPS', payload: shipsData });
+                dispatch({ type: 'SET_SHIP_SKINS', payload: skinsData });
+                dispatch({ type: 'SET_HULL_TYPES_DATA', payload: hullsData });
+                dispatch({ type: 'SET_STAT_TYPES', payload: statsData });
+                dispatch({ type: 'SET_NATIONALITIES_DATA', payload: nationsData });
+                dispatch({ type: 'SET_NATIONALITY_IMAGES', payload: nationsImgData });
+                dispatch({ type: 'SET_SKILL_DATA', payload: skillsData });
+                dispatch({ type: 'SET_SKILL_ICONS', payload: skillIconsData });
+                dispatch({ type: 'SET_TRANSFORM_SKILL_MAPPING', payload: transformSkillMappingData });
+                dispatch({ type: 'SET_UNIQUE_SP_WEAPONS', payload: uniqueSpWeaponsData });
+
+                
 
             } catch (error) {
                 console.error("Failed to fetch data:", error);
@@ -236,16 +157,16 @@ export default function Page() {
             }
         }
 
-        setTechStatList(savedTechStats);
+        dispatch({ type: 'SET_TECH_STAT_LIST', payload: savedTechStats });
         fetchData();
     }, []);
 
     useEffect(() => {
-        let shipsToFilter = [...ships];
+        let shipsToFilter = [...state.ships];
 
-        if (searchTerm) {
+        if (state.searchTerm) {
             shipsToFilter = shipsToFilter.filter(ship =>
-                (ship.name_kr || ship.name).toLowerCase().includes(searchTerm.toLowerCase())
+                (ship.name_kr || ship.name).toLowerCase().includes(state.searchTerm.toLowerCase())
             );
         }
 
@@ -261,7 +182,7 @@ export default function Page() {
         }
 
         if (state.selectedNationalities.length > 0) {
-            shipsToFilter = shipsToFilter.filter(ship => state.selectedNationalities.includes(nationalities[ship.nationality]?.code));
+            shipsToFilter = shipsToFilter.filter(ship => state.selectedNationalities.includes(state.nationalities[ship.nationality]?.code));
         }
 
         if (state.selectedRarities.length > 0) {
@@ -291,7 +212,7 @@ export default function Page() {
 
         if (state.selectedTechStatus.length > 0) {
             shipsToFilter = shipsToFilter.filter(ship => {
-                const techStat = techStatList.find(t => t.id === ship.id);
+                const techStat = state.techStatList.find(t => t.id === ship.id);
                 if (!techStat) return false;
 
                 return state.selectedTechStatus.every(status => {
@@ -303,16 +224,46 @@ export default function Page() {
             });
         }
 
-        setFilteredShips(shipsToFilter);
-    }, [ships, state, nationalities, hullTypes, techStatList, searchTerm]);
+        dispatch({ type: 'SET_FILTERED_SHIPS', payload: shipsToFilter });
+    }, [
+        state.ships,
+        state.searchTerm,
+        state.selectedHullTypes,
+        state.selectedNationalities,
+        state.selectedRarities,
+        state.selectedTechStats,
+        state.selectedTechStatus,
+        state.nationalities,
+        state.hullTypes,
+        state.techStatList,
+    ]);
 
     useEffect(() => {
-        const selected = ships.filter(ship => techStatList.some(tech => tech.id === ship.id && (tech.get || tech.level)));
-        setSelectedShips(selected);
-    }, [techStatList, ships]);
+        const selected = state.ships.filter(ship => state.techStatList.some(tech => tech.id === ship.id && (tech.get || tech.level)));
+        dispatch({ type: 'SET_SELECTED_SHIPS', payload: selected });
+    }, [state.techStatList, state.ships]);
+
+    useEffect(() => {
+        const preloadImages = (sources: (string | undefined)[]) => {
+            sources.forEach(src => {
+                if (src) {
+                    const img = new window.Image();
+                    img.src = src;
+                }
+            });
+        };
+
+        if (Object.keys(state.hullTypes).length > 0 && Object.keys(state.nationalityImages).length > 0 && Object.keys(state.statTypes).length > 0) {
+            const hullTypeIcons = Object.values(state.hullTypes).map(ht => ht.icon);
+            const nationalityIcons = Object.values(state.nationalityImages);
+            const statIcons = Object.values(state.statTypes).map(st => st.iconbox);
+
+            preloadImages([...hullTypeIcons, ...nationalityIcons, ...statIcons]);
+        }
+    }, [state.hullTypes, state.nationalityImages, state.statTypes]);
 
     const exportTechStats = async () => {
-        const data = JSON.stringify(techStatList);
+        const data = JSON.stringify(state.techStatList);
         const btoa = window.btoa(data);
         await window.navigator.clipboard.writeText(btoa);
         dispatch({ type: 'SHOW_SNACKBAR', payload: { message: '데이터가 클립보드에 복사되었습니다.', severity: 'success' } });
@@ -320,12 +271,12 @@ export default function Page() {
 
     const importTechStats = () => {
         try {
-            const decodedData = window.atob(importText); // Base64 디코딩
+            const decodedData = window.atob(state.importText); // Base64 디코딩
             const parsedData: ShipTechStatData[] = JSON.parse(decodedData); // JSON 파싱
 
             //데이터 검증
             if (Array.isArray(parsedData) && parsedData.every(item => typeof item.id === 'number')) {
-                setTechStatList(parsedData);
+                dispatch({ type: 'SET_TECH_STAT_LIST', payload: parsedData });
 
                 window.localStorage.clear(); // localStorage 초기화
                 parsedData.forEach(stat => {
@@ -334,7 +285,7 @@ export default function Page() {
 
                 dispatch({ type: 'SHOW_SNACKBAR', payload: { message: '데이터를 성공적으로 가져왔습니다.', severity: 'success' } });
                 dispatch({ type: 'TOGGLE_IMPORT_DIALOG', payload: false });
-                setImportText('');
+                dispatch({ type: 'SET_IMPORT_TEXT', payload: '' });
             } else {
                 dispatch({ type: 'SHOW_SNACKBAR', payload: { message: '유효하지 않은 데이터 형식입니다.', severity: 'error' } });
             }
@@ -344,22 +295,11 @@ export default function Page() {
         }
     };
 
-    const handleTechStatChange = (shipId: number, field: string, value: boolean) => {
-        setTechStatList(prevList => {
-            const index = prevList.findIndex(stat => stat.id === shipId);
-            const newList = [...prevList];
-
-            if (index > -1) {
-                const updatedStat = { ...newList[index], [field]: value };
-                newList[index] = updatedStat;
-                window.localStorage.setItem(shipId.toString(), JSON.stringify(updatedStat));
-            } else {
-                const newStat = { id: shipId, get: false, level: false, upgrade: false, [field]: value };
-                newList.push(newStat);
-                window.localStorage.setItem(shipId.toString(), JSON.stringify(newStat));
-            }
-            return newList;
-        });
+    const handleTechStatChange = (shipId: number, field: keyof ShipTechStatData, value: boolean) => {
+        dispatch({ type: 'UPDATE_TECH_STAT', payload: { shipId, field, value } });
+        const existing = state.techStatList.find(stat => stat.id === shipId);
+        const updated = existing ? { ...existing, [field]: value } : { id: shipId, get: false, level: false, upgrade: false, [field]: value } as ShipTechStatData;
+        window.localStorage.setItem(shipId.toString(), JSON.stringify(updated));
     };
 
     if (state.loading) {
@@ -374,53 +314,97 @@ export default function Page() {
         <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        함순이 청문회
-                    </Typography>
-                    <Box sx={{
-                        position: 'relative',
-                        borderRadius: theme.shape.borderRadius,
-                        backgroundColor: alpha(theme.palette.common.white, 0.15),
-                        '&:hover': {
-                            backgroundColor: alpha(theme.palette.common.white, 0.25),
-                        },
-                        marginLeft: 0,
-                        width: 'auto',
-                    }}>
-                        <Box sx={{ padding: theme.spacing(0, 2), height: '100%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <SearchIcon />
-                        </Box>
-                        <InputBase
-                            placeholder="함선 검색…"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            sx={{
-                                color: 'inherit',
-                                '& .MuiInputBase-input': {
-                                    padding: theme.spacing(1, 1, 1, 0),
-                                    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-                                    transition: theme.transitions.create('width'),
-                                    width: '20ch',
+                    {isMobile ? (
+                        <>
+                            <Box sx={{
+                                position: 'relative',
+                                borderRadius: theme.shape.borderRadius,
+                                backgroundColor: alpha(theme.palette.common.white, 0.15),
+                                '&:hover': {
+                                    backgroundColor: alpha(theme.palette.common.white, 0.25),
                                 },
-                            }}
-                        />
-                    </Box>
-                    <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
-                        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-                    </IconButton>
+                                width: 'auto',
+                            }}>
+                                <Box sx={{ padding: theme.spacing(0, 2), height: '100%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <SearchIcon />
+                                </Box>
+                                <InputBase
+                                    placeholder="함선 검색…"
+                                    value={state.searchTerm}
+                                    onChange={(e) => dispatch({ type: 'SET_SEARCH_TERM', payload: e.target.value })}
+                                    sx={{
+                                        color: 'inherit',
+                                        '& .MuiInputBase-input': {
+                                            padding: theme.spacing(1, 1, 1, 0),
+                                            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+                                            transition: theme.transitions.create('width'),
+                                            width: '20ch',
+                                        },
+                                    }}
+                                />
+                            </Box>
+                            <Box sx={{ flexGrow: 1 }} />
+                            <IconButton onClick={toggleColorMode} color="inherit">
+                                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                            </IconButton>
+                        </>
+                    ) : (
+                        <>
+                            <Typography variant="h6" component="div">
+                                함순이 청문회
+                            </Typography>
+                            <Box sx={{ flexGrow: 1 }} />
+                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Box sx={{
+                                    position: 'relative',
+                                    borderRadius: theme.shape.borderRadius,
+                                    backgroundColor: alpha(theme.palette.common.white, 0.15),
+                                    '&:hover': {
+                                        backgroundColor: alpha(theme.palette.common.white, 0.25),
+                                    },
+                                    width: 'auto',
+                                }}>
+                                    <Box sx={{ padding: theme.spacing(0, 2), height: '100%', position: 'absolute', pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <SearchIcon />
+                                    </Box>
+                                    <InputBase
+                                        placeholder="함선 검색…"
+                                        value={state.searchTerm}
+                                        onChange={(e) => dispatch({ type: 'SET_SEARCH_TERM', payload: e.target.value })}
+                                        sx={{
+                                            color: 'inherit',
+                                            '& .MuiInputBase-input': {
+                                                padding: theme.spacing(1, 1, 1, 0),
+                                                paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+                                                transition: theme.transitions.create('width'),
+                                                width: '20ch',
+                                            },
+                                        }}
+                                    />
+                                </Box>
+                                <IconButton sx={{ ml: 1 }} onClick={toggleColorMode} color="inherit">
+                                    {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                                </IconButton>
+                            </Box>
+                        </>
+                    )}
                 </Toolbar>
             </AppBar>
-            <Paper sx={{ flex: 1, overflow: 'hidden', margin: '0 auto', width: '1200px', borderRadius: '0px' }}>
-                <TableVirtuoso
-                    data={filteredShips}
-                    components={VirtuosoTableComponents}
-                    fixedHeaderContent={ShipHeaderContent}
-                    itemContent={(index, ship) => {
-                        const hullTypeName = hullTypes[ship.type]?.name_kr || 'Unknown';
-                        const nationalityName = nationalities[ship.nationality]?.name_kr || nationalities[ship.nationality]?.name || 'Unknown';
-                        const defaultSkin = shipSkins[ship.gid]?.skins[ship.gid * 10];
+            <Paper sx={{ flex: 1, overflow: 'hidden', margin: isMobile ? 0 : '0 auto', width: isMobile ? '100%' : '1200px', borderRadius: '0px' }}>
+                    <TableVirtuoso
+                        data={state.filteredShips}
+                        components={VirtuosoTableComponents}
+                        fixedHeaderContent={ShipHeaderContent}
+                        fixedFooterContent={!isMobile ? null :
+                            () => <Box sx={{ backgroundColor: theme.palette.background.paper, width: '100vw', height: '100px' }}>
+                            </Box>
+                        }
+                        itemContent={(index, ship) => {
+                        const hullTypeName = state.hullTypes[ship.type]?.name_kr || 'Unknown';
+                        const nationalityName = state.nationalities[ship.nationality]?.name_kr || state.nationalities[ship.nationality]?.name || 'Unknown';
+                        const defaultSkin = state.shipSkins[ship.gid]?.skins[ship.gid * 10];
                         const skinIcon = defaultSkin?.icon || '/favicon.ico';
-                        const techStat = techStatList.find(t => t.id === ship.id);
+                        const techStat = state.techStatList.find(t => t.id === ship.id);
 
                         return (
                             <>
@@ -428,125 +412,192 @@ export default function Page() {
                                     <Image src={skinIcon} alt={ship.name_kr || ship.name} width={64} height={64} />
                                 </TableCell>
                                 <TableCell>{ship.name_kr || ship.name}</TableCell>
-                                <TableCell>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
-                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                            {hullTypes[ship.type] && <Image src={hullTypes[ship.type].icon} alt={hullTypeName} width={32} height={32} />}
-                                            <span>{hullTypeName}</span>
-                                        </Box>
-                                        {ship.retrofit?.type !== undefined && ship.retrofit.type !== ship.type && hullTypes[ship.retrofit.type] && (
-                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                                <span>→</span>
-                                                <Image src={hullTypes[ship.retrofit.type].icon} alt={hullTypes[ship.retrofit.type].name_kr} width={32} height={32} />
-                                                <span>{hullTypes[ship.retrofit.type].name_kr === "미사일구축함" ? "미구" : hullTypes[ship.retrofit.type].name_kr}</span>
+                                {!isMobile && (
+                                    <>
+                                        <TableCell>
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+                                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                                    {state.hullTypes[ship.type] && <Image src={state.hullTypes[ship.type].icon} alt={hullTypeName} width={32} height={32} />}
+                                                    <span>{hullTypeName}</span>
+                                                </Box>
+                                                {ship.retrofit?.type !== undefined && ship.retrofit.type !== ship.type && state.hullTypes[ship.retrofit.type] && (
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                                        <span>→</span>
+                                                        <Image src={state.hullTypes[ship.retrofit.type].icon} alt={state.hullTypes[ship.retrofit.type].name_kr} width={32} height={32} />
+                                                        <span>{state.hullTypes[ship.retrofit.type].name_kr === "미사일구축함" ? "미구" : state.hullTypes[ship.retrofit.type].name_kr}</span>
+                                                    </Box>
+                                                )}
                                             </Box>
-                                        )}
-                                    </Box>
-                                </TableCell>
-                                <TableCell>{nationalityName}</TableCell>
-                                <TableCell sx={{ fontWeight: 800 }}>
-                                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                                        <Chip
-                                            label={rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]}
-                                            sx={{
-                                                background: {
-                                                    'N': '#DDDDDD',
-                                                    'R': '#34B8F2',
-                                                    'SR': '#C963FC',
-                                                    'SSR': '#F4B039',
-                                                    'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
-                                                    'PR': '#F4B039',
-                                                    'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
-                                                }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]],
-                                                color: rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)] === 'N' ? 'black' : 'white',
-                                                fontWeight: 'bold',
-                                                width: 'fit-content'
-                                            }}
-                                        />
-                                        {ship.retrofit !== undefined &&
-                                            <Chip
-                                                label={rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]}
-                                                sx={{
-                                                    background: {
-                                                        'N': '#DDDDDD',
-                                                        'R': '#34B8F2',
-                                                        'SR': '#C963FC',
-                                                        'SSR': '#F4B039',
-                                                        'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
-                                                        'PR': '#F4B039',
-                                                        'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
-                                                    }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]],
-                                                    color: rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)] === 'N' ? 'black' : 'white',
-                                                    fontWeight: 'bold',
-                                                    width: 'fit-content'
-                                                }}
-                                            />
-                                        }
-                                    </Box>
-                                </TableCell>
+                                        </TableCell>
+                                        <TableCell>{nationalityName}</TableCell>
+                                        <TableCell sx={{ fontWeight: 800 }}>
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                                                <Chip
+                                                    label={rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]}
+                                                    sx={theme => ({
+                                                        background: theme.palette.mode === 'dark' ? {
+                                                            'N': '#DDDDDD',
+                                                            'R': '#34B8F2',
+                                                            'SR': '#C963FC',
+                                                            'SSR': '#F4B039',
+                                                            'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                            'PR': '#F4B039',
+                                                            'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                        }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]] : {
+                                                            'N': '#e0e0e0',
+                                                            'R': '#64b5f6',
+                                                            'SR': '#ba68c8',
+                                                            'SSR': '#ffd54f',
+                                                            'UR': 'linear-gradient(150deg, #ffccbc, #e1bee7, #a7ffeb)',
+                                                            'PR': '#ffd54f',
+                                                            'DR': 'linear-gradient(150deg, #ffccbc, #e1bee7, #a7ffeb)',
+                                                        }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]],
+                                                        color: theme.palette.getContrastText(theme.palette.mode === 'dark' ? {
+                                                            'N': '#DDDDDD',
+                                                            'R': '#34B8F2',
+                                                            'SR': '#C963FC',
+                                                            'SSR': '#F4B039',
+                                                            'UR': '#FFFFFF',
+                                                            'PR': '#F4B039',
+                                                            'DR': '#FFFFFF',
+                                                        }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]] || '#000' : {
+                                                            'N': '#e0e0e0',
+                                                            'R': '#64b5f6',
+                                                            'SR': '#ba68c8',
+                                                            'SSR': '#ffd54f',
+                                                            'UR': '#000000',
+                                                            'PR': '#ffd54f',
+                                                            'DR': '#000000',
+                                                        }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]] || '#fff'),
+                                                        fontWeight: 'bold',
+                                                        width: 'fit-content'
+                                                    })} 
+                                                />
+                                                {ship.retrofit !== undefined &&
+                                                    <Chip
+                                                        label={rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]}
+                                                        sx={theme => ({
+                                                            background: theme.palette.mode === 'dark' ? {
+                                                                'N': '#DDDDDD',
+                                                                'R': '#34B8F2',
+                                                                'SR': '#C963FC',
+                                                                'SSR': '#F4B039',
+                                                                'UR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                                'PR': '#F4B039',
+                                                                'DR': 'linear-gradient(150deg, #FFE1D3, #DCABF7, #53DEB9)',
+                                                            }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]] : {
+                                                                'N': '#e0e0e0',
+                                                                'R': '#64b5f6',
+                                                                'SR': '#ba68c8',
+                                                                'SSR': '#ffd54f',
+                                                                'UR': 'linear-gradient(150deg, #ffccbc, #e1bee7, #a7ffeb)',
+                                                                'PR': '#ffd54f',
+                                                                'DR': 'linear-gradient(150deg, #ffccbc, #e1bee7, #a7ffeb)',
+                                                            }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]],
+                                                            color: theme.palette.getContrastText(theme.palette.mode === 'dark' ? {
+                                                                'N': '#DDDDDD',
+                                                                'R': '#34B8F2',
+                                                                'SR': '#C963FC',
+                                                                'SSR': '#F4B039',
+                                                                'UR': '#FFFFFF',
+                                                                'PR': '#F4B039',
+                                                                'DR': '#FFFFFF',
+                                                            }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]] || '#000' : {
+                                                                'N': '#e0e0e0',
+                                                                'R': '#64b5f6',
+                                                                'SR': '#ba68c8',
+                                                                'SSR': '#ffd54f',
+                                                                'UR': '#000000',
+                                                                'PR': '#ffd54f',
+                                                                'DR': '#000000',
+                                                            }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]] || '#fff'),
+                                                            fontWeight: 'bold',
+                                                            width: 'fit-content'
+                                                        })}
+                                                    />
+                                                }
+                                            </Box>
+                                        </TableCell>
+                                        <TableCell>
+                                            {ship.obtain_kr ? (
+                                                ship.obtain_kr.map((text, index) => (
+                                                    <p key={index} style={{ margin: '4px 0' }}>
+                                                        {text}
+                                                    </p>
+                                                ))
+                                            ) : (
+                                                ''
+                                            )}
+                                        </TableCell>
+                                    </>
+                                )}
                                 <TableCell>
-                                    {ship.obtain_kr ? (
-                                        ship.obtain_kr.map((text, index) => (
-                                            <p key={index} style={{ margin: '4px 0' }}>
-                                                {text}
-                                            </p>
-                                        ))
+                                    {ship.tech ? (
+                                        isMobile ? (
+                                            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+                                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                                    <Image src={state.statTypes[techAttr[ship.tech.add_get_attr]]?.iconbox} alt={state.statTypes[techAttr[ship.tech.add_get_attr]]?.name} width={20} height={20} />
+                                                    <Typography variant="body2" sx={{ ml: 1 }}>+{ship.tech.add_get_value}</Typography>
+                                                </Box>
+                                                <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
+                                                    <Image src={state.statTypes[techAttr[ship.tech.add_level_attr]]?.iconbox} alt={state.statTypes[techAttr[ship.tech.add_level_attr]]?.name} width={20} height={20} />
+                                                    <Typography variant="body2" sx={{ ml: 1 }}>+{ship.tech.add_level_value}</Typography>
+                                                </Box>
+                                            </Box>
+                                        ) : (
+                                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                                {/* 획득 Row */}
+                                                <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+                                                        <Box sx={{ display: 'flex', flex: 1 }}>
+                                                            {ship.tech.add_get_shiptype.map((text, index) => (
+                                                                <Image key={index} src={state.hullTypes[text]?.icon} alt={state.hullTypes[text]?.name_kr} width={28} height={28} />
+                                                            ))}
+                                                        </Box>
+                                                        <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '4px' }}>
+                                                            <Image src={state.statTypes[techAttr[ship.tech.add_get_attr]]?.iconbox} alt={state.statTypes[techAttr[ship.tech.add_get_attr]]?.name} width={20} height={20} />
+                                                            <p style={{ marginLeft: "4px" }}>+{ship.tech.add_get_value}</p>
+                                                        </Box>
+                                                    </Box>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
+                                                        <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
+                                                        <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_get}</p>
+                                                    </Box>
+                                                </Box>
+
+                                                {/* 풀돌 Row */}
+                                                <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
+                                                    <Box sx={{ flex: 1 }} /> {/* Empty placeholder for stat bonus */}
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
+                                                        <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
+                                                        <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_level}</p>
+                                                    </Box>
+                                                </Box>
+
+                                                {/* 120 Row */}
+                                                <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+                                                        <Box sx={{ display: 'flex', flex: 1 }}>
+                                                            {ship.tech.add_level_shiptype.map((text, index) => (
+                                                                <Image key={index} src={state.hullTypes[text]?.icon} alt={state.hullTypes[text]?.name_kr} width={28} height={28} />
+                                                            ))}
+                                                        </Box>
+                                                        <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '4px' }}>
+                                                            <Image src={state.statTypes[techAttr[ship.tech.add_level_attr]]?.iconbox} alt={state.statTypes[techAttr[ship.tech.add_level_attr]]?.name} width={20} height={20} />
+                                                            <p style={{ marginLeft: "4px" }}>+{ship.tech.add_level_value}</p>
+                                                        </Box>
+                                                    </Box>
+                                                    <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
+                                                        <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
+                                                        <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_upgrade}</p>
+                                                    </Box>
+                                                </Box>
+                                            </Box>
+                                        )
                                     ) : (
                                         ''
                                     )}
                                 </TableCell>
-                                <TableCell>{ship.tech ? (
-                                    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                                        {/* 획득 Row */}
-                                        <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
-                                            <Box sx={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-                                                <Box sx={{ display: 'flex', flex: 1 }}>
-                                                    {ship.tech.add_get_shiptype.map((text, index) => (
-                                                        <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
-                                                    ))}
-                                                </Box>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '4px' }}>
-                                                    <Image src={statTypes[techAttr[ship.tech.add_get_attr]]?.iconbox} alt={statTypes[techAttr[ship.tech.add_get_attr]]?.name} width={20} height={20} />
-                                                    <p style={{ marginLeft: "4px" }}>+{ship.tech.add_get_value}</p>
-                                                </Box>
-                                            </Box>
-                                            <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
-                                                <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
-                                                <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_get}</p>
-                                            </Box>
-                                        </Box>
-
-                                        {/* 풀돌 Row */}
-                                        <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
-                                            <Box sx={{ flex: 1 }} /> {/* Empty placeholder for stat bonus */}
-                                            <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
-                                                <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
-                                                <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_level}</p>
-                                            </Box>
-                                        </Box>
-
-                                        {/* 120 Row */}
-                                        <Box sx={{ display: 'flex', alignItems: 'center', minHeight: '32px' }}>
-                                            <Box sx={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-                                                <Box sx={{ display: 'flex', flex: 1 }}>
-                                                    {ship.tech.add_level_shiptype.map((text, index) => (
-                                                        <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
-                                                    ))}
-                                                </Box>
-                                                <Box sx={{ display: 'flex', alignItems: 'center', marginLeft: '4px' }}>
-                                                    <Image src={statTypes[techAttr[ship.tech.add_level_attr]]?.iconbox} alt={statTypes[techAttr[ship.tech.add_level_attr]]?.name} width={20} height={20} />
-                                                    <p style={{ marginLeft: "4px" }}>+{ship.tech.add_level_value}</p>
-                                                </Box>
-                                            </Box>
-                                            <Box sx={{ display: 'flex', alignItems: 'center', width: '60px', marginLeft: '4px' }}>
-                                                <Image src="icon/techpoint.png" alt="techpoint" width={32} height={32} />
-                                                <p style={{ marginLeft: "4px" }}>+{ship.tech.pt_upgrade}</p>
-                                            </Box>
-                                        </Box>
-                                    </Box>
-                                ) : (
-                                    ''
-                                )}</TableCell>
                                 <TableCell padding="checkbox">
                                     <Box sx={{ display: 'flex', alignItems: 'left', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
                                         <Checkbox onChange={(e) => handleTechStatChange(ship.id, 'get', e.target.checked)} checked={techStat?.get || false} sx={{ width: '32px', height: '32px' }} />
@@ -556,15 +607,15 @@ export default function Page() {
                                 </TableCell>
                             </>
                         );
-                    }}
-                />
+                        }}
+                    />
             </Paper>
             <FilterDialog
                 open={state.filterDialogOpen}
                 onClose={() => dispatch({ type: 'TOGGLE_FILTER_DIALOG', payload: false })}
-                hullTypes={hullTypes}
-                nationalities={nationalities}
-                statTypes={statTypes}
+                hullTypes={state.hullTypes}
+                nationalities={state.nationalities}
+                statTypes={state.statTypes}
                 selectedHullTypes={state.selectedHullTypes}
                 setSelectedHullTypes={(payload) => dispatch({ type: 'SET_HULL_TYPES', payload })}
                 selectedNationalities={state.selectedNationalities}
@@ -580,35 +631,36 @@ export default function Page() {
             <ShipInfoDialog
                 open={state.shipInfoDialogOpen}
                 onClose={() => dispatch({ type: 'TOGGLE_SHIP_INFO_DIALOG', payload: false })}
-                ship={selectedShip}
-                hullTypes={hullTypes}
-                nationalities={nationalities}
-                nationalityImages={nationalityImages}
-                skinData={shipSkins}
-                statData={statTypes}
-                skillData={skillData}
-                skillIcons={skillIcons}
-                transformSkillMapping={transformSkillMapping}
-                uniqueSpWeapons={uniqueSpWeapons}
+                ship={state.selectedShip}
+                hullTypes={state.hullTypes}
+                nationalities={state.nationalities}
+                nationalityImages={state.nationalityImages}
+                skinData={state.shipSkins}
+                statData={state.statTypes}
+                skillData={state.skillData}
+                skillIcons={state.skillIcons}
+                transformSkillMapping={state.transformSkillMapping}
+                uniqueSpWeapons={state.uniqueSpWeapons}
+                isMobile={isMobile}
             />
             <StatDialog
                 open={state.statDialogOpen}
                 onClose={() => dispatch({ type: 'TOGGLE_STAT_DIALOG', payload: false })}
-                shipData={selectedShips}
-                allShips={ships}
-                shipType={hullTypes}
-                nationalities={nationalities}
+                shipData={state.selectedShips}
+                allShips={state.ships}
+                shipType={state.hullTypes}
+                nationalities={state.nationalities}
                 statList={statList}
-                statData={statTypes}
-                skinData={shipSkins}
+                statData={state.statTypes}
+                skinData={state.shipSkins}
             />
             <Dialog open={state.importDialogOpen} onClose={() => dispatch({ type: 'TOGGLE_IMPORT_DIALOG', payload: false })}>
                 <DialogTitle>데이터 가져오기</DialogTitle>
                 <DialogContent>
                     <TextField
                         label="데이터를 붙여넣어 주세요"
-                        value={importText}
-                        onChange={(e) => setImportText(e.target.value)}
+                        value={state.importText}
+                        onChange={(e) => dispatch({ type: 'SET_IMPORT_TEXT', payload: e.target.value })}
                         multiline
                         rows={5}
                         fullWidth

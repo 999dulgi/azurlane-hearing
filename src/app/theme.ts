@@ -8,8 +8,8 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#ffffff',
-      contrastText: 'rgba(0, 0, 0, 0.87)',
+      main: '#1976d2', // A standard blue color
+      contrastText: '#ffffff',
     },
     background: {
       default: '#fafafa',
@@ -31,8 +31,9 @@ export const darkTheme = createTheme({
     mode: 'dark',
     background: {
       default: '#222222',
-      paper: '#333333', // Paper 컴포넌트는 약간 더 밝은 색으로 설정하여 깊이감을 줍니다.
+      paper: '#333333',
     },
+    divider: 'rgba(255, 255, 255, 0.2)',
   },
   typography: {
     fontFamily: "Noto Sans KR, sans-serif",

@@ -20,7 +20,7 @@ import {
     FormControlLabel,
 } from '@mui/material';
 import Image from 'next/image';
-import { rarities, statList } from '../typelist';
+import { rarities, statList, techAttr } from '../ships/state/types';
 
 interface ShipInfoDialogProps {
     open: boolean;
@@ -35,6 +35,7 @@ interface ShipInfoDialogProps {
     skillIcons: SkillIcons;
     transformSkillMapping: { [key: string]: number };
     uniqueSpWeapons: { [key: string]: { name: string; skill: number } };
+    isMobile: boolean;
 }
 
 
@@ -90,7 +91,7 @@ const HuntingRangeGrid = ({ gridLevels, setLevel, level }:
 };
 
 function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationalityImages, skinData, statData,
-    skillData, skillIcons, transformSkillMapping, uniqueSpWeapons }: ShipInfoDialogProps) {
+    skillData, skillIcons, transformSkillMapping, uniqueSpWeapons, isMobile }: ShipInfoDialogProps) {
     const [tab, setTab] = useState(0);
     const [affinity, setAffinity] = useState(1);
     const [gridLevels, setGridLevels] = useState<number[][][]>();
@@ -168,10 +169,12 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
             const urls = new Set<string>();
             urls.add(selectedSkin.background || 'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/images/background/210.png');
             urls.add(selectedSkin.painting); // Initially, only load the default painting
-            urls.add(selectedSkin.chibi);
+            if (!isMobile) {
+                urls.add(selectedSkin.chibi);
+            }
             setLoadingUrls(urls);
         }
-    }, [selectedSkin]);
+    }, [selectedSkin, isMobile]);
 
     const handleImageLoad = (url: string) => {
         setLoadingUrls(prev => {
@@ -193,14 +196,14 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
     }
 
     return (
-        <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
+        <Dialog open={open} onClose={onClose} fullWidth maxWidth="md" scroll={isMobile ? 'body' : 'paper'}>
             <DialogContent>
                 <Tabs value={tab} onChange={(e, newValue) => setTab(newValue)}>
                     <Tab label="정보" />
                     <Tab label="스킨" />
                 </Tabs>
                 <Box role="tabpanel" hidden={tab !== 0} id={`tabpanel-${tab}`}>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} direction={isMobile ? 'column' : 'row'}>
                         <Grid sx={{ xs: 4 }}>
                             <Image src={skinData[ship.gid]["skins"][ship.gid * 10].shipyard} alt={ship.name} width={200} height={0}
                                 style={{
@@ -277,7 +280,7 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 <Typography sx={{ fontWeight: 'bold', minWidth: '80px' }}>입수 경로</Typography>
                                 <Typography sx={{ maxWidth: '540px' }}>{ship.obtain_kr?.join(', ')}</Typography>
                             </Box>
-                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: '40px' }}>
+                            <Box sx={{ display: 'flex', justifyContent: 'start', alignItems: 'center', minHeight: '40px' }}>
                                 <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
                                     <Typography sx={{ fontWeight: 'bold', minWidth: '80px' }}>개조 유무</Typography>
                                     <Typography sx={{ width: '80px' }}>{ship.retrofit ? 'O' : 'X'}</Typography>
@@ -286,44 +289,45 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                     <Typography sx={{ fontWeight: 'bold', minWidth: '80px' }}>전장 유무</Typography>
                                     <Typography sx={{ width: '80px' }}>{Object.keys(uniqueSpWeapons || {}).includes(ship.gid.toString()) ? 'O' : 'X'}</Typography>
                                 </Box>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
-                                    <Box sx={{ display: 'flex', gap: 1 }}>
-                                        {[
-                                            { label: '낯섦', value: 1 },
-                                            { label: '사랑', value: 1.06 },
-                                            { label: '서약 100', value: 1.09 },
-                                            { label: '서약 200', value: 1.12 },
-                                        ].map(({ label, value }) => (
-                                            <Chip
-                                                key={label}
-                                                label={label}
-                                                variant={affinity === value ? 'filled' : 'outlined'}
-                                                sx={{
-                                                    fontWeight: affinity === value ? 'bold' : 'normal'
-                                                    , backgroundColor: affinity === value ? {
-                                                        '낯섦': '#AAD1DA',
-                                                        '사랑': '#FF7766',
-                                                        '서약 100': '#FFDDFF',
-                                                        '서약 200': '#FFDDFF',
-                                                    }[label] : undefined,
-                                                    color: affinity === value ? {
-                                                        '낯섦': '#000000',
-                                                        '사랑': '#ffffff',
-                                                        '서약 100': '#000000',
-                                                        '서약 200': '#000000',
-                                                    }[label] : 'inherit',
-                                                }}
-                                                onClick={() => setAffinity(value)}
-                                                size="small"
-                                            />
-                                        ))}
-                                    </Box>
-                                </Box>
                             </Box>
                         </Grid>
                     </Grid>
                     <Box sx={{ marginTop: 2 }}>
-                        <Table sx={{ tableLayout: 'fixed' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 1 }}>
+                            <Box sx={{ display: 'flex', gap: 1 }}>
+                                {[
+                                    { label: '낯섦', value: 1 },
+                                    { label: '사랑', value: 1.06 },
+                                    { label: '서약 100', value: 1.09 },
+                                    { label: '서약 200', value: 1.12 },
+                                ].map(({ label, value }) => (
+                                    <Chip
+                                        key={label}
+                                        label={label}
+                                        variant={affinity === value ? 'filled' : 'outlined'}
+                                        sx={{
+                                            fontWeight: affinity === value ? 'bold' : 'normal'
+                                            , backgroundColor: affinity === value ? {
+                                                '낯섦': '#AAD1DA',
+                                                '사랑': '#FF7766',
+                                                '서약 100': '#FFDDFF',
+                                                '서약 200': '#FFDDFF',
+                                            }[label] : undefined,
+                                            color: affinity === value ? {
+                                                '낯섦': '#000000',
+                                                '사랑': '#ffffff',
+                                                '서약 100': '#000000',
+                                                '서약 200': '#000000',
+                                            }[label] : 'inherit',
+                                        }}
+                                        onClick={() => setAffinity(value)}
+                                        size="small"
+                                    />
+                                ))}
+                            </Box>
+                        </Box>
+                        <Box sx={{ overflowX: 'auto' }}>
+                            <Table sx={{ tableLayout: 'fixed', minWidth: 650 }}>
                             <TableHead>
                                 <TableRow>
                                     <TableCell align="center">LV</TableCell>
@@ -379,8 +383,72 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 ) : null}
                             </TableBody>
                         </Table>
+                        </Box>
                         {hullTypes[ship.type]?.position === "submarine" && gridLevels && (
                             <HuntingRangeGrid gridLevels={gridLevels} setLevel={setLevel} level={level} />
+                        )}
+                        {ship.tech && (
+                            <Box sx={{ marginTop: 2 }}>
+                                <Typography variant="h6" gutterBottom>기술 점수</Typography>
+                                <Table>
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableCell>조건</TableCell>
+                                            <TableCell>함종</TableCell>
+                                            <TableCell>스탯</TableCell>
+                                            <TableCell>점수</TableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableCell>획득</TableCell>
+                                            <TableCell>
+                                                <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row' }}>
+                                                    {ship.tech.add_get_shiptype.map((text, index) => (
+                                                        isMobile ?
+                                                        <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
+                                                        :
+                                                        <Typography key={index} sx={{ ml: 1 }}>{hullTypes[text]?.name_kr}</Typography>
+                                                    ))}
+                                                </Box>
+                                            </TableCell>
+                                            <TableCell>
+                                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                                    <Image src={statData[techAttr[ship.tech.add_get_attr]]?.iconbox} alt={statData[techAttr[ship.tech.add_get_attr]]?.name} width={20} height={20} />
+                                                    <Typography variant="body2" sx={{ ml: 1 }}>+{ship.tech.add_get_value}</Typography>
+                                                </Box>
+                                            </TableCell>
+                                            <TableCell>{ship.tech.pt_get}</TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell>풀돌</TableCell>
+                                            <TableCell></TableCell>
+                                            <TableCell></TableCell>
+                                            <TableCell>{ship.tech.pt_level}</TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <TableCell>120레벨</TableCell>
+                                            <TableCell>
+                                                <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row' }}>
+                                                    {ship.tech.add_level_shiptype.map((text, index) => (
+                                                        isMobile ?
+                                                        <Image key={index} src={hullTypes[text]?.icon} alt={hullTypes[text]?.name_kr} width={28} height={28} />
+                                                        :
+                                                        <Typography key={index} sx={{ ml: 1 }}>{hullTypes[text]?.name_kr}</Typography>
+                                                    ))}
+                                                </Box>
+                                            </TableCell>
+                                            <TableCell>
+                                                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                                    <Image src={statData[techAttr[ship.tech.add_level_attr]]?.iconbox} alt={statData[techAttr[ship.tech.add_level_attr]]?.name} width={20} height={20} />
+                                                    <Typography variant="body2" sx={{ ml: 1 }}>+{ship.tech.add_level_value}</Typography>
+                                                </Box>
+                                            </TableCell>
+                                            <TableCell>{ship.tech.pt_upgrade}</TableCell>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                            </Box>
                         )}
                         <Box sx={{ marginTop: 2 }}>
                             <Typography variant="h6" gutterBottom>스킬</Typography>
@@ -438,23 +506,23 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 </Table>
                             </Box>
                             {Object.keys(uniqueSpWeapons || {}).includes(ship.gid.toString()) ? (
-                            <Box sx={{ marginTop: 2 }}>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
-                                    <Typography variant="h6" gutterBottom>전용 장비</Typography>
-                                    <Typography>{uniqueSpWeapons[ship.gid].name}</Typography>
-                                </Box>
-                                <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
-                                    {skillData[uniqueSpWeapons[ship.gid].skill] ? (
-                                        <Box key={ship.gid} sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
-                                            <Image src={skillIcons[uniqueSpWeapons[ship.gid].skill]} alt={skillData[uniqueSpWeapons[ship.gid].skill]?.name} width={64} height={64} />
-                                            <Box>
-                                                <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{skillData[uniqueSpWeapons[ship.gid].skill]?.name}</Typography>
-                                                <Typography variant="body2">{skillData[uniqueSpWeapons[ship.gid].skill]?.desc}</Typography>
+                                <Box sx={{ marginTop: 2 }}>
+                                    <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+                                        <Typography variant="h6" gutterBottom>전용 장비</Typography>
+                                        <Typography>{uniqueSpWeapons[ship.gid].name}</Typography>
+                                    </Box>
+                                    <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+                                        {skillData[uniqueSpWeapons[ship.gid].skill] ? (
+                                            <Box key={ship.gid} sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                                                <Image src={skillIcons[uniqueSpWeapons[ship.gid].skill]} alt={skillData[uniqueSpWeapons[ship.gid].skill]?.name} width={64} height={64} />
+                                                <Box>
+                                                    <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>{skillData[uniqueSpWeapons[ship.gid].skill]?.name}</Typography>
+                                                    <Typography variant="body2">{skillData[uniqueSpWeapons[ship.gid].skill]?.desc}</Typography>
+                                                </Box>
                                             </Box>
-                                        </Box>
-                                    ) : <Typography>전용 장비 스킬 정보 없음</Typography>}
-                                </Box>
-                            </Box>) : null}
+                                        ) : <Typography>전용 장비 스킬 정보 없음</Typography>}
+                                    </Box>
+                                </Box>) : null}
                             <Box sx={{ marginTop: 2 }}>
                                 <Typography variant="h6" gutterBottom>한줄평</Typography>
                                 언젠가 추가
@@ -497,24 +565,26 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                         onLoad={() => handleImageLoad(showPaintingN ? selectedSkin.painting_n! : selectedSkin.painting)}
                                         onError={() => handleImageLoad(showPaintingN ? selectedSkin.painting_n! : selectedSkin.painting)}
                                     />
-                                    <Image
-                                        key={`${selectedSkin.id}-chibi`}
-                                        src={selectedSkin.chibi}
-                                        alt={`${selectedSkin.name_kr || selectedSkin.name} chibi`}
-                                        width={150}
-                                        height={150}
-                                        style={{
-                                            position: 'absolute',
-                                            bottom: 10,
-                                            right: 10,
-                                            zIndex: 2,
-                                        }}
-                                        onLoad={() => handleImageLoad(selectedSkin.chibi)}
-                                        onError={() => handleImageLoad(selectedSkin.chibi)}
-                                    />
+                                    {!isMobile && (
+                                        <Image
+                                            key={`${selectedSkin.id}-chibi`}
+                                            src={selectedSkin.chibi}
+                                            alt={`${selectedSkin.name_kr || selectedSkin.name} chibi`}
+                                            width={150}
+                                            height={150}
+                                            style={{
+                                                position: 'absolute',
+                                                bottom: 10,
+                                                right: 10,
+                                                zIndex: 2,
+                                            }}
+                                            onLoad={() => handleImageLoad(selectedSkin.chibi)}
+                                            onError={() => handleImageLoad(selectedSkin.chibi)}
+                                        />
+                                    )}
                                 </Box>
                             </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexDirection: isMobile ? 'column' : 'row' }}>
                                 <Typography variant="h6">{selectedSkin.name_kr || selectedSkin.name}</Typography>
                                 {selectedSkin.painting_n && (
                                     <FormControlLabel
@@ -533,23 +603,23 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 )}
                             </Box>
 
-                            <Box 
+                            <Box
                                 ref={scrollContainerRef}
                                 onWheel={handleWheel}
-                                sx={{ 
-                                display: 'flex', 
-                                overflowX: 'scroll', 
-                                gap: 1, 
-                                padding: 1, 
-                                width: '100%',
-                                '::-webkit-scrollbar': {
-                                    height: '8px',
-                                },
-                                '::-webkit-scrollbar-thumb': {
-                                    backgroundColor: 'rgba(0,0,0,.2)',
-                                    borderRadius: '4px',
-                                }
-                            }}>
+                                sx={{
+                                    display: 'flex',
+                                    overflowX: 'scroll',
+                                    gap: 1,
+                                    padding: 1,
+                                    width: '100%',
+                                    '::-webkit-scrollbar': {
+                                        height: '8px',
+                                    },
+                                    '::-webkit-scrollbar-thumb': {
+                                        backgroundColor: 'rgba(0,0,0,.2)',
+                                        borderRadius: '4px',
+                                    }
+                                }}>
                                 {Object.values(skinData[ship.gid].skins).map(skin => (
                                     <Box
                                         key={skin.id}
@@ -566,11 +636,11 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                             backgroundColor: '#e0e0e0'
                                         }}
                                     >
-                                        <Image 
-                                            src={skin.icon} 
-                                            alt={skin.name_kr || skin.name} 
-                                            layout="fill" 
-                                            objectFit="cover" 
+                                        <Image
+                                            src={skin.icon}
+                                            alt={skin.name_kr || skin.name}
+                                            layout="fill"
+                                            objectFit="cover"
                                         />
                                     </Box>
                                 ))}

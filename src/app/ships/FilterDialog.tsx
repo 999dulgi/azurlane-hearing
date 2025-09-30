@@ -13,7 +13,7 @@ import {
     FormControl,
     InputLabel,
 } from "@mui/material";
-import {rarities, statList} from "../typelist";
+import { rarities, statList } from "../ships/state/types";
 
 interface FilterDialogProps {
     open: boolean;
