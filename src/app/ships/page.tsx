@@ -470,7 +470,10 @@ export default function Page() {
                                                             'DR': '#000000',
                                                         }[rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]] || '#fff'),
                                                         fontWeight: 'bold',
-                                                        width: 'fit-content'
+                                                        width: 'fit-content',
+                                                        '& .MuiChip-label': {
+                                                            overflow: 'visible',
+                                                        },
                                                     })} 
                                                 />
                                                 {ship.retrofit !== undefined &&
@@ -512,7 +515,10 @@ export default function Page() {
                                                                 'DR': '#000000',
                                                             }[rarities[ship.rarity - 1 + (ship.cid == 2 ? 2 : 0)]] || '#fff'),
                                                             fontWeight: 'bold',
-                                                            width: 'fit-content'
+                                                            width: 'fit-content',
+                                                            '& .MuiChip-label': {
+                                                                overflow: 'visible',
+                                                            }
                                                         })}
                                                     />
                                                 }
