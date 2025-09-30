@@ -1,0 +1,3166 @@
+[
+    {
+        "url": "https://ac-o.namu.la/20210711/3255f30a11b27d3096a32814e8e42f389353bd90e1f4502b28d1a5dbb0b06938.png?expires=1759236035&key=Uds_urErp4Qae4i9kQU2fQ&type=orig",
+        "name": "범용형 부린"
+    },
+    {
+        "url": "https://ac-o.namu.la/20210711/cffa2a86a6739fd5a22080c91ce82836a06144c34257e0d8d356c3aebeedb6ca.png?expires=1759236035&key=8M_lETqFf7O8NHGW9hRTxA&type=orig",
+        "name": "시제형 부린 MK II"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923141",
+        "name": "캐신",
+        "grade": "C+",
+        "description": "초창기 거지런의 선두주자중 하나 기름상한이 생긴 지금 쓸 일은 없으나 저지역에서 싸게 굴릴 더미용 구축을 찾는다면 제격이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923206",
+        "name": "다운즈",
+        "grade": "C+",
+        "description": "초창기 거지런의 선두주자중 하나 기름상한이 생긴 지금 쓸 일은 없으나 저지역에서 싸게 굴릴 더미용 구축을 찾는다면 제격이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923307",
+        "name": "그리들리",
+        "grade": "D",
+        "description": "새러토가 스토커, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923463",
+        "name": "아일윈",
+        "grade": "D",
+        "description": "명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923545",
+        "name": "크레이븐",
+        "grade": "D",
+        "description": "명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923632",
+        "name": "맥콜",
+        "grade": "D",
+        "description": "명함용, 맥콜 먹는 게이들 없지?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923695",
+        "name": "모리",
+        "grade": "D",
+        "description": "달성률 100%를 노리고 있다면 일부로 업적 보상을 받지 않는 것도 방법, 건조풀이 증가하므로 소형함 건조를 끝내고 나중에 받는 것을 추천"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923843",
+        "name": "허먼",
+        "grade": "C",
+        "description": "하무망은 하무망이야!, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29984949",
+        "name": "벤슨",
+        "grade": "C",
+        "description": "자신의 모항에 공습선도 서포터가 정말 1도 없어야 꺼낼까 말까 고민할 듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29693694",
+        "name": "라피",
+        "grade": "B+",
+        "description": "스타팅 구축함(아야나미, 라피, 자벨린)은 키워서 손해 볼 것 없다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29985036",
+        "name": "베일리",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29985208",
+        "name": "커크",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29985281",
+        "name": "플레처",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29985378",
+        "name": "레드포드",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29985464",
+        "name": "젠킨스",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047054",
+        "name": "배시",
+        "grade": "C",
+        "description": "비추수집기 0 티어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047103",
+        "name": "스탠리",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047176",
+        "name": "푸트",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047222",
+        "name": "스펜스",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047355",
+        "name": "킴벌리",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047429",
+        "name": "모리슨",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30111568",
+        "name": "멀라니",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30111780",
+        "name": "부시",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30111882",
+        "name": "스테판 포터",
+        "grade": "B",
+        "description": "이글 유니온 함대로 이뤄진 항모 파티가 대세가 되어 공습선도가 달린 유니온 함선이 필요해질때 채택되지 않을까 싶음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30111936",
+        "name": "스몰리",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30111986",
+        "name": "얼릭",
+        "grade": "C",
+        "description": "명함, 도크용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30112333",
+        "name": "찰스 오스본",
+        "grade": "B",
+        "description": "개장이 생겨서 어찌 굴려먹을 정도는 된다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30112476",
+        "name": "알렌 M. 섬너",
+        "grade": "A",
+        "description": "준수한 성능의 대공 믹서기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30112557",
+        "name": "쿠퍼",
+        "grade": "C",
+        "description": "대잠 전문함이긴 한데 어차피 이 게임 대잠 시스템은 박살나서 지금은 의미가 없다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30112638",
+        "name": "엘드릿지",
+        "grade": "B->EX",
+        "description": "무적 원툴이긴한데 정말 가끔가다 이 원툴을 써야 할 때가 있다. -> 개장 시 무적 달린 미친 딜 서폿으로 변신한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/32961243?p=1",
+        "name": "잉그레이엄",
+        "grade": "A",
+        "description": "무난하게 굴리기 좋은 미구축함, 섬너처럼 대공 성능이 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/67351510",
+        "name": "허먼·II",
+        "grade": "B+",
+        "description": "공습 선도만 아니면 F 줬다, 단또년아."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97759314?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "라피·II",
+        "grade": "EX",
+        "description": "만렙 토끼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116439881?p=1",
+        "name": "벨",
+        "grade": "C+",
+        "description": "'벨'이라고만 부르면 두 명이 반응한다고 한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/136396395?p=1",
+        "name": "밀러",
+        "grade": "B",
+        "description": "가키 전형 함순이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292192",
+        "name": "오마하",
+        "grade": "C",
+        "description": "명함, 도크용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292238",
+        "name": "롤리",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292299",
+        "name": "리치몬드",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292419",
+        "name": "마블헤드",
+        "grade": "1",
+        "description": "1"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292469",
+        "name": "멤피스",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292535",
+        "name": "브루클린",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292695",
+        "name": "피닉스",
+        "grade": "C+",
+        "description": "국밥 of 국밥, 아무것도 모르는 뉴비라면 일단 써도 된다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292790",
+        "name": "호놀룰루"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292875",
+        "name": "세인트루이스",
+        "grade": "C+",
+        "description": "창녀로써의 성능이 더욱 높다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30292932",
+        "name": "헬레나",
+        "grade": "EX",
+        "description": "게임이 출시된 이후로 아직까지도 대체 불가능한 초고성능 광역 디버퍼 함선"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30293004",
+        "name": "꼬마 헬레나",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359088",
+        "name": "쥬노",
+        "grade": "C",
+        "description": "연습전에서 보이면 대가리를 깨주자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359131",
+        "name": "샌디에이고",
+        "grade": "C+->S",
+        "description": "개장 시 대공 1툴 병신 SSR에서 팔방미인으로 진화한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359192",
+        "name": "산후안",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359237",
+        "name": "리노",
+        "grade": "B+",
+        "description": "딜러도 서포터도 아닌 뭔가 어중간한 어딘가에 위치함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29923918",
+        "name": "클리블랜드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359365",
+        "name": "컬럼비아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359413",
+        "name": "몬트필리어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359468",
+        "name": "덴버"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359561",
+        "name": "빌럭시"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359659",
+        "name": "꼬마클리블랜드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359790",
+        "name": "클리블랜드(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97701396?p=1",
+        "name": "휴스턴·II",
+        "grade": "B+",
+        "description": "현 시점 15-4를 수동으로 도는 이유"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116444910?p=1",
+        "name": "파고",
+        "grade": "B+",
+        "description": "힐 주는 쿠팡녀"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/136396838?p=1",
+        "name": "산타페",
+        "grade": "B+",
+        "description": "나중에 굴릴 곳이 있을까??"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30432921",
+        "name": "펜사콜라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30432994",
+        "name": "솔트레이크시티"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433050",
+        "name": "노샘프턴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433182",
+        "name": "휴스턴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29924002",
+        "name": "포틀랜드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433282",
+        "name": "인디애나폴리스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433351",
+        "name": "아스토리아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433473",
+        "name": "샌프란시스코"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433520",
+        "name": "퀸시"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433566",
+        "name": "빈센스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433629",
+        "name": "위치타"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433829",
+        "name": "브레머튼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30433915",
+        "name": "볼티모어(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/41811907?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "뉴 올리언스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/67352773",
+        "name": "노샘프턴·II",
+        "grade": "B+",
+        "description": "온전한 성능을 낼려면 아군 기함이 USS 항모여야 하는게 단점이지만 그래도 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97752150?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "루이빌",
+        "grade": "C+",
+        "description": "모항에서 찌찌나 쪼물쪼물 만져주자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116441747?p=1",
+        "name": "피츠버그",
+        "grade": "A",
+        "description": "적당히 믿고 쓰는 공수잡힌 미국산 중순"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/138516796?p=1",
+        "name": "꼬마 앵커리지",
+        "grade": "C+",
+        "description": "꼬앵커가 세상에 등장한 순간 지휘관을 바라보는 함순이들의 표정이 일제히 썩었다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500026",
+        "name": "네바다"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500092",
+        "name": "오클라호마"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500153",
+        "name": "펜실베이니아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500266",
+        "name": "테네시"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500357",
+        "name": "캘리포니아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500422",
+        "name": "콜로라도"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500598",
+        "name": "메릴랜드",
+        "grade": "A",
+        "description": "메리쨩도 스킨줘"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047542",
+        "name": "노스캐롤라이나"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500712",
+        "name": "워싱턴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500884",
+        "name": "사우스다코타"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30500958",
+        "name": "뉴저지"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30501103",
+        "name": "앨라배마"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97753299?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "컨스텔레이션",
+        "grade": "A",
+        "description": "최근 함선들 중에선 가장 심플한 효과, Simple is Best"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116442731?p=1",
+        "name": "인디애나",
+        "grade": "A+",
+        "description": "무난히 좋은 금딱 전함, 나름 선봉함대 탱킹도 챙겨줄 수 있다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30569015",
+        "name": "롱 아일랜드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30569067",
+        "name": "보그"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30569140",
+        "name": "카사블랑카"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30569304",
+        "name": "새러토가"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047602",
+        "name": "레인저"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30569918",
+        "name": "요크타운"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047664",
+        "name": "엔터프라이즈"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30570085",
+        "name": "호넷"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629606",
+        "name": "에식스",
+        "grade": "S",
+        "description": "엔프라 개장보다 먼저 나와서인지 눈치보고 있는 에섹스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629671",
+        "name": "인트래피드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629715",
+        "name": "타이콘데로가"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629816",
+        "name": "인디펜던스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629884",
+        "name": "프린스턴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629951",
+        "name": "바탄"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30629997",
+        "name": "샹그릴라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30569791",
+        "name": "렉싱턴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/67359977",
+        "name": "랭글리·II",
+        "grade": "B",
+        "description": "애도 미묘하게 성능이 괜찮아졌음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/67362701",
+        "name": "요크타운·II",
+        "grade": "EX",
+        "description": "적이 경장이다 -> 너는 이미 죽어있다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/67361294",
+        "name": "호넷·II",
+        "grade": "A",
+        "description": "원본 호넷보다는 당연히 월등히 좋은 성능으로 등장."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/136397402?p=1",
+        "name": "프랭클린",
+        "grade": "A+",
+        "description": "이 눈나 너무 야해"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30047734",
+        "name": "베스탈"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30690505",
+        "name": "알바코어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30690546",
+        "name": "블루길"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30690586",
+        "name": "카발라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30690705",
+        "name": "알바코어(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30690742",
+        "name": "아처피시"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/32961318?p=1",
+        "name": "노틸러스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97751265?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "플래셔",
+        "grade": "S",
+        "description": "존나 쌔노오옹ㅋㅋ누오오오오옹ㅋㅋ노오옹ㅋㅋ누오오옹ㅋㅋ"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30199589?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "뱀파이어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30199633?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아마존"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30199736?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아카스타"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29747893?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "비글"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29747824?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "불독"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748080?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "코멧"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748151?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "크레센트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30199834?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "에코"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748250?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "폭스하운드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30199871?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "포춘"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30199921?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "그렌빌"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200067?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하디"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200099?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "헌터"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200163?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이카로스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29693775?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "재블린"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200258?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "주피터"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200306?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "저지"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200355?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "매치리스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30200398?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "머스킷티어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/52854307",
+        "name": "저비스",
+        "grade": "B+",
+        "description": "탱킹이 좋긴한데 딱히 그 이상의 매력은 없음, 로열 네이비(HMS)의 첫 태생 SSR 구축함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/63568056",
+        "name": "재너스",
+        "grade": "B",
+        "description": "저비스가 탱이라면 재너스는 딜 쪽 스킬을 받았다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/71848719?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "히어로",
+        "grade": "C",
+        "description": "허~~~~~~~~접♪"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/104640464?p=1",
+        "name": "누비안",
+        "grade": "A-",
+        "description": "누오오옹ㅋㅋ비안"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/141579387?p=1",
+        "name": "트라팔가",
+        "grade": "EX",
+        "description": "구?축?함?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720681?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "퀴라소"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720710?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "컬루"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720738?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "리앤더"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720781?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아킬레스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720811?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "에이잭스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720850?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아레투사"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720893?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "갈라테아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30720980?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "페넬로피"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721047?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "오로라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721132?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "사우스햄튼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721173?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "뉴캐슬"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721335?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "셰필드"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721393?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "글래스고"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721429?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "글로스터"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721476?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "에든버러"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721534?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "벨파스트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721633?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "꼬마 벨파스트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721690?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "셰필드(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721757?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "다이도"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721812?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "허마이오니"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721843?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시리우스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721893?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "블랙 프린스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721936?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "다이도(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30721996?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "피지"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30722048?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "자메이카"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30722086?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "스위프트슈어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/44196611",
+        "name": "카리브디스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/52854943",
+        "name": "벨로나",
+        "grade": "C+",
+        "description": "공습 선도용 함선이 없는 뉴비라면 거쳐가는 용도로 채용 할만 하지만 다른 애 쓰는게 더 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/54918596",
+        "name": "엔터프라이즈",
+        "grade": "C",
+        "description": "존나 쌘 엔터프라이즈를 찾는다면 https://arca.live/b/azurlane/30047664"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/63569574",
+        "name": "맨체스터",
+        "grade": "C",
+        "description": "지금부터 여기는 맨체스터 유나이티드가 지배한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/71851812?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "스킬라",
+        "grade": "B+",
+        "description": "대공이 준수한 그저 평범한 HMS 경순 가스라이팅을 잘해요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/104638021?p=1",
+        "name": "리버풀",
+        "grade": "B",
+        "description": "리중딱~ 리중딱 신나는 노래~ 나도 한 번 불러본다아아아아~~"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/141574517?p=1",
+        "name": "트리니다드",
+        "grade": "B",
+        "description": "무난하게 요망한 보딱 경순"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/141577069?p=1",
+        "name": "클레오파트라",
+        "grade": "A",
+        "description": "컨셉 홍차덱을 짠다면 픽할 만함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726503?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "런던"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726546?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "슈롭셔",
+        "grade": "C+",
+        "description": "평범한 로열 중순"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726581?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "서식스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726680?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "서포크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726727?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "노포크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726828?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "도셋셔"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30726870?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "요크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/52855544",
+        "name": "꼬마 체셔",
+        "grade": "C+",
+        "description": "꼬마 함선들만 비교 했을 때는 굉장히 준수한 성능"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/104638915?p=1",
+        "name": "데본셔",
+        "grade": "B",
+        "description": "여러가지 맛의 그녀"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736259",
+        "name": "리나운"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736303",
+        "name": "리펄스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736367",
+        "name": "꼬마 리나운"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736503",
+        "name": "퀸 엘리자베스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736577",
+        "name": "워스파이트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736650",
+        "name": "밸리언트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736701",
+        "name": "넬슨",
+        "grade": "B+",
+        "description": "개장 후 생기는 버프 스킬로 빅세븐이 조건부로 100%가 되긴하는데... 뉴비가 쓰기엔 개장비용이 부담스럽고, 어차피 UR 전함 쓰겠지"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736791",
+        "name": "킹 조지 5세"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30736965",
+        "name": "프린스 오브 웨일즈"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30737025",
+        "name": "듀크 오브 요크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/49257003?p=1",
+        "name": "하우",
+        "grade": "B+",
+        "description": "한 번 패싱당해서 메인으로 활약할 만한 시기를 놓쳤으나 쓸 전함이 없는 뉴비들에겐 매우좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/52857275",
+        "name": "뱅가드",
+        "grade": "EX",
+        "description": "일단 뉴저지 옆자리 예약,  뉴비라면 물어보지 말고 그냥 키우면 된다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/71850173?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "로열 오크",
+        "grade": "B+",
+        "description": "무난하게 굴릴 말한 흔한 금딱 전함 피격 시 탄막이 나가는걸 보니 물이 많은 함순이일듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/141581380?p=1",
+        "name": "라이온",
+        "grade": "EX",
+        "description": "사자는 해역을 찢어"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30745730?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "허미즈"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30745764?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "유니콘",
+        "grade": "B->EX",
+        "description": "퍼시우스가 없는 뉴비들이라면 꼭 필요할 광역 힐러"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30745996?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "센토"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30746054?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이글"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30746101?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아크 로열",
+        "grade": "A",
+        "description": "적에게 슬로우 넣을 함선들이 늘어나서 그렇지 지금도 쓴다면 충분히 쓰는 좋은 항모 그리고 -페- 다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30746383?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "포미더블"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30746491?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "글로리어스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30746547?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "꼬마일러스트리어스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/63568882",
+        "name": "알비온",
+        "grade": "A",
+        "description": "언니인 센토가 딜쪽이면 동생쪽이 서포팅 스킬을 두르고 나옴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/69260158",
+        "name": "테세우스",
+        "grade": "A",
+        "description": "경항모의 물몸을 자힐과 피감으로 커버, 쫄&보스전 가리지 않고 좋은 성능을 보임."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/71849479?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "아거스",
+        "grade": "B",
+        "description": "뉴비들이 HMS PR함 후열 경작 할 때는 찾을만 할지도..?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/107596248?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "포미더블(µ장비)",
+        "grade": "A(A+)",
+        "description": "\"µ장비\" 함선들과 같이 써야 최대 성능을 뽑는다. 아니면 댄스 스커트나 댄싱 슈즈가 있거나"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30745480?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "에레버스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30745505?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "테러"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30745576?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "애버크롬비"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218080?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "카미카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218142?target=all&keyword=%EB%A7%88%EC%B8%A0%EC%B9%B4%EC%A0%9C&p=1",
+        "name": "마츠카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218254?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하타카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748413?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "무츠키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748951?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키사라기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748845?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "우즈키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748510?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미나즈키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218530?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "나가츠키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748578?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미카즈키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218621?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "후부키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218695?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시라유키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29693919?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아야나미"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218843?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아카츠키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218891?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "히비키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30218968?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이카즈치"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219165?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하츠하루"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219244?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "와카바"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219348?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하츠시모"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219401?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아리아케"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219564?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시라츠유"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219693?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시구레"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219750?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "유다치"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219837?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "카와카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30219945?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "오오시오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220003?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미치시오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220088?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아라시오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220159?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "카스미"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29748714?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시라누이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220353?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "쿠로시오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220399?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "오야시오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220453?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "유키카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220569?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이소카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220616?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하마카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220675?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "타니카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30220976?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "노와키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221099?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "나가나미"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221153?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "마키나미"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221211?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키요나미"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221315?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "스즈츠키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221417?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하루츠키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221481?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "요이즈키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30221552?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하나즈키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/34826287",
+        "name": "야마카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/34826549",
+        "name": "시마카제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/60621601",
+        "name": "미유키",
+        "grade": "C",
+        "description": "도크, 명함용"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/60622214",
+        "name": "와카츠키",
+        "grade": "B",
+        "description": "대잠스킬을 줄거면 잠수함만 때려 잡는 스테이지라도 주던가"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/88978314?p=1",
+        "name": "아사나기",
+        "grade": "B",
+        "description": "수상할 정도로 배에 진심인"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/120799899?p=1",
+        "name": "스즈나미",
+        "grade": "C+",
+        "description": "이벤트마다 늘있는 농농농"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30819783",
+        "name": "나가라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30819818",
+        "name": "이스즈"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30819864",
+        "name": "키누"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30819908",
+        "name": "아부쿠마"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30820057",
+        "name": "센다이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30820103",
+        "name": "진츠"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30820143",
+        "name": "나카"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30820207",
+        "name": "모가미(경순->중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30820306",
+        "name": "아가노"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30820355",
+        "name": "노시로"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/34826600",
+        "name": "유라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/60623113",
+        "name": "사카와",
+        "grade": "B",
+        "description": "언니(노시로) 만큼의 성능은 아님, 경순의 한계이기도 하고"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/107594974?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "노시로(µ장비)",
+        "grade": "B+",
+        "description": "이번 뮤장비에서 가장 애매한 아이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/120804042?p=1",
+        "name": "와타라세",
+        "grade": "A",
+        "description": "야무진 탄막 빵빵"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/120800754?p=1",
+        "name": "아야세",
+        "grade": "C+",
+        "description": "빵ㅋㅋ빵ㅋㅋ한 무녀님, 침대 성능 외에는 기대하지말자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888326",
+        "name": "스즈야"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888360",
+        "name": "쿠마노"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888410",
+        "name": "후루타카"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888487",
+        "name": "카코"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888584",
+        "name": "키누가사"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888630",
+        "name": "묘코"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888678",
+        "name": "나치",
+        "grade": "C+",
+        "description": "글쎄 굳이 써야할 이유가?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888707",
+        "name": "아시가라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888828",
+        "name": "아타고"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888862",
+        "name": "마야"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30888906",
+        "name": "초카이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/34826673",
+        "name": "치쿠마"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/88982143?p=1",
+        "name": "운젠",
+        "grade": "EX",
+        "description": "UR 등급인 만큼 닥치고 뽑아야하며 그에 걸맞게 무척 강력한 것음 맞음, 다만 개썩은물 보스전 컨텐츠에서 활약할 일이 있을까? 싶기는 함 아님 말고 레후"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30919832?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=2",
+        "name": "콘고"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30919861?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "히에이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30919898?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하루나"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30919926?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키리시마"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920126?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아마기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920184?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "꼬마 아마기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920216?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미카사"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920262?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "후소(전함->항전)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920382?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이세(전함->항전)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920435?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "휴가(전함->항전)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920467?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "나가토"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920508?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "무츠"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920608?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "토사"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920634?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30920703?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "스루가"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/60631427",
+        "name": "무사시"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/107591665?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "콘고(µ장비)",
+        "grade": "B+",
+        "description": "이쪽의 콘고도 귀국자녀인가?, 그냥 무난히 돌리기 좋은 보딱 순전"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30936924?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "히요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30936983?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "준요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937039?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "호쇼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937094?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "쇼호"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937240?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "류호"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937346?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "치토세"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937429?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "치요다"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937488?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아카기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937693?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "꼬마 아카기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937757?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아카기(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937814?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "소류"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30937882?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "히류"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30938053?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "즈이카쿠"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30938119?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "다이호"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30938170?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "다이호(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30938296?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시나노"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80481330?category=%ED%95%A8%EC%84%A0&target=all&keyword=%EB%8B%A4%EC%9D%B4%ED%98%B8&p=1",
+        "name": "꼬마 다이호",
+        "grade": "C+",
+        "description": "키울거 없을때 키우면 된다. (원본 다이호보다 애가 더 무서운거 같다.)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/107590403?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "꼬마 시나노",
+        "grade": "B",
+        "description": "이렇게 많이 자니 크면 훌륭한 찌찌를 얻는구나"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116446016?p=1",
+        "name": "즈이호",
+        "grade": "S",
+        "description": "힐 함선은 아무튼 옳다, 짹ㅋㅋ농ㅋㅋ"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/120805366?p=1",
+        "name": "아마기(항공모함)",
+        "grade": "EX",
+        "description": "내가 사쿠라 항모팟의 새로운 정점에 서겠다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30938872?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "공작함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30938936?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "운송함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30939029?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이19"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30939120?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이25"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30939166?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이26"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30939262?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이58"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30939732?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이168"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30939991?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "이13"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30228562?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z1"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30228657?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z2"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30228709?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z18"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29749574?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z20"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29749685?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z21"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29693851?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z23"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30228878?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z24"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30228987?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z26"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30229039?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z28"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30229085?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z35"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30229120?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "Z36"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/58538308?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "Z16",
+        "grade": "C+",
+        "description": "음문이 그려져 있지 않은 기본 복장이 단점 키울거 없을 때 키우면된다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80728792?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "오토 폰 알벤슬레벤",
+        "grade": "B+",
+        "description": "아무리봐도 잠수함인데 알고보니 구축함 나름 딜/회피 능력을 준수하게 받음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/112213763?p=1",
+        "name": "Z43",
+        "grade": "C+",
+        "description": "도크행, 후순위 육성 순위로 밀어도 무방. 이 아이도 중2병 냄새가 풀풀난다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/112215677?p=1",
+        "name": "Z47",
+        "grade": "B",
+        "description": "딱히 아주 특출난 장점이 있는 아이가 아니라 애정이 없다면 도크 방치행 묘하게 학대순애가 어울려보이는 아이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/127754579?p=1",
+        "name": "Z11",
+        "grade": "C+",
+        "description": "지뢰계(?) 소녀, 침대 성능만 기대하자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/127757988?p=1",
+        "name": "Z52",
+        "grade": "EX",
+        "description": "뭘 좋아 할지 몰라서 효과를 가득 넣어봤단다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/146951895?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "Z13",
+        "grade": "B",
+        "description": "월급 루팡은 혼나야 해요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30980571",
+        "name": "쾨니히스베르크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30980605",
+        "name": "카를스루에"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30980629",
+        "name": "쾰른"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30980674",
+        "name": "라이프치히"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/42059652?p=1",
+        "name": "마그데부르크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50669334?p=1",
+        "name": "엠덴",
+        "grade": "B+",
+        "description": "대공포가 없는 만큼 화력은 나오지만 대공이 필요한 해역에선 쓰지 말 것"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50671550?p=1",
+        "name": "엘빙",
+        "grade": "C+",
+        "description": "대공포를 달 수 있고 관련 스킬도 있으나 개빻은 수치에 어찌 써먹어야 할 지 모르겠음 그냥 안달고 화력용으로 써먹는게 낫겠다 싶음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80732090?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "레겐스부르크",
+        "grade": "B+",
+        "description": "외형에 비해 조금 심심한 능력, 그냥 잘싸우는 금딱 경순이라 보면됨"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30985424",
+        "name": "도이칠란트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30985476",
+        "name": "어드미랄 그라프 슈피"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30985535",
+        "name": "어드미랄 히퍼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30985595",
+        "name": "프린츠 오이겐"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30985745",
+        "name": "론(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30985806",
+        "name": "프린츠 하인리히"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/42059742?p=1",
+        "name": "프린츠 아달베르트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50630601?p=1",
+        "name": "꼬마 프린츠 오이겐",
+        "grade": "C",
+        "description": "커여움 원툴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/58537714?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "블뤼허",
+        "grade": "B+",
+        "description": "나쁘진 않은데 KMS 중순 범용 성능은 론이라는 미친년이.."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/62347508?p=1",
+        "name": "꼬마 슈피",
+        "grade": "C+",
+        "description": "본판보다 성능좋은 꼬마 함순이이긴 하지만 어차피 둘 다 안쓴다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/104642411?p=1",
+        "name": "프리드리히 카를",
+        "grade": "A-",
+        "description": "누군가를 대체하기 위하여 빨리 등장했다고 하는데... 이유는 아무도 모른다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/107593729?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "프린츠 오이겐(µ장비)",
+        "grade": "B+",
+        "description": "만약 두 명의 오이겐이 자신이 진짜라고 우길 때 구분법은 성능이 더 구린 쪽이 진짜이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30988022",
+        "name": "샤른호르스트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30988088",
+        "name": "그나이제나우"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30988140",
+        "name": "비스마르크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30988181",
+        "name": "티르피츠"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50662645?p=1",
+        "name": "뤼초",
+        "grade": "B(B+)",
+        "description": "자이틀리츠와 같이 쓰기를 매우 권장, 마찬가지로 대공 수치가 낮은 것은 단점."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50664236?p=1",
+        "name": "튀링겐",
+        "grade": "C+",
+        "description": "흔한 SR 전함보다 살짝 더 좋은 수준"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50631731?p=1",
+        "name": "자이틀리츠",
+        "grade": "B(B+)",
+        "description": "메탈 블러드(KMS) 함선과 같이 쓰길 매우 권장, 대공 수치가 낮아 대공이 중요시되는 곳은 피하는게 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/58538915?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "브륀힐드",
+        "grade": "B+",
+        "description": "일찍 나왔다면 개떡상도 가능했을거 같긴 한데 지금도 충분히 좋은 거 같음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/109819066?p=1",
+        "name": "꼬마 프리드리히",
+        "grade": "B+",
+        "description": "커엽농ㅋㅋ"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/112216801?p=1",
+        "name": "알비트",
+        "grade": "A",
+        "description": "100% 확률의 탄막은 아니지만 2개의 탄막 스킬 보유, 순양전함이란 함종은 가끔 언젠가 꺼내 먹는 때가 있다, 키워둔 순전이 없으면 충분히 키워 볼만함. 빵ㅋㅋ"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/146954425?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "어드미랄 젠커",
+        "grade": "A+",
+        "description": "아무튼 탄막을 전개하는 금딱 전함이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30990954?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "베저"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30990997?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "그라프 체펠린"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30991036?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "페터 슈트라서"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30991088?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "꼬마그라프 체펠린"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80726517?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "야드",
+        "grade": "B+",
+        "description": "딱 보딱 경항모 능력을 보여줌"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/127759337?p=1",
+        "name": "프리츠 루메이",
+        "grade": "EX",
+        "description": "등급이 낮은 아이였다면 장난감 취급 받았을 지도"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995029?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-37"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29749471?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-47"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995080?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-73"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995117?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-81"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995200?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-101"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995228?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-110"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995262?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-410"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995333?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-522"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30995435?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "U-557"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/42059552?p=1",
+        "name": "U-1206"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/112214708?p=1",
+        "name": "U-31",
+        "grade": "C+",
+        "description": "잠수함이 진짜 이거 밖에 없어요 하는게 아닌 이상 후순위 육성 메스가키 참교육이 필요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/146953359?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "U-552",
+        "grade": "S",
+        "description": "독잠을 다시 위대하게 만들 그런 잠수함을 난 기다리고있다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003400?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "그롬키"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003455?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "그리먀시"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864627?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "그로즈니"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003514?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "스트례미텔니"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864811?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "타슈켄트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003580?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "타슈켄트(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/46630507",
+        "name": "키예프"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/46630631",
+        "name": "소브라지텔니"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/102348459?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "오그네보이",
+        "grade": "A",
+        "description": "강력한 하트 탄막을 날리는 그네뾰이!"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003667?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아브로라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29694042?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "파먀티 메르쿠리야"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003715?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "무르만스크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003769?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키로프"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/69261043",
+        "name": "쿠이비셰프",
+        "grade": "B+",
+        "description": "간만에 피닉스가 떠오르는 자힐 경순"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/74915062",
+        "name": "보로실로프",
+        "grade": "B",
+        "description": "성능자체는 이도저도 아닌 경순인듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/138517407?p=1",
+        "name": "올레그",
+        "grade": "B",
+        "description": "보딱 경순이 다 그렇죠 뭐"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003882?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "탈린"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/46630814",
+        "name": "크론시타트(대형순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/74912220",
+        "name": "쿠르스크",
+        "grade": "B+",
+        "description": "여기 오모시로이한 스킬 구성을 지닌 중순양함이 있다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003936?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "강구트"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864972?p=1",
+        "name": "소비에츠카야벨로루시아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31003982?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "소비에츠카야러시아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/46630573",
+        "name": "아르한겔스크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/102343634?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "폴타바",
+        "grade": "B+",
+        "description": "보딱인데 나름 우수한 전함 플릿 스킬 때문인지 기본 체급은 낮음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/102350032?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "소비에츠키 소유즈",
+        "grade": "EX",
+        "description": "ㅍvㅍ"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/138518041?p=1",
+        "name": "카잔",
+        "grade": "A+",
+        "description": "퍼스트 카잔이 아니고 다른 함순이들을 케어해주는 마망 함순이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/46630690",
+        "name": "볼가"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29863657?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "안샨"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29863745?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "푸슌",
+        "grade": "A+",
+        "description": "미사일 구축은 싼 맛에 굴리기 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29863815?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "창춘"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864060?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "타이위안",
+        "grade": "A+",
+        "description": "절약팟에 온걸 환영한다 아쎄이."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/100001555?p=1",
+        "name": "롱우",
+        "grade": "C",
+        "description": "누오오옹 ㅋㅋ(3)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/99998476?p=1",
+        "name": "페이윈",
+        "grade": "C",
+        "description": "누오오옹 ㅋㅋ"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/99999503?p=1",
+        "name": "후번",
+        "grade": "C",
+        "description": "누오오옹 ㅋㅋ (2)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/130799796?p=1",
+        "name": "창펑",
+        "grade": "C+",
+        "description": "농ㅋㅋ 마마"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864143?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "잉 루이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864302?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "차오 호"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864381?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "얏센",
+        "grade": "B(B+)",
+        "description": "나중에 중국국뽕 함선이 좀 채워지면 써볼만 할지도?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29864454?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "닝하이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/44196770",
+        "name": "하이티엔"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/100002779?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "지안",
+        "grade": "C",
+        "description": "이스트 글림 함선들과 안쓰면 진짜 절망적인 성능, 심지어 같이 써도 구림"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/130800286?p=1",
+        "name": "하이롱",
+        "grade": "C+",
+        "description": "대공포는 어디 팔았니?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/130800507?p=1",
+        "name": "지엔우",
+        "grade": "B+",
+        "description": "이스트 글림 최초의 중순양함, 벽람 최초의 듀얼폼 스킨. 스킬 성능은 준수하지만 이스트 글림 특유의 처참한 깡성능, 이 아이도 대공포가 없다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/100004200?p=1",
+        "name": "환창",
+        "grade": "A",
+        "description": "이번 이벤 주인공인 만큼 성능은 챙김, 출신지가 안타까울뿐"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/44196858",
+        "name": "젠하이",
+        "grade": "F->A",
+        "description": "개장 안하면 잠자리 원툴"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/69258974",
+        "name": "화지아",
+        "grade": "D+->B+",
+        "description": "개장 초 필 수"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/69258280",
+        "name": "딩안",
+        "grade": "D",
+        "description": "얌전히 도크닦이를 시키자."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31009589?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "포르뱅"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29747674?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "르 테메레르"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31009678?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "로피니아트르"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31009742?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "르 트리옹팡"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/38772412",
+        "name": "마이예 브레제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/107591024?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "르 테메레르(µ장비)",
+        "grade": "C+",
+        "description": "리이츄 마마.. 돌아와.."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31009849?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "에밀 베르탱"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31009903?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "잔 다르크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86299145?p=1",
+        "name": "기샹",
+        "grade": "B",
+        "description": "타로점 하나 오픈해서 거기다 박아두는게 좋을듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86300225?p=1",
+        "name": "쉬프랑",
+        "grade": "B",
+        "description": "어 맞아맞아 그건 사실이야, 누나는 성능이 안좋아"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/109814970?p=1",
+        "name": "브렌누스",
+        "grade": "B+",
+        "description": "빠아아아앙 ㅋㅋ, 이번 창녀중에선 얌전한 편"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31009982?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "리슐리외"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86299660?p=1",
+        "name": "리옹",
+        "grade": "B",
+        "description": "뉴비도 걸러야할 성능, 차나리 웨스트 버지니아 키워서 개장시키는게 나을듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/109818059?p=1",
+        "name": "알자스",
+        "grade": "EX",
+        "description": "항상 오류가 발생해있는 챙녀"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31010033?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "베아른"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86302674?p=1",
+        "name": "펭르베",
+        "grade": "A+",
+        "description": "항모에 힐이 달렸다면 밥 값 이상은 보여준다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31010107?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "쉬르쿠프"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29800647?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "르 마르스"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29800906?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "타르투"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29800814?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "보클랭"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29800731?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "르 말랭"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/54919626?category=%ED%95%A8%EC%84%A0&target=all&keyword=%ED%83%80%EB%B8%94&p=1",
+        "name": "랭동타블",
+        "grade": "B-",
+        "description": "나중에 키울 거 없을 때 키우는 것을 추천"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86304142?p=1",
+        "name": "케르생",
+        "grade": "B",
+        "description": "구축함의 새로운 시대를 알리는 함선(빵ㅋㅋ)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/109816519?p=1",
+        "name": "모가도르",
+        "grade": "EX",
+        "description": "개변태 킁킁이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/109810459?p=1",
+        "name": "에페",
+        "grade": "C+",
+        "description": "버티고 버텨라 에페쨩"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116413744?p=1",
+        "name": "로데슈",
+        "grade": "B+",
+        "description": "MNF/FFNF와 같이 써야 고점을 보는데 그마저도 맛이 있다고 보기엔 별루 빵딩이나 때려주자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31016779?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "라 갈리소니에르"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/88967225?p=1",
+        "name": "마르세예즈",
+        "grade": "B+",
+        "description": "딱 키우기 괜찮은 금딱 경순, FFNF/MNF 애들 키울때 같이 껴주면 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31016858?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "알제리"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/39564692?p=1",
+        "name": "포슈"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116411546?p=1",
+        "name": "듀플렉스",
+        "grade": "B",
+        "description": "딱 보딱 중순에게 기대할 수 있는 성능보다 살짝 더 좋은 체감"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31016924?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "됭케르크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31017039?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "장 바르"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31017128?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "가스코뉴(μ장비)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86305008?p=1",
+        "name": "클레망소",
+        "grade": "A",
+        "description": "최단기 퇴물이라기엔 전성기조차 없었다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29801112?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "카라비니에레"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31026659?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "니콜로소 다 레코"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31026694?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "마에스트라레"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31026726?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "리베치오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/48527379?p=1",
+        "name": "폼페오 마뇨"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/57022503?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "알프레도 오리아니",
+        "grade": "C",
+        "description": "도크에서 귀여움을 뽐내도록 하자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/57023091?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "에마누엘레 페사노",
+        "grade": "C",
+        "description": "몸매는 옳지만 성능은 그렇지 못함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/82622382?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "아틸레오 레골로",
+        "grade": "B+",
+        "description": "쓸만한 금딱 구축함, 일단 커엽다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31026884?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "두카 델리 아브루치"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/57020038?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "주세페 가리발디",
+        "grade": "B+",
+        "description": "언니만큼 준수한 성능이라고 생각함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/133862570?p=1",
+        "name": "바르톨로메오 콜레오니",
+        "grade": "B",
+        "description": "평범한 보딱 경순, 모항에서 찌찌나 만져주자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29801234?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "트렌토"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/29801023?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "차라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31026947?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "폴라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/48527431?p=1",
+        "name": "트리에스테"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/82624677?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "고리치아",
+        "grade": "B+",
+        "description": "차라, 폴라와 같이 굴려보자 체감상 강해진다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31027005?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "비토리오 베네토"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31027052?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "리토리오"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31027111?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "콘테 디 카보우르"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31027165?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "줄리오 체사레"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/82620844?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "안드레아 도리아",
+        "grade": "B",
+        "description": "도크용 마망으로 활용하자."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/133886947?p=1",
+        "name": "라파엘로",
+        "grade": "EX",
+        "description": "UR같지 않은(?) 외모, 매우 UR다운 성능"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31027237?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아퀼라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/48527300?p=1",
+        "name": "임페로"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31027294?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "토리첼리"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/57018941?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "레오나르도 다 빈치",
+        "grade": "S",
+        "description": "같이 놀 수 있는 친구들이 나왔다 떡상이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/133866303?p=1",
+        "name": "마조레 바라카",
+        "grade": "A+",
+        "description": "다 빈치가 나왔을 환경에는 맛있게 쓸만한 환경이였던거 같은데 애는 좀 애매하다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/92118161?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "메리 셀러스트(s)",
+        "grade": "A",
+        "description": "잠수 함대에서 출격하는 범선, 포츈쨩은 특장 왜 안주는데"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/123979477?p=1",
+        "name": "돌핀(s)",
+        "grade": "C+",
+        "description": "템페스타 누오오옹ㅋㅋ 할당제"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/138518567?p=1",
+        "name": "에버트센",
+        "grade": "C+",
+        "description": "로우 트윈테일은 최강이야"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/138519406?p=1",
+        "name": "드 제번 프로빈시엔",
+        "grade": "A",
+        "description": "경순양함이 아닌것 같은 포용력"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034664?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "블랑(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034692?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "화이트 하트(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034734?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "넵튠(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034784?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "퍼플 하트(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034846?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "블랙 하트(중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034915?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "벨(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31034954?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "그린 하트(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31036614?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "네코네(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31036648?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "루루티에(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31036677?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "쿠온(중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31036697?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "우루루(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31036742?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "후미뤼르(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31049961?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키즈나 아이(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050011?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키즈나 아이 -엘레강트(중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050068?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키즈나 아이 -슈퍼 게이머(전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050175?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키즈나 아이 -애니버서리(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050252?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시라카미 후부키(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050348?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "나츠이로 마츠리(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050387?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "나키리 아야메(중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050418?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "토키노 소라(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050506?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "오오카미 미오(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050538?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미나토 아쿠아(잠수)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050760?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "마리 로즈(구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050790?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미사키(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050816?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "모니카(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050839?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "카스미(중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050906?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "나기사(전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31050963?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "뇨텐구(경항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/77500489",
+        "name": "타마키(순전)",
+        "grade": "B+",
+        "description": "전용 장비는 필수, 단독으로 써도 파갑 효과용으로 쓸만하다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/77501438",
+        "name": "루나(경항모)",
+        "grade": "A",
+        "description": "전용 장비는 당연히 필수, 대작전 쫄팟에 뮤카기 대신 루나 쓰면 될 듯함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31051164?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아마미 하루카(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31051199?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키사라기 치하야(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31051246?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미나세 이오리(전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31051273?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "미우라 아즈사(중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31051334?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "후타미 아미(잠수)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31051351?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "후타미 마미(잠수)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/40227929?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "나미코(중순)",
+        "grade": "B",
+        "description": "무쌩겨써~"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/40228004?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "무지나(전함)",
+        "grade": "B+",
+        "description": "그럭저럭 좋은 보딱 전함 수준"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/40228058?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "미나미 유메(중순)",
+        "grade": "A",
+        "description": "난또까 비므~ 성능도 준수하고 개쩌는 롸봇을 볼려면 채용해야한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/40228105?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "신죠 아카네(전함)",
+        "grade": "A-",
+        "description": "다른 그리드맨 주요 맴버들이랑 비교하자면 조금 아쉬운 수준"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/40228255?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "타카라다 릿카(경순)",
+        "grade": "A+",
+        "description": "배틀 트랙토 맥스, 버스터 보르, 스카이 비터는 릿카 전용 주포/어뢰/대공포라 보면된다. 순서를 다르게 착용하면 추가 효과를 못보니 주의하자. 굉장히 다재다능한 성능의 경순으로 애매한 경순 라인에서는 최상위권이라 보면된다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/40228301?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "핫스(경순)",
+        "grade": "B",
+        "description": "복각 전에는 외모전형으로 그리드맨 파티 한 자리를 먹었는데 히메사마가 뺏어가 버림"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/84303826?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "2대(항전)",
+        "grade": "A-",
+        "description": "나는 오늘도 얌시롱을 키우러간다. 따위와는 비교할 수 없는 성능."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/84304645?category=%ED%95%A8%EC%84%A0&target=title&keyword=SSSS&p=1",
+        "name": "공주(운송함)",
+        "grade": "A+",
+        "description": "SSSS.GRIDMAN 파티를 굴리는 핵심 파츠"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65080888",
+        "name": "라이잘린 스타우트(경순)",
+        "grade": "A(A+)",
+        "description": "딜 경순중 최상위권, 라이자의 아틀리에 콜라보 캐릭터와 같이 사용시 더 좋음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65081831",
+        "name": "클라우디아 발렌츠(경항모)",
+        "grade": "A(A+)",
+        "description": "단순 힐항모로써도 좋지만 아틀리에 콜라보 캐릭들을 대상으로하는 힐량이 매우좋음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65083128",
+        "name": "파트리샤 아벨하임(전함)",
+        "grade": "A(A+)",
+        "description": "단독 사용도 나쁘지 않지만 콜라보 캐릭과 같이 사용하길 추천."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65083847",
+        "name": "세리 글로스(항모)",
+        "grade": "B",
+        "description": "원작 고증은 좋은데 성능까지 고증당함."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65084670",
+        "name": "릴라 디자이어스(중순)",
+        "grade": "B+",
+        "description": "보딱 딜중순이라 약간 애매한 감이 있으나 콜라보 캐릭끼리 묶어서 쓸 사람들은 14지 갈 거 아니면 큰 신경 안써도 될 듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65085653",
+        "name": "칼라 이데아스(대형순)",
+        "grade": "A",
+        "description": "금딱 첫 대형순양함, 서포팅 스킬도 괜찮음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94087368?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "아스카(경순)",
+        "grade": "A+",
+        "description": "이제는 콜라보 전통이된 경순 함순이는 밥값 이상을 한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94088340?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "후부키(전함)",
+        "grade": "A+",
+        "description": "탄막이 1자형으로 한 번 찍싸고 끝나서 생각보다는 심심한 전함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94089440?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "유미(항모)",
+        "grade": "A-",
+        "description": "최근 콜라보 함선중에선 가장 아쉬운 성능"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94091111?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "이카루가(중순)",
+        "grade": "A",
+        "description": "무난한 금딱 중순, 다만 목소리는 호불호가 갈릴 수 있다. 대신 중파스킨이 제일 꼴리게 나온듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94092416?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "호무라(잠수함)",
+        "grade": "S",
+        "description": "556(META)와 다빈치가 함께 놀 친구를 찾았다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94093584?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "무라사키(경항모)",
+        "grade": "A",
+        "description": "보딱 경항모 치곤 이정도면 쓸만함, 수치상 카시노 찌찌 이김"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/94094383?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "유우야키(중순)",
+        "grade": "B+",
+        "description": "은근 기본스킨이 꼴리는 함순이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125629673?p=1",
+        "name": "라라 사타린 데빌룩(중순)",
+        "grade": "B+",
+        "description": "도라에몽님 좀 더 좋은 거 만들어 오십쇼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125629001?p=1",
+        "name": "나나 아스타 데빌룩(구축함)",
+        "grade": "B",
+        "description": "너 왜 금딱임?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125628214?p=1",
+        "name": "모모 베리아 데빌룩(경순)",
+        "grade": "A",
+        "description": "장난감에 가깝긴 한데 그래도 금딱 값은 한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125627321?p=1",
+        "name": "금빛 어둠(전함)",
+        "grade": "A+",
+        "description": "딜은 진짜 좋음, UR 없었으면 밥값 할만 했는데"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125626518?p=1",
+        "name": "사이렌지 하루나(전함)",
+        "grade": "B+",
+        "description": "깡스텟이 아쉽지만 보딱치고 좋은 성능, 간만에 보는 힐 전함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125625760?p=1",
+        "name": "코테가와 유이(항모)",
+        "grade": "B+",
+        "description": "전용장비 장착 시 성능이 보딱치고는 굉장히 준수함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/146950374?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "DEAD MASTER(항모)",
+        "grade": "A+",
+        "description": "특장끼고 연습전 박아둔 새끼 있으면 대가리를 깨주자"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/146949079?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "BLACK★ROCK SHOOTER(전함)",
+        "grade": "A+",
+        "description": "준수한 성능의 콜라보 전함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/148025971?p=1",
+        "name": "유미아 리스펠트(항모)",
+        "grade": "A+",
+        "description": "굳이 항모로 안나와도 되는데 항모로 나온느낌"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/148024966?p=1",
+        "name": "아일라 폰 뒤러(경순)",
+        "grade": "A",
+        "description": "유미아를 모르고 콜라보 함선을 보면 애가 주인공 같음"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/148024012?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "니나 프리드(전함)",
+        "grade": "A+",
+        "description": "탄막을 흩뿌리는 금발 태닝녀"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/148023304?p=1",
+        "name": "레이냐(구축)",
+        "grade": "A",
+        "description": "-털- ㅋㅋㅋ 체감상은 생각보다 좀 더 많이 좋다고 느껴짐"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30229418?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "넵튠(HMS/경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30293131",
+        "name": "모나크(HMS/전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30570240",
+        "name": "이부키(IJN/중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30359865",
+        "name": "이즈모(IJN/전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/30570335",
+        "name": "생 루이(FFNF/중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060318?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "시애틀(USS/경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060376?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "조지아(USS/전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060403?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "키타카제(IJN/구축)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060438?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아즈마(IJN/대형순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060534?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "가스코뉴(MNF/전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060603?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "체셔(HMS/중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060637?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "드레이크(HMS/중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060681?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "마인츠(KMS/경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060714?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "오딘(KMS/순전)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060843?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "앵커리지(USS/중순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060882?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "하쿠류(IJN/항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060937?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "에기르(KMS/대형순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31060973?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "마르코 폴로(RN/전함)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/62350020?p=1",
+        "name": "브레스트(FFNF/대형순)",
+        "grade": "S",
+        "description": "5기까지 나온 시점에서 탱킹은 최고랭크"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/62351042?p=1",
+        "name": "치칼로프(SN/항모)",
+        "grade": "A+",
+        "description": "오랫만에 보는 폭폭뇌 항모, 제공이 딸리는 곳이 아니면 좋은 딜용 항모"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/62351998?p=1",
+        "name": "플리머스(HMS/경순)",
+        "grade": "EX",
+        "description": "메인 전함의 딜량을 증폭시켜주는 서포터, 현시점 최고 전함인 뉴 저지나 무사시의 단짝 친구."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/62352964?p=1",
+        "name": "프린츠 루프레히트(KMS/순전)",
+        "grade": "A",
+        "description": "그냥 저냥 무난한 PR함, 초기 14지에서 활약했던 오딘과 비교하자면 별 특색은 없다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/90903980?p=1",
+        "name": "플랑드르(MNF/전함)",
+        "grade": "A+",
+        "description": "무난한, 귀여운 PR 전함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/90905583?p=1",
+        "name": "펠릭스 슐츠(KMS/구축)",
+        "grade": "A",
+        "description": "경순양함 뺨치는 체급이긴한데 딱 거기까지임"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/90906645?p=1",
+        "name": "시만토(IJN/경순)",
+        "grade": "S+",
+        "description": "시만토와 함께라면 15지가 두렵지 않다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/90910216?p=1",
+        "name": "힌덴부르크(KMS/중순)",
+        "grade": "S+",
+        "description": "Power Overwhelming 딜만 놓고보면 쌔긴 존나쌤"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/144220202?p=1",
+        "name": "할포드(USS/구축)",
+        "grade": "A+",
+        "description": "수상기 장착이 가능한 구축, 끝"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/144221761?p=1",
+        "name": "다이센(IJN/전함)",
+        "grade": "S",
+        "description": "아무튼 힐 전함임"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/144222808?p=1",
+        "name": "나폴리(RN/중순)",
+        "grade": "S+",
+        "description": "순수하게 체급으로 찍어누르기"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/144224437?p=1",
+        "name": "어드미럴 나히모프(SN/항모)",
+        "grade": "EX",
+        "description": "냥냥펀치 디버퍼"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/144225570?p=1",
+        "name": "바야르(FFNF/경순)",
+        "grade": "A+",
+        "description": "큭, 죽여라 연습하시는게 취직에 도움될거 같아요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31061116?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "히류·META(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31061158?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "아크 로열·META(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/31061203?target=all&keyword=%5B%EC%B2%AD%EB%AC%B8%ED%9A%8C%5D&p=1",
+        "name": "헬레나·META(경순)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/39563106?p=1",
+        "name": "소류·META(항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/42055622?p=1",
+        "name": "히요·META(경항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/45483791?p=1",
+        "name": "그나이제우·META(순전)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/45483843?p=1",
+        "name": "준요·META(경항모)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/50567644?p=1",
+        "name": "샤른호르스트·META(순전)",
+        "grade": "B+",
+        "description": "META 캐릭터는 전부 어느 정도 국밥같은 역할, 메샤른은 파갑효과도 있어서 좋은 축이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/54917572",
+        "name": "멤피스·META(경순)",
+        "grade": "B",
+        "description": "무-난, 외모에 반한게 아니면 뉴비는 육성순위를 저 멀리 미뤄도 된다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/57017474?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "리펄스·META(순전)",
+        "grade": "B+",
+        "description": "대체로 META 함선은 다 밥값은 한다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/62355018?p=1",
+        "name": "트렌토·META(중순)",
+        "grade": "B",
+        "description": "META의 첫 중순양함, META함 자체가 뉴비가 써먹기는 힘드니 후순위 육성으로 둬도 무관."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/65078494?p=1",
+        "name": "리나운·META(순전)",
+        "grade": "A",
+        "description": "META 특성상 뉴비가 키우기 힘든 것 빼고는 준수한 성능."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/69262413",
+        "name": "포춘·META(구축)",
+        "grade": "C+",
+        "description": "META의 첫 구축함, 도크에 그냥 계속 묶어놓는 것도 나쁘지 않은 선택."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/69264152",
+        "name": "애리조나·META(전함)",
+        "grade": "A",
+        "description": "선봉함대에게만 주는 조건 힐이지만 META 진영에선 귀한 힐 전함이다. META쪽 다른 함선들과 장판파 플레이하면 나름 재밌음."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/74911397",
+        "name": "셰필드·META(경순)",
+        "grade": "C+",
+        "description": "그냥 저냥 쓸만한 수준 (노팬티가 아니라 아쉽다.)"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80421118?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "라 갈리소니에르·META(경순)",
+        "grade": "B",
+        "description": "키울거 없을 때 키우자."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80724065?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "U-556·META(잠수함)",
+        "grade": "S",
+        "description": "첫 META 잠수함, 같이 놀 친구들이 나왔다 떡상이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/80725389?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "베스탈·META(공작함)",
+        "grade": "C+",
+        "description": "공작함은 죽었어!"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/86131916?p=1",
+        "name": "알제리·META(중순)",
+        "grade": "B+",
+        "description": "뭔가 덕지덕지 발려있긴 한데 결국 META 첫 금딱 중순이란 타이틀만 가져가는게 나을듯"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/90900495?p=1",
+        "name": "진츠·META(경순)",
+        "grade": "B+",
+        "description": "홍어새끼들이 방덱에 쓰는 년"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/90901541?p=1",
+        "name": "프린스턴·META(경항모)",
+        "grade": "C+",
+        "description": "진짜 굳이 쓸 이유가?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97748574?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "에레버스·META(모니터함)",
+        "grade": "B",
+        "description": "사루 캐릭터 중엔 제일 멋지다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/97749450?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "키로프·META(경순)",
+        "grade": "B+",
+        "description": "META 함선은 오모시로이한 테스트 함선이 많다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/102347731?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "파먀티 메르쿠리야·META(경순)",
+        "grade": "A",
+        "description": "흑화 파먀티쨩"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/104636064?p=1",
+        "name": "로드니·META(전함)",
+        "grade": "A",
+        "description": "기믹이 아주 엿같은 메드니쨩"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/104637207?p=1",
+        "name": "뱀파이어·META(구축)",
+        "grade": "B",
+        "description": "멋대로 키스하고 그걸 트집잡아 공격하는 년"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/109813163?p=1",
+        "name": "베아른·META(항모)",
+        "grade": "A",
+        "description": "생각보다 가지고 놀기 재밌는 함순이"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/114324929?p=1",
+        "name": "위치타·META(중순)",
+        "grade": "B+",
+        "description": "위치타 이거 딜 제정신 아니네 완전 유리 대포임으로 애로 뭘 어떻게 해보겠는 생각은 안하는게 좋다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/116411010?p=1",
+        "name": "카스미·META(구축)",
+        "grade": "B",
+        "description": "운젠의 중2병 사춘기 시절 늘 그렇듯 월드 투어 함선의 성능에 큰 기대를 하지말라"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/120795382?p=1",
+        "name": "나가토·META(전함)",
+        "grade": "A",
+        "description": "META함선 답게 본 판에 비해 단독으로 쓰기 좋게 변했다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/120796523?p=1",
+        "name": "히에이·META(전함)",
+        "grade": "A-",
+        "description": "아니 니가 왜 딜을 대신 받을려해요"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125624352?p=1",
+        "name": "줄리오 체사레·META(전함)",
+        "grade": "B",
+        "description": "보딱 전함에게 뭘 바라는가"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/125625024?p=1",
+        "name": "다이호·META(항모)",
+        "grade": "?",
+        "description": "아직 안써봐서 몰라!"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/127757008?p=1",
+        "name": "어드미랄·META(중순)",
+        "grade": "A",
+        "description": "탱커가 절대적으로 부족한 META 쪽에 나온 꽤나 좋은 방패"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/130800128?p=1",
+        "name": "볼차노·META(중순)",
+        "grade": "B+",
+        "description": "앤 진짜 맨땅이면 쓸만함"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/136396014?p=1",
+        "name": "네바다·META(전함)",
+        "grade": "B+",
+        "description": "못쓸건 아니지만 월드투어 메타함은 장난감이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/136395671?p=1",
+        "name": "호넷·META(항모)",
+        "grade": "A+",
+        "description": "메타함치고 매우 정상적이다."
+    },
+    {
+        "url": "https://arca.live/b/azurlane/141578076?p=1",
+        "name": "글로리어스·META(항모)",
+        "grade": "EX",
+        "description": "개인적으로는 UR 등급 함선들과 대등한 아이라고 생각함 천박하게 입어도 파티에 들어가지 못한 설움에 META화가 된게 아닐까?"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/146944957?category=%ED%95%A8%EC%84%A0&p=1",
+        "name": "그렌빌·META(구축)",
+        "grade": "B",
+        "description": "다 아는 월드 투어 보딱의 맛"
+    },
+    {
+        "url": "https://arca.live/b/azurlane/148020467?p=1",
+        "name": "됭케르크·META(전함)",
+        "grade": "B",
+        "description": "표-독스러운데 목소리는 그렇지 않아"
+    }
+]

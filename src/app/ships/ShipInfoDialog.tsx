@@ -18,9 +18,12 @@ import {
     CircularProgress,
     Switch,
     FormControlLabel,
+    IconButton,
 } from '@mui/material';
 import Image from 'next/image';
+import LinkIcon from '@mui/icons-material/Link';
 import { rarities, statList, techAttr } from '../ships/state/types';
+import shipLinks from '../../../public/ship_links.json';
 
 interface ShipInfoDialogProps {
     open: boolean;
@@ -36,6 +39,13 @@ interface ShipInfoDialogProps {
     transformSkillMapping: { [key: string]: number };
     uniqueSpWeapons: { [key: string]: { name: string; skill: number } };
     isMobile: boolean;
+}
+
+interface ShipEvaluation {
+    url: string;
+    name: string;
+    grade?: string;
+    description?: string;
 }
 
 
@@ -99,6 +109,7 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
     const [selectedSkin, setSelectedSkin] = useState<SkinData | null>(null);
     const [loadingUrls, setLoadingUrls] = useState<Set<string>>(new Set());
     const [showPaintingN, setShowPaintingN] = useState(false);
+    const [evaluation, setEvaluation] = useState<ShipEvaluation | null>(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
@@ -161,6 +172,9 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
             setSelectedSkin(defaultSkin);
         }
 
+        const foundEval = (shipLinks as ShipEvaluation[]).find(link => link.name === ship.name_kr);
+        setEvaluation(foundEval || null);
+
     }, [ship, skinData]);
 
     useEffect(() => {
@@ -219,9 +233,20 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                 }} />
                         </Grid>
                         <Grid sx={{ xs: 8, display: 'flex', flexDirection: 'column', gap: 1 }} size="grow">
-                            <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1 }}>
+                            <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
                                 <Typography sx={{ fontWeight: 'bold' }}>{ship.codename_kr}</Typography>
                                 <Typography>{ship.codename}</Typography>
+                                {evaluation && evaluation.url && evaluation.url.startsWith('http') && (
+                                    <IconButton
+                                        component="a"
+                                        href={evaluation.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        size="small"
+                                    >
+                                        <LinkIcon fontSize="small" />
+                                    </IconButton>
+                                )}
                             </Box>
                             <Box sx={{ display: 'flex', flexDirection: 'row', gap: 1 }}>
                                 <Chip label={rarities[ship.rarity - 2 + (ship.cid == 2 ? 2 : 0)]}
@@ -523,10 +548,19 @@ function ShipInfoDialog({ open, onClose, ship, hullTypes, nationalities, nationa
                                         ) : <Typography>전용 장비 스킬 정보 없음</Typography>}
                                     </Box>
                                 </Box>) : null}
-                            <Box sx={{ marginTop: 2 }}>
-                                <Typography variant="h6" gutterBottom>한줄평</Typography>
-                                언젠가 추가
-                            </Box>
+                            {evaluation && (evaluation.grade || evaluation.description) && (
+                                <Box sx={{ marginTop: 2 }}>
+                                    <Typography variant="h6" gutterBottom>한줄평</Typography>
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                        {evaluation.grade && 
+                                            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{evaluation.grade}</Typography>
+                                        }
+                                        {evaluation.description && 
+                                            <Typography variant="body2">{evaluation.description}</Typography>
+                                        }
+                                    </Box>
+                                </Box>
+                            )}
                         </Box>
                     </Box>
                 </Box>
