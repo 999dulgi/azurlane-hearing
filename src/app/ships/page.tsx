@@ -654,6 +654,7 @@ export default function Page() {
                 onClose={() => dispatch({ type: 'TOGGLE_STAT_DIALOG', payload: false })}
                 shipData={state.selectedShips}
                 allShips={state.ships}
+                ship120List={state.techStatList}
                 shipType={state.hullTypes}
                 nationalities={state.nationalities}
                 statList={statList}

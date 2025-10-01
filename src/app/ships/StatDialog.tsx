@@ -10,6 +10,7 @@ interface StatDialogProps {
     onClose: () => void;
     shipData: Ship[];
     allShips: Ship[];
+    ship120List: ShipTechStatData[];
     shipType: HullTypes;
     nationalities: Nationalities;
     statList: string[];
@@ -108,7 +109,7 @@ function TabPanel(props: TabPanelProps) {
     );
 }
 
-export default function StatDialog({ open, onClose, shipData, allShips, shipType, nationalities, statList, statData, skinData }: StatDialogProps) {
+export default function StatDialog({ open, onClose, shipData, allShips, ship120List, shipType, nationalities, statList, statData, skinData }: StatDialogProps) {
     const [tabValue, setTabValue] = useState(0);
     const [milestoneView, setMilestoneView] = useState<{ [key: string]: boolean }>({});
 
@@ -155,7 +156,7 @@ export default function StatDialog({ open, onClose, shipData, allShips, shipType
         return stats;
     };
 
-    function calculateFactionPoints(ships: Ship[]) {
+    function calculateAllFacitonPoints(ships: Ship[]) {
         const points: { [key: string]: number } = {};
         ships.forEach(ship => {
             if (!ship.tech) return;
@@ -168,10 +169,34 @@ export default function StatDialog({ open, onClose, shipData, allShips, shipType
         return points;
     }
 
+    function calculateFactionPoints(ships: Ship[]) {
+        const points: { [key: string]: number } = {};
+        ships.forEach(ship => {
+            if (!ship.tech) return;
+            const factionName = nationalities[ship.nationality]?.name_kr || '기타';
+            if (!points[factionName]) {
+                points[factionName] = 0;
+            }
+            const ship120 = ship120List.find(ship120 => ship120.id === ship.id);
+            if(ship120) {
+                if(ship120.get) {
+                    points[factionName] += ship.tech.pt_get;
+                }
+                if(ship120.level) {
+                    points[factionName] += ship.tech.pt_level;
+                }
+                if(ship120.upgrade) {
+                    points[factionName] += ship.tech.pt_upgrade;
+                }
+            }
+        });
+        return points;
+    }
+
     const currentStats = calculateStats(shipData);
     const totalStats = calculateStats(allShips);
     const currentFactionPoints = calculateFactionPoints(shipData);
-    const totalFactionPoints = calculateFactionPoints(allShips);
+    const totalFactionPoints = calculateAllFacitonPoints(allShips);
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
